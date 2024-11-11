@@ -1,5 +1,8 @@
 # 💫 About Me:
-I'm Stanislav Kinash, a Middle Frontend Engineer focused on Vue.js.<br>👋 Hey, I am a hardworking individual with excellent communication skills, who thrives on continuous learning and development. My primary focus lies in Frontend development, particularly in JavaScript and the Vue framework. I am passionate about leveraging these skills to create innovative and user-friendly web applications.<br><br>🛠️ Key Skills: JavaScript • Vue.js • Nuxt.js • React.js • Next.js • HTML • CSS<br><br>📚 My Courses: <a href="https://itvdn.com/ua/catalog/author/kinash-stanislav" target="_blank">ITVDN</a>
+
+## Stanislav Kinash - Middle Frontend Engineer (Vue.js)
+
+👋 Hey, I am a hardworking individual with excellent communication skills, who thrives on continuous learning and development. My primary focus lies in Frontend development, particularly in JavaScript and the Vue framework. I am passionate about leveraging these skills to create innovative and user-friendly web applications.<br><br>🛠️ Key Skills: JavaScript • Vue.js • Nuxt.js • React.js • Next.js • HTML • CSS<br><br>📚 My Courses: <a href="https://itvdn.com/ua/catalog/author/kinash-stanislav" target="_blank">ITVDN</a>
 
 ## 🌐 Socials:
 [![Behance](https://img.shields.io/badge/Behance-1769ff?logo=behance&logoColor=white)](https://behance.net/https://www.behance.net/neprostostas) [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/https://www.facebook.com/profile.php?id=100011158801705) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/neprostostas/) 
