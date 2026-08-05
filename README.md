@@ -13,12 +13,12 @@
 ## 🔥 My Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=neprostostas&show_icons=true&include_all_commits=true&count_private=true&theme=dracula&hide_border=false" height="165" alt="GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=neprostostas&layout=compact&langs_count=8&theme=dracula&hide_border=false" height="165" alt="Top languages" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/stats.svg" height="205" alt="GitHub stats" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/languages.svg" height="205" alt="Top languages" />
 </div>
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=neprostostas&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5" height="180" alt="GitHub streak" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/streak.svg" alt="GitHub contribution activity" />
 </div>
 
 ## 🐍 Contribution Snake
