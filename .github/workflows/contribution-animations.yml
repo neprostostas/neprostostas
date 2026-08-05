@@ -42,6 +42,7 @@ jobs:
 
           const username = process.env.USERNAME;
           const token = process.env.GITHUB_TOKEN;
+
           const headers = {
             Accept: 'application/vnd.github+json',
             Authorization: `Bearer ${token}`,
@@ -49,17 +50,22 @@ jobs:
             'User-Agent': 'profile-readme-generator'
           };
 
-          const palette = {
-            bg: '#282a36',
-            border: '#6272a4',
-            text: '#f8f8f2',
-            muted: '#b6b9c9',
-            pink: '#ff79c6',
-            purple: '#bd93f9',
-            cyan: '#8be9fd',
-            green: '#50fa7b',
-            orange: '#ffb86c',
-            yellow: '#f1fa8c'
+          const ui = {
+            bgTop: '#15171c',
+            bgBottom: '#090a0d',
+            surface: '#1c1e24',
+            surfaceStrong: '#22252d',
+            border: '#343741',
+            text: '#f5f5f7',
+            muted: '#98989f',
+            subtle: '#63636a',
+            blue: '#0a84ff',
+            purple: '#bf5af2',
+            pink: '#ff375f',
+            cyan: '#64d2ff',
+            green: '#30d158',
+            orange: '#ff9f0a',
+            yellow: '#ffd60a'
           };
 
           const escapeXml = (value) => String(value)
@@ -69,37 +75,50 @@ jobs:
             .replaceAll('"', '&quot;')
             .replaceAll("'", '&apos;');
 
-          const formatNumber = (value) => new Intl.NumberFormat('en-US').format(value || 0);
+          const formatNumber = (value) => new Intl.NumberFormat('en-US').format(Number(value || 0));
 
           async function github(url, options = {}) {
-            const response = await fetch(url, { ...options, headers: { ...headers, ...(options.headers || {}) } });
+            const response = await fetch(url, {
+              ...options,
+              headers: { ...headers, ...(options.headers || {}) }
+            });
+
             if (!response.ok) {
               throw new Error(`${response.status} ${response.statusText}: ${await response.text()}`);
             }
+
             return response.json();
           }
 
           async function getRepositories() {
             const repositories = [];
+
             for (let page = 1; page <= 10; page += 1) {
-              const batch = await github(`https://api.github.com/users/${username}/repos?type=owner&sort=updated&per_page=100&page=${page}`);
+              const batch = await github(
+                `https://api.github.com/users/${username}/repos?type=owner&sort=updated&per_page=100&page=${page}`
+              );
+
               repositories.push(...batch);
               if (batch.length < 100) break;
             }
+
             return repositories.filter((repo) => !repo.fork && !repo.archived);
           }
 
           async function getLanguageTotals(repositories) {
             const totals = {};
+
             for (let index = 0; index < repositories.length; index += 10) {
               const batch = repositories.slice(index, index + 10);
-              const results = await Promise.all(batch.map(async (repo) => {
-                try {
-                  return await github(repo.languages_url);
-                } catch {
-                  return {};
-                }
-              }));
+              const results = await Promise.all(
+                batch.map(async (repo) => {
+                  try {
+                    return await github(repo.languages_url);
+                  } catch {
+                    return {};
+                  }
+                })
+              );
 
               for (const languages of results) {
                 for (const [language, bytes] of Object.entries(languages)) {
@@ -107,6 +126,7 @@ jobs:
                 }
               }
             }
+
             return totals;
           }
 
@@ -151,7 +171,10 @@ jobs:
               })
             });
 
-            if (result.errors?.length) throw new Error(result.errors.map((error) => error.message).join('; '));
+            if (result.errors?.length) {
+              throw new Error(result.errors.map((error) => error.message).join('; '));
+            }
+
             return result.data.user.contributionsCollection;
           }
 
@@ -181,85 +204,192 @@ jobs:
             return { current, longest };
           }
 
-          function wrapSvg(width, height, title, content) {
+          function commonDefs(extra = '') {
+            return `
+              <defs>
+                <linearGradient id="card-bg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="${ui.bgTop}"/>
+                  <stop offset="100%" stop-color="${ui.bgBottom}"/>
+                </linearGradient>
+                <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="${ui.blue}"/>
+                  <stop offset="52%" stop-color="${ui.purple}"/>
+                  <stop offset="100%" stop-color="${ui.pink}"/>
+                </linearGradient>
+                <radialGradient id="blue-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(82 26) rotate(35) scale(205 130)">
+                  <stop stop-color="${ui.blue}" stop-opacity="0.20"/>
+                  <stop offset="1" stop-color="${ui.blue}" stop-opacity="0"/>
+                </radialGradient>
+                <radialGradient id="purple-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(412 220) rotate(-140) scale(210 150)">
+                  <stop stop-color="${ui.purple}" stop-opacity="0.17"/>
+                  <stop offset="1" stop-color="${ui.purple}" stop-opacity="0"/>
+                </radialGradient>
+                <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="160%">
+                  <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.32"/>
+                </filter>
+                ${extra}
+                <style>
+                  text {
+                    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+                    text-rendering: geometricPrecision;
+                  }
+                  .heading { font-size: 21px; font-weight: 700; fill: ${ui.text}; letter-spacing: -0.35px; }
+                  .caption { font-size: 10.5px; font-weight: 500; fill: ${ui.muted}; }
+                  .metric-label { font-size: 10px; font-weight: 500; fill: ${ui.muted}; }
+                  .metric-value { font-size: 21px; font-weight: 720; fill: ${ui.text}; letter-spacing: -0.55px; }
+                </style>
+              </defs>`;
+          }
+
+          function cardShell(width, height, title, subtitle, body, extraDefs = '') {
             return `<?xml version="1.0" encoding="UTF-8"?>
-            <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeXml(title)}">
-              <rect x="1" y="1" width="${width - 2}" height="${height - 2}" rx="10" fill="${palette.bg}" stroke="${palette.border}" stroke-width="2"/>
-              <style>
-                text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; }
-                .title { font-size: 20px; font-weight: 700; fill: ${palette.pink}; }
-                .label { font-size: 13px; fill: ${palette.muted}; }
-                .value { font-size: 22px; font-weight: 700; fill: ${palette.text}; }
-              </style>
-              <text x="24" y="34" class="title">${escapeXml(title)}</text>
-              ${content}
-            </svg>`;
+              <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeXml(title)}">
+                ${commonDefs(extraDefs)}
+                <rect x="7" y="9" width="${width - 14}" height="${height - 16}" rx="24" fill="#000000" opacity="0.24" filter="url(#soft-shadow)"/>
+                <rect x="1" y="1" width="${width - 2}" height="${height - 2}" rx="23" fill="url(#card-bg)" stroke="${ui.border}" stroke-width="1.25"/>
+                <rect x="1" y="1" width="${width - 2}" height="${height - 2}" rx="23" fill="url(#blue-glow)"/>
+                <rect x="1" y="1" width="${width - 2}" height="${height - 2}" rx="23" fill="url(#purple-glow)"/>
+                <path d="M24 1 H${width - 24}" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+                <text x="22" y="34" class="heading">${escapeXml(title)}</text>
+                <text x="22" y="53" class="caption">${escapeXml(subtitle)}</text>
+                ${body}
+              </svg>`;
+          }
+
+          function metricTile(x, y, width, label, value, accentColor) {
+            return `
+              <g>
+                <rect x="${x}" y="${y}" width="${width}" height="43" rx="13" fill="${ui.surface}" fill-opacity="0.78" stroke="#ffffff" stroke-opacity="0.075"/>
+                <rect x="${x + 10}" y="${y + 10}" width="3" height="23" rx="1.5" fill="${accentColor}"/>
+                <text x="${x + 21}" y="${y + 16}" class="metric-label">${escapeXml(label)}</text>
+                <text x="${x + 21}" y="${y + 35}" class="metric-value">${formatNumber(value)}</text>
+              </g>`;
           }
 
           function generateStatsCard(profile, repositories, contributions) {
-            const stars = repositories.reduce((sum, repo) => sum + repo.stargazers_count, 0);
-            const commits = contributions?.totalCommitContributions || 0;
-            const totalContributions = contributions?.contributionCalendar?.totalContributions || 0;
+            const stars = repositories.reduce((sum, repo) => sum + (repo.stargazers_count || 0), 0);
             const values = [
-              ['Public repositories', profile.public_repos],
-              ['Total stars earned', stars],
-              ['Followers', profile.followers],
-              ['Following', profile.following],
-              ['Contributions · 1 year', totalContributions],
-              ['Commits · 1 year', commits]
+              ['Repositories', profile.public_repos, ui.blue],
+              ['Stars earned', stars, ui.yellow],
+              ['Followers', profile.followers, ui.cyan],
+              ['Contributions', contributions?.contributionCalendar?.totalContributions || 0, ui.purple],
+              ['Commits', contributions?.totalCommitContributions || 0, ui.green],
+              ['Pull requests', contributions?.totalPullRequestContributions || 0, ui.pink]
             ];
 
-            const content = values.map(([label, value], index) => {
+            const tiles = values.map(([label, value, color], index) => {
               const column = index % 2;
               const row = Math.floor(index / 2);
-              const x = 28 + column * 232;
-              const y = 72 + row * 43;
-              return `<text x="${x}" y="${y}" class="label">${escapeXml(label)}</text>
-                      <text x="${x}" y="${y + 23}" class="value">${formatNumber(value)}</text>`;
-            }).join('\n');
+              return metricTile(22 + column * 198, 69 + row * 50, 188, label, value, color);
+            }).join('');
 
-            return wrapSvg(480, 205, `${profile.name || profile.login}'s GitHub Stats`, content);
+            const livePill = `
+              <g>
+                <rect x="351" y="20" width="57" height="21" rx="10.5" fill="${ui.green}" fill-opacity="0.11" stroke="${ui.green}" stroke-opacity="0.28"/>
+                <circle cx="363" cy="30.5" r="3" fill="${ui.green}"/>
+                <text x="371" y="34" style="font-size:9px;font-weight:700;fill:${ui.green};letter-spacing:0.6px">LIVE</text>
+              </g>`;
+
+            return cardShell(
+              430,
+              230,
+              'GitHub Overview',
+              `@${profile.login} · updated automatically`,
+              `${livePill}${tiles}`
+            );
           }
 
           function generateLanguagesCard(languageTotals) {
-            const colors = [palette.pink, palette.purple, palette.cyan, palette.green, palette.orange, palette.yellow];
-            const entries = Object.entries(languageTotals).sort((a, b) => b[1] - a[1]).slice(0, 6);
+            const colors = [ui.blue, ui.purple, ui.pink, ui.cyan, ui.green, ui.orange];
+            const entries = Object.entries(languageTotals)
+              .sort((a, b) => b[1] - a[1])
+              .slice(0, 6);
             const total = entries.reduce((sum, [, bytes]) => sum + bytes, 0) || 1;
+            const barX = 22;
+            const barY = 73;
+            const barWidth = 386;
+            const gap = 2;
+            const usableWidth = barWidth - Math.max(entries.length - 1, 0) * gap;
+            let cursor = barX;
 
-            const content = entries.map(([language, bytes], index) => {
+            const segments = entries.map(([, bytes], index) => {
+              const percent = bytes / total;
+              const width = index === entries.length - 1
+                ? Math.max(3, barX + barWidth - cursor)
+                : Math.max(3, Math.round(usableWidth * percent));
+              const segment = `<rect x="${cursor}" y="${barY}" width="${width}" height="11" fill="${colors[index]}"/>`;
+              cursor += width + gap;
+              return segment;
+            }).join('');
+
+            const rows = entries.map(([language, bytes], index) => {
+              const column = index % 2;
+              const row = Math.floor(index / 2);
+              const x = 22 + column * 198;
+              const y = 111 + row * 36;
               const percent = bytes / total * 100;
-              const y = 61 + index * 23;
-              const width = Math.max(4, Math.round(percent * 2.25));
-              return `<circle cx="29" cy="${y - 4}" r="5" fill="${colors[index]}"/>
-                      <text x="42" y="${y}" class="label" style="fill:${palette.text}">${escapeXml(language)}</text>
-                      <text x="438" y="${y}" text-anchor="end" class="label">${percent.toFixed(1)}%</text>
-                      <rect x="205" y="${y - 11}" width="225" height="7" rx="3.5" fill="#44475a"/>
-                      <rect x="205" y="${y - 11}" width="${width}" height="7" rx="3.5" fill="${colors[index]}"/>`;
-            }).join('\n');
 
-            return wrapSvg(480, 205, 'Most Used Languages', content || `<text x="24" y="80" class="label">No language data available</text>`);
+              return `
+                <g>
+                  <rect x="${x}" y="${y - 16}" width="188" height="29" rx="10" fill="${ui.surface}" fill-opacity="0.66" stroke="#ffffff" stroke-opacity="0.06"/>
+                  <circle cx="${x + 13}" cy="${y - 1}" r="4" fill="${colors[index]}"/>
+                  <text x="${x + 24}" y="${y + 3}" style="font-size:11px;font-weight:620;fill:${ui.text}">${escapeXml(language)}</text>
+                  <text x="${x + 176}" y="${y + 3}" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:${ui.muted}">${percent.toFixed(1)}%</text>
+                </g>`;
+            }).join('');
+
+            const extraDefs = `
+              <clipPath id="language-bar-clip">
+                <rect x="${barX}" y="${barY}" width="${barWidth}" height="11" rx="5.5"/>
+              </clipPath>`;
+
+            const body = entries.length
+              ? `
+                <rect x="${barX}" y="${barY}" width="${barWidth}" height="11" rx="5.5" fill="${ui.surfaceStrong}"/>
+                <g clip-path="url(#language-bar-clip)">${segments}</g>
+                ${rows}`
+              : `<text x="22" y="92" class="caption">No language data available</text>`;
+
+            return cardShell(
+              430,
+              230,
+              'Languages',
+              'Share of code across public repositories',
+              body,
+              extraDefs
+            );
+          }
+
+          function activityTile(x, value, label, suffix, color) {
+            return `
+              <g>
+                <rect x="${x}" y="76" width="266" height="121" rx="18" fill="${ui.surface}" fill-opacity="0.73" stroke="#ffffff" stroke-opacity="0.07"/>
+                <circle cx="${x + 29}" cy="104" r="12" fill="${color}" fill-opacity="0.12" stroke="${color}" stroke-opacity="0.3"/>
+                <circle cx="${x + 29}" cy="104" r="4" fill="${color}"/>
+                <text x="${x + 50}" y="108" style="font-size:11px;font-weight:600;fill:${ui.muted}">${escapeXml(label)}</text>
+                <text x="${x + 22}" y="159" style="font-size:38px;font-weight:750;fill:${ui.text};letter-spacing:-1px">${formatNumber(value)}</text>
+                <text x="${x + 22}" y="181" style="font-size:10.5px;font-weight:500;fill:${ui.muted}">${escapeXml(suffix)}</text>
+              </g>`;
           }
 
           function generateStreakCard(contributions) {
             const days = contributions?.contributionCalendar?.weeks?.flatMap((week) => week.contributionDays) || [];
             const streaks = calculateStreaks(days);
             const total = contributions?.contributionCalendar?.totalContributions || 0;
-            const items = [
-              [streaks.current, 'Current streak', 'days'],
-              [total, 'Contributions', 'last 365 days'],
-              [streaks.longest, 'Longest streak', 'days']
-            ];
+            const activeDays = days.filter((day) => day.contributionCount > 0).length;
 
-            const content = items.map(([value, label, suffix], index) => {
-              const center = 160 + index * 320;
-              const divider = index < 2 ? `<line x1="${320 + index * 320}" y1="58" x2="${320 + index * 320}" y2="172" stroke="#44475a"/>` : '';
-              return `<text x="${center}" y="104" text-anchor="middle" style="font-size:38px;font-weight:700;fill:${index === 1 ? palette.pink : palette.text}">${formatNumber(value)}</text>
-                      <text x="${center}" y="135" text-anchor="middle" class="label" style="font-size:15px;fill:${palette.text}">${escapeXml(label)}</text>
-                      <text x="${center}" y="158" text-anchor="middle" class="label">${escapeXml(suffix)}</text>
-                      ${divider}`;
-            }).join('\n');
+            const body = `
+              ${activityTile(22, streaks.current, 'Current streak', 'consecutive active days', ui.blue)}
+              ${activityTile(307, total, 'Contributions', 'during the last 365 days', ui.purple)}
+              ${activityTile(592, streaks.longest, 'Longest streak', `${formatNumber(activeDays)} active days this year`, ui.pink)}`;
 
-            return wrapSvg(960, 195, 'Contribution Activity', content);
+            return cardShell(
+              880,
+              220,
+              'Contribution Activity',
+              'Live overview of your GitHub consistency',
+              body
+            );
           }
 
           (async () => {
