@@ -1,4 +1,4 @@
-name: Generate contribution animations
+name: Generate profile graphics
 
 on:
   schedule:
@@ -30,6 +30,258 @@ jobs:
           outputs: |
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
+
+      - name: Generate statistics cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+        run: |
+          mkdir -p dist
+          node <<'NODE'
+          const fs = require('fs');
+
+          const username = process.env.USERNAME;
+          const token = process.env.GITHUB_TOKEN;
+          const headers = {
+            Accept: 'application/vnd.github+json',
+            Authorization: `Bearer ${token}`,
+            'X-GitHub-Api-Version': '2022-11-28',
+            'User-Agent': 'profile-readme-generator'
+          };
+
+          const palette = {
+            bg: '#282a36',
+            border: '#6272a4',
+            text: '#f8f8f2',
+            muted: '#b6b9c9',
+            pink: '#ff79c6',
+            purple: '#bd93f9',
+            cyan: '#8be9fd',
+            green: '#50fa7b',
+            orange: '#ffb86c',
+            yellow: '#f1fa8c'
+          };
+
+          const escapeXml = (value) => String(value)
+            .replaceAll('&', '&amp;')
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;')
+            .replaceAll('"', '&quot;')
+            .replaceAll("'", '&apos;');
+
+          const formatNumber = (value) => new Intl.NumberFormat('en-US').format(value || 0);
+
+          async function github(url, options = {}) {
+            const response = await fetch(url, { ...options, headers: { ...headers, ...(options.headers || {}) } });
+            if (!response.ok) {
+              throw new Error(`${response.status} ${response.statusText}: ${await response.text()}`);
+            }
+            return response.json();
+          }
+
+          async function getRepositories() {
+            const repositories = [];
+            for (let page = 1; page <= 10; page += 1) {
+              const batch = await github(`https://api.github.com/users/${username}/repos?type=owner&sort=updated&per_page=100&page=${page}`);
+              repositories.push(...batch);
+              if (batch.length < 100) break;
+            }
+            return repositories.filter((repo) => !repo.fork && !repo.archived);
+          }
+
+          async function getLanguageTotals(repositories) {
+            const totals = {};
+            for (let index = 0; index < repositories.length; index += 10) {
+              const batch = repositories.slice(index, index + 10);
+              const results = await Promise.all(batch.map(async (repo) => {
+                try {
+                  return await github(repo.languages_url);
+                } catch {
+                  return {};
+                }
+              }));
+
+              for (const languages of results) {
+                for (const [language, bytes] of Object.entries(languages)) {
+                  totals[language] = (totals[language] || 0) + bytes;
+                }
+              }
+            }
+            return totals;
+          }
+
+          async function getContributions() {
+            const to = new Date();
+            const from = new Date(to);
+            from.setUTCFullYear(from.getUTCFullYear() - 1);
+
+            const query = `
+              query($login: String!, $from: DateTime!, $to: DateTime!) {
+                user(login: $login) {
+                  contributionsCollection(from: $from, to: $to) {
+                    totalCommitContributions
+                    totalIssueContributions
+                    totalPullRequestContributions
+                    totalPullRequestReviewContributions
+                    restrictedContributionsCount
+                    contributionCalendar {
+                      totalContributions
+                      weeks {
+                        contributionDays {
+                          date
+                          contributionCount
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `;
+
+            const result = await github('https://api.github.com/graphql', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                query,
+                variables: {
+                  login: username,
+                  from: from.toISOString(),
+                  to: to.toISOString()
+                }
+              })
+            });
+
+            if (result.errors?.length) throw new Error(result.errors.map((error) => error.message).join('; '));
+            return result.data.user.contributionsCollection;
+          }
+
+          function calculateStreaks(days) {
+            const sorted = [...days].sort((a, b) => a.date.localeCompare(b.date));
+            let longest = 0;
+            let running = 0;
+
+            for (const day of sorted) {
+              if (day.contributionCount > 0) {
+                running += 1;
+                longest = Math.max(longest, running);
+              } else {
+                running = 0;
+              }
+            }
+
+            let pointer = sorted.length - 1;
+            if (pointer >= 0 && sorted[pointer].contributionCount === 0) pointer -= 1;
+
+            let current = 0;
+            while (pointer >= 0 && sorted[pointer].contributionCount > 0) {
+              current += 1;
+              pointer -= 1;
+            }
+
+            return { current, longest };
+          }
+
+          function wrapSvg(width, height, title, content) {
+            return `<?xml version="1.0" encoding="UTF-8"?>
+            <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeXml(title)}">
+              <rect x="1" y="1" width="${width - 2}" height="${height - 2}" rx="10" fill="${palette.bg}" stroke="${palette.border}" stroke-width="2"/>
+              <style>
+                text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; }
+                .title { font-size: 20px; font-weight: 700; fill: ${palette.pink}; }
+                .label { font-size: 13px; fill: ${palette.muted}; }
+                .value { font-size: 22px; font-weight: 700; fill: ${palette.text}; }
+              </style>
+              <text x="24" y="34" class="title">${escapeXml(title)}</text>
+              ${content}
+            </svg>`;
+          }
+
+          function generateStatsCard(profile, repositories, contributions) {
+            const stars = repositories.reduce((sum, repo) => sum + repo.stargazers_count, 0);
+            const commits = contributions?.totalCommitContributions || 0;
+            const totalContributions = contributions?.contributionCalendar?.totalContributions || 0;
+            const values = [
+              ['Public repositories', profile.public_repos],
+              ['Total stars earned', stars],
+              ['Followers', profile.followers],
+              ['Following', profile.following],
+              ['Contributions · 1 year', totalContributions],
+              ['Commits · 1 year', commits]
+            ];
+
+            const content = values.map(([label, value], index) => {
+              const column = index % 2;
+              const row = Math.floor(index / 2);
+              const x = 28 + column * 232;
+              const y = 72 + row * 43;
+              return `<text x="${x}" y="${y}" class="label">${escapeXml(label)}</text>
+                      <text x="${x}" y="${y + 23}" class="value">${formatNumber(value)}</text>`;
+            }).join('\n');
+
+            return wrapSvg(480, 205, `${profile.name || profile.login}'s GitHub Stats`, content);
+          }
+
+          function generateLanguagesCard(languageTotals) {
+            const colors = [palette.pink, palette.purple, palette.cyan, palette.green, palette.orange, palette.yellow];
+            const entries = Object.entries(languageTotals).sort((a, b) => b[1] - a[1]).slice(0, 6);
+            const total = entries.reduce((sum, [, bytes]) => sum + bytes, 0) || 1;
+
+            const content = entries.map(([language, bytes], index) => {
+              const percent = bytes / total * 100;
+              const y = 61 + index * 23;
+              const width = Math.max(4, Math.round(percent * 2.25));
+              return `<circle cx="29" cy="${y - 4}" r="5" fill="${colors[index]}"/>
+                      <text x="42" y="${y}" class="label" style="fill:${palette.text}">${escapeXml(language)}</text>
+                      <text x="438" y="${y}" text-anchor="end" class="label">${percent.toFixed(1)}%</text>
+                      <rect x="205" y="${y - 11}" width="225" height="7" rx="3.5" fill="#44475a"/>
+                      <rect x="205" y="${y - 11}" width="${width}" height="7" rx="3.5" fill="${colors[index]}"/>`;
+            }).join('\n');
+
+            return wrapSvg(480, 205, 'Most Used Languages', content || `<text x="24" y="80" class="label">No language data available</text>`);
+          }
+
+          function generateStreakCard(contributions) {
+            const days = contributions?.contributionCalendar?.weeks?.flatMap((week) => week.contributionDays) || [];
+            const streaks = calculateStreaks(days);
+            const total = contributions?.contributionCalendar?.totalContributions || 0;
+            const items = [
+              [streaks.current, 'Current streak', 'days'],
+              [total, 'Contributions', 'last 365 days'],
+              [streaks.longest, 'Longest streak', 'days']
+            ];
+
+            const content = items.map(([value, label, suffix], index) => {
+              const center = 160 + index * 320;
+              const divider = index < 2 ? `<line x1="${320 + index * 320}" y1="58" x2="${320 + index * 320}" y2="172" stroke="#44475a"/>` : '';
+              return `<text x="${center}" y="104" text-anchor="middle" style="font-size:38px;font-weight:700;fill:${index === 1 ? palette.pink : palette.text}">${formatNumber(value)}</text>
+                      <text x="${center}" y="135" text-anchor="middle" class="label" style="font-size:15px;fill:${palette.text}">${escapeXml(label)}</text>
+                      <text x="${center}" y="158" text-anchor="middle" class="label">${escapeXml(suffix)}</text>
+                      ${divider}`;
+            }).join('\n');
+
+            return wrapSvg(960, 195, 'Contribution Activity', content);
+          }
+
+          (async () => {
+            const profile = await github(`https://api.github.com/users/${username}`);
+            const repositories = await getRepositories();
+            const languageTotals = await getLanguageTotals(repositories);
+
+            let contributions = null;
+            try {
+              contributions = await getContributions();
+            } catch (error) {
+              console.warn(`Could not retrieve contribution calendar: ${error.message}`);
+            }
+
+            fs.writeFileSync('dist/stats.svg', generateStatsCard(profile, repositories, contributions));
+            fs.writeFileSync('dist/languages.svg', generateLanguagesCard(languageTotals));
+            fs.writeFileSync('dist/streak.svg', generateStreakCard(contributions));
+          })().catch((error) => {
+            console.error(error);
+            process.exit(1);
+          });
+          NODE
 
       - name: Push generated SVGs to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
