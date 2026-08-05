@@ -13,12 +13,9 @@
 ## 🔥 My Stats
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/stats.svg" width="49%" alt="GitHub stats" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/languages.svg" width="49%" alt="Top languages" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/stats.svg" width="49.5%" alt="GitHub stats" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/languages.svg" width="49.5%" alt="Top languages" />
 </p>
-
-<br>
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/streak.svg" width="100%" alt="GitHub contribution activity" />
 </p>
