@@ -12,14 +12,16 @@
 
 ## 🔥 My Stats
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/stats.svg" height="205" alt="GitHub stats" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/languages.svg" height="205" alt="Top languages" />
-</div>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/stats.svg" width="49%" alt="GitHub stats" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/languages.svg" width="49%" alt="Top languages" />
+</p>
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/streak.svg" alt="GitHub contribution activity" />
-</div>
+<br>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/streak.svg" width="100%" alt="GitHub contribution activity" />
+</p>
 
 ## 🐍 Contribution Snake
 
