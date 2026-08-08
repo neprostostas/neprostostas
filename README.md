@@ -43,3 +43,9 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/neprostostas/neprostostas/output/pacman-contribution-graph.svg" />
   <img alt="Pac-Man contribution graph" src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/pacman-contribution-graph.svg" />
 </picture>
+
+## ✍️ Random Dev Quote
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/quote-output/dev-quote.svg" width="100%" alt="Random developer quote" />
+</p>
