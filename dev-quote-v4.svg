@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="180" viewBox="0 0 920 180" role="img" aria-label="Random developer quote">
+  <defs>
+    <linearGradient id="card-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#15171c"/>
+      <stop offset="100%" stop-color="#090a0d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0a84ff"/>
+      <stop offset="52%" stop-color="#bf5af2"/>
+      <stop offset="100%" stop-color="#ff375f"/>
+    </linearGradient>
+    <radialGradient id="blue-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(90 22) rotate(35) scale(260 140)">
+      <stop stop-color="#0a84ff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#0a84ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="purple-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(830 180) rotate(-140) scale(250 150)">
+      <stop stop-color="#bf5af2" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#bf5af2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.32"/>
+    </filter>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif; text-rendering: geometricPrecision; }
+      .eyebrow { font-size: 10px; font-weight: 800; fill: #64d2ff; letter-spacing: 1.6px; }
+      .sub { font-size: 10px; font-weight: 500; fill: #98989f; }
+      .quote { font-size: 22px; font-weight: 680; fill: #f5f5f7; letter-spacing: -0.35px; }
+      .author { font-size: 14px; font-weight: 600; fill: #a7a7b0; }
+    </style>
+  </defs>
+
+  <rect x="7" y="9" width="906" height="164" rx="24" fill="#000" opacity="0.24" filter="url(#shadow)"/>
+  <rect x="1" y="1" width="918" height="178" rx="23" fill="url(#card-bg)" stroke="#343741" stroke-width="1.25"/>
+  <rect x="1" y="1" width="918" height="178" rx="23" fill="url(#blue-glow)"/>
+  <rect x="1" y="1" width="918" height="178" rx="23" fill="url(#purple-glow)"/>
+  <path d="M24 1 H896" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+
+  <text x="72" y="38" class="eyebrow">DAILY DEV QUOTE</text>
+  <text x="72" y="54" class="sub">A little signal between the commits.</text>
+
+  <g fill="#bf5af2" opacity="0.22">
+    <path d="M758 58 H794 L783 124 H742 Z"/>
+    <path d="M808 58 H844 L833 124 H792 Z"/>
+  </g>
+
+  <text x="72" y="91" class="quote">Code is like humor. When you have to explain it, it</text>
+<text x="72" y="119" class="quote">is bad.</text>
+
+  <g transform="translate(72 146)">
+    <rect x="0" y="-14" width="5" height="20" rx="2.5" fill="#bf5af2"/>
+    <text x="16" y="0" class="author">— Cory House</text>
+  </g>
+</svg>
