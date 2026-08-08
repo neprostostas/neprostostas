@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="55" viewBox="0 0 900 55" role="img" aria-label="Typing animation" style="background-color:transparent">
+  <defs>
+    <linearGradient id="textGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8FA7E8"/>
+      <stop offset="48%" stop-color="#A98BE8"/>
+      <stop offset="100%" stop-color="#C39BEF"/>
+      <animate attributeName="x1" values="0;0.15;0" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;0.85;1" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <mask id="m0">
+      <rect x="0" y="0" width="0" height="55" fill="white">
+        <animate id="a0" attributeName="width" values="0;900;900;0" keyTimes="0;0.66;0.88;1" dur="6s" begin="0s;a3.end"/>
+      </rect>
+    </mask>
+
+    <mask id="m1">
+      <rect x="0" y="0" width="0" height="55" fill="white">
+        <animate id="a1" attributeName="width" values="0;900;900;0" keyTimes="0;0.66;0.88;1" dur="6s" begin="a0.end"/>
+      </rect>
+    </mask>
+
+    <mask id="m2">
+      <rect x="0" y="0" width="0" height="55" fill="white">
+        <animate id="a2" attributeName="width" values="0;900;900;0" keyTimes="0;0.66;0.88;1" dur="6s" begin="a1.end"/>
+      </rect>
+    </mask>
+
+    <mask id="m3">
+      <rect x="0" y="0" width="0" height="55" fill="white">
+        <animate id="a3" attributeName="width" values="0;900;900;0" keyTimes="0;0.66;0.88;1" dur="6s" begin="a2.end"/>
+      </rect>
+    </mask>
+  </defs>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="600" fill="url(#textGradient)" text-anchor="middle">
+    <text x="450" y="34" mask="url(#m0)">Building interactive web experiences 🚀</text>
+    <text x="450" y="34" mask="url(#m1)">Vue • Nuxt • React • Next.js</text>
+    <text x="450" y="34" mask="url(#m2)">PixiJS • WebGL • GSAP • Spine</text>
+    <text x="450" y="34" mask="url(#m3)">Crafting smooth interfaces &amp; animations ✨</text>
+  </g>
+</svg>
