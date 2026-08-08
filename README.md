@@ -47,5 +47,5 @@
 ## ✍️ Random Dev Quote
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/quote-output/dev-quote-v3.svg" width="100%" alt="Random developer quote" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/quote-output/dev-quote-v2.svg" width="100%" alt="Random developer quote" />
 </p>
