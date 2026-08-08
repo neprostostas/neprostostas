@@ -48,13 +48,14 @@ jobs:
             .replaceAll('"', '&quot;')
             .replaceAll("'", '&apos;');
 
-          function wrap(text, max = 48) {
+          function wrap(text, max = 52) {
             const words = text.split(/\s+/);
             const lines = [];
             let current = '';
 
             for (const word of words) {
               const candidate = current ? `${current} ${word}` : word;
+
               if (candidate.length > max && current) {
                 lines.push(current);
                 current = word;
@@ -64,20 +65,27 @@ jobs:
             }
 
             if (current) lines.push(current);
+
             return lines.slice(0, 3);
           }
 
           const lines = wrap(quote.text);
 
-          let firstY = 88;
-          if (lines.length === 2) firstY = 82;
-          if (lines.length === 3) firstY = 74;
+          const firstY =
+            lines.length === 1 ? 102 :
+            lines.length === 2 ? 91 :
+            80;
 
           const lineHeight = 28;
 
           const quoteLines = lines.map((line, index) =>
-            `<text x="150" y="${firstY + index * lineHeight}" class="quote">${escapeXml(line)}</text>`
+            `<text x="72" y="${firstY + index * lineHeight}" class="quote">${escapeXml(line)}</text>`
           ).join('\n');
+
+          const authorY =
+            lines.length === 1 ? 137 :
+            lines.length === 2 ? 146 :
+            154;
 
           const svg = `<?xml version="1.0" encoding="UTF-8"?>
           <svg xmlns="http://www.w3.org/2000/svg" width="920" height="180" viewBox="0 0 920 180" role="img" aria-label="Random developer quote">
@@ -112,23 +120,27 @@ jobs:
                   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
                   text-rendering: geometricPrecision;
                 }
+
                 .eyebrow {
-                  font-size: 12px;
+                  font-size: 10px;
                   font-weight: 800;
                   fill: #64d2ff;
-                  letter-spacing: 2px;
+                  letter-spacing: 1.6px;
                 }
+
                 .sub {
-                  font-size: 12px;
+                  font-size: 10px;
                   font-weight: 500;
                   fill: #98989f;
                 }
+
                 .quote {
                   font-size: 22px;
                   font-weight: 680;
                   fill: #f5f5f7;
                   letter-spacing: -0.35px;
                 }
+
                 .author {
                   font-size: 14px;
                   font-weight: 600;
@@ -143,15 +155,12 @@ jobs:
             <rect x="1" y="1" width="918" height="178" rx="23" fill="url(#purple-glow)"/>
             <path d="M24 1 H896" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
 
-            <circle cx="74" cy="54" r="22" fill="#0a84ff" fill-opacity="0.12" stroke="#0a84ff" stroke-opacity="0.30"/>
-            <text x="74" y="54" text-anchor="middle" dominant-baseline="middle" style="font-size:28px;font-weight:900;fill:#64d2ff">“</text>
-
-            <text x="150" y="43" class="eyebrow">DAILY DEV QUOTE</text>
-            <text x="150" y="62" class="sub">A little signal between the commits.</text>
+            <text x="72" y="38" class="eyebrow">DAILY DEV QUOTE</text>
+            <text x="72" y="54" class="sub">A little signal between the commits.</text>
 
             ${quoteLines}
 
-            <g transform="translate(150 136)">
+            <g transform="translate(72 ${authorY})">
               <rect x="0" y="-14" width="5" height="20" rx="2.5" fill="#bf5af2"/>
               <text x="16" y="0" class="author">— ${escapeXml(quote.author)}</text>
             </g>
