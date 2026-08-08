@@ -4,11 +4,85 @@
 
 👋 Hey, I am a hardworking individual with excellent communication skills, who thrives on continuous learning and development. My primary focus lies in Frontend development, particularly in JavaScript and the Vue framework. I am passionate about leveraging these skills to create innovative and user-friendly web applications.<br><br>🛠️ Key Skills: JavaScript • Vue.js • Nuxt.js • React.js • Next.js • HTML • CSS<br><br>📚 My Courses: <a href="https://itvdn.com/ua/catalog/author/kinash-stanislav" target="_blank">ITVDN</a>
 
-## 🌐 Socials:
-[![Behance](https://img.shields.io/badge/Behance-1769ff?logo=behance&logoColor=white)](https://www.behance.net/neprostostas) [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://www.facebook.com/profile.php?id=100011158801705) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/neprostostas/)
+<h3 align="center">Connect with me:</h3>
 
-## 💻 Tech Stack:
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=%2300C7B7) ![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white) ![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white) ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) ![Gulp](https://img.shields.io/badge/GULP-%23CF4647.svg?style=for-the-badge&logo=gulp&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white) ![Nuxt JS](https://img.shields.io/badge/Nuxt-002E3B.svg?style=for-the-badge&logo=nuxt.js&logoColor=%2300DC82) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Pug](https://img.shields.io/badge/Pug-FFF?style=for-the-badge&logo=pug&logoColor=A86454) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![Vuetify](https://img.shields.io/badge/Vuetify-1867C0.svg?style=for-the-badge&logo=vuetify&logoColor=AEDDFF) ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Bitbucket](https://img.shields.io/badge/bitbucket-%230047B3.svg?style=for-the-badge&logo=bitbucket&logoColor=white) ![ESLint](https://img.shields.io/badge/ESLint-4B3263.svg?style=for-the-badge&logo=eslint&logoColor=white) ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=trello&logoColor=white)
+<div align="center">
+  <a href="https://www.linkedin.com/in/neprostostas/" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/main/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="LinkedIn" />
+  </a>
+  <a href="https://www.behance.net/neprostostas" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/main/src/assets/icons/social/behance/default.svg" width="52" height="40" alt="Behance" />
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=100011158801705" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/main/src/assets/icons/social/facebook/default.svg" width="52" height="40" alt="Facebook" />
+  </a>
+</div>
+
+---
+
+## 💻 Tech Stack
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=js" height="46" alt="JavaScript" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=ts" height="46" alt="TypeScript" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=html" height="46" alt="HTML" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=css" height="46" alt="CSS" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=sass" height="46" alt="Sass" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=tailwind" height="46" alt="Tailwind CSS" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=vue" height="46" alt="Vue.js" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=nuxtjs" height="46" alt="Nuxt.js" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=react" height="46" alt="React" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=nextjs" height="46" alt="Next.js" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=astro" height="46" alt="Astro" />
+  <br><br>
+  <img src="https://skillicons.dev/icons?i=vite" height="46" alt="Vite" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=webpack" height="46" alt="Webpack" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=jquery" height="46" alt="jQuery" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=npm" height="46" alt="npm" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=nodejs" height="46" alt="Node.js" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=threejs" height="46" alt="Three.js" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=firebase" height="46" alt="Firebase" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=git" height="46" alt="Git" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=github" height="46" alt="GitHub" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=gitlab" height="46" alt="GitLab" />
+</div>
+
+## 🛠️ IDEs & Other Tools
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=vscode" height="46" alt="VS Code" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=webstorm" height="46" alt="WebStorm" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=figma" height="46" alt="Figma" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=ps" height="46" alt="Adobe Photoshop" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=postman" height="46" alt="Postman" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=netlify" height="46" alt="Netlify" />
+  <img width="10" />
+  <img src="https://skillicons.dev/icons?i=vercel" height="46" alt="Vercel" />
+</div>
 
 ## 🔥 My Stats
 
