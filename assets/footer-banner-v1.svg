@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="170" viewBox="0 0 1200 170" role="img" aria-label="Thanks for visiting">
+  <defs>
+    <linearGradient id="waveMain" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2B1734"/>
+      <stop offset="48%" stop-color="#2B2A55"/>
+      <stop offset="100%" stop-color="#1F4F6B"/>
+    </linearGradient>
+    <linearGradient id="waveSoft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8F7CE8" stop-opacity="0.30"/>
+      <stop offset="52%" stop-color="#6E7ED8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#64D2FF" stop-opacity="0.16"/>
+    </linearGradient>
+    <style>
+      .page-bg { fill: #0d1117; }
+      .title {
+        font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: -0.6px;
+        fill: #f5f5f7;
+        text-anchor: middle;
+        text-rendering: geometricPrecision;
+      }
+      .fade { animation: fadeIn .9s ease-out both; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+      @media (prefers-color-scheme: light) { .page-bg { fill: #ffffff; } }
+    </style>
+  </defs>
+
+  <rect class="page-bg" width="1200" height="170"/>
+
+  <path fill="url(#waveSoft)" d="M0 52 C160 38 310 76 465 70 C620 64 755 32 920 43 C1035 50 1125 66 1200 74 L1200 170 L0 170 Z"/>
+  <path fill="url(#waveMain)" d="M0 70 C170 102 330 96 490 78 C650 60 790 62 930 70 C1040 76 1120 94 1200 102 L1200 170 L0 170 Z"/>
+  <path fill="#64D2FF" opacity="0.08" d="M0 92 C180 112 340 114 520 98 C710 82 850 72 1005 78 C1090 82 1155 90 1200 96 L1200 170 L0 170 Z"/>
+
+  <g class="fade">
+    <text x="600" y="66" class="title">Thanks for visiting! 👋</text>
+  </g>
+</svg>
