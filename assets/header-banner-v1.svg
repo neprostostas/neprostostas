@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="210" viewBox="0 0 1200 210" role="img" aria-label="Stanislav Kinash - Frontend Engineer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0B0F14"/>
+      <stop offset="45%" stop-color="#111827"/>
+      <stop offset="75%" stop-color="#1D1530"/>
+      <stop offset="100%" stop-color="#2B1734"/>
+    </linearGradient>
+    <style>
+      .page-bg { fill: #0d1117; }
+      .title, .subtitle {
+        font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
+        text-anchor: middle;
+        text-rendering: geometricPrecision;
+      }
+      .title { font-size: 66px; font-weight: 750; letter-spacing: -1.8px; fill: #f5f5f7; }
+      .subtitle { font-size: 25px; font-weight: 560; letter-spacing: -0.35px; fill: #64d2ff; }
+      .fade { animation: fadeIn .9s ease-out both; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+      @media (prefers-color-scheme: light) { .page-bg { fill: #ffffff; } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="210" fill="url(#bg)"/>
+  <path class="page-bg" d="M0 164 C180 148 320 171 485 161 C650 151 795 147 940 156 C1040 162 1125 175 1200 186 L1200 210 L0 210 Z"/>
+
+  <g class="fade">
+    <text x="600" y="90" class="title">STANISLAV KINASH</text>
+    <text x="600" y="130" class="subtitle">Frontend Engineer | Vue.js | React | PixiJS/WebGL</text>
+  </g>
+</svg>
