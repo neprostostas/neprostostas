@@ -158,6 +158,9 @@ jobs:
             <text x="72" y="38" class="eyebrow">DAILY DEV QUOTE</text>
             <text x="72" y="54" class="sub">A little signal between the commits.</text>
 
+            <!-- decorative right-side quote -->
+            <text x="810" y="106" text-anchor="middle" dominant-baseline="middle" style="font-size:92px;font-weight:800;fill:#ffffff;opacity:0.06">“</text>
+
             ${quoteLines}
 
             <g transform="translate(72 ${authorY})">
