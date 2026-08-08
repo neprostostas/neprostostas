@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <clipPath id="tile"><rect width="256" height="256" rx="60" ry="60"/></clipPath>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="256" height="256" fill="#242938"/>
+    <image href="https://esotericsoftware.com/files/branding/spine_badge.png" x="34" y="72" width="188" height="112" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+</svg>
