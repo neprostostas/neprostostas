@@ -17,18 +17,42 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - name: Generate trophy.svg
-        uses: Erik-Donath/github-profile-trophy@feature/generate-svg
-        with:
-          username: ${{ github.repository_owner }}
-          file: dist/trophy.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          theme: algolia
-          max-rows: 1
-          margin-width: 8
-          margin-height: 8
-          no-background: false
-          no-frame: false
+      - name: Download trophy.svg
+        env:
+          USERNAME: ${{ github.repository_owner }}
+        run: |
+          mkdir -p dist
+
+          endpoints=(
+            "https://github-profile-trophy.vercel.app"
+            "https://github-profile-trophy-liard-delta.vercel.app"
+            "https://github-profile-trophy-fork-two.vercel.app"
+            "https://github-profile-trophy-winning.vercel.app"
+            "https://trophy.ryglcloud.net"
+          )
+
+          success=false
+
+          for endpoint in "${endpoints[@]}"; do
+            url="${endpoint}/?username=${USERNAME}&theme=algolia&column=-1&row=1&margin-w=8&margin-h=8&no-bg=false&no-frame=false"
+            echo "Trying ${endpoint}..."
+
+            if curl --fail --location --silent --show-error --max-time 30 --retry 2 --retry-delay 2 "$url" -o dist/trophy.tmp.svg; then
+              if grep -q '<svg' dist/trophy.tmp.svg; then
+                mv dist/trophy.tmp.svg dist/trophy.svg
+                echo "Trophy generated successfully via ${endpoint}"
+                success=true
+                break
+              fi
+            fi
+          done
+
+          rm -f dist/trophy.tmp.svg
+
+          if [ "$success" != "true" ]; then
+            echo "All trophy endpoints failed"
+            exit 1
+          fi
 
       - name: Push trophy.svg to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
