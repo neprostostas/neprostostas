@@ -131,7 +131,7 @@ jobs:
             </g>
           </svg>`;
 
-          fs.writeFileSync('dist/dev-quote-v3.svg', svg);
+          fs.writeFileSync('dist/dev-quote-v2.svg', svg);
           NODE
 
       - name: Push quote SVG to output branch
