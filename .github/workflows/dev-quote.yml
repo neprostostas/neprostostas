@@ -118,9 +118,9 @@ jobs:
             <text x="72" y="38" class="eyebrow">DAILY DEV QUOTE</text>
             <text x="72" y="54" class="sub">A little signal between the commits.</text>
 
-            <g fill="#bf5af2" opacity="0.16">
-              <path d="M776 66 H804 L795 118 H768 Z"/>
-              <path d="M818 66 H846 L837 118 H810 Z"/>
+            <g fill="#bf5af2" opacity="0.22">
+              <path d="M758 58 H794 L783 124 H742 Z"/>
+              <path d="M808 58 H844 L833 124 H792 Z"/>
             </g>
 
             ${quoteLines}
