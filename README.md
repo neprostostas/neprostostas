@@ -6,9 +6,7 @@
 
 # 💫 About Me:
 
-## Stanislav Kinash - Frontend Engineer
-
-👋 Hey, I am a hardworking individual with excellent communication skills, who thrives on continuous learning and development. My primary focus lies in Frontend development, particularly in JavaScript and the Vue framework. I am passionate about leveraging these skills to create innovative and user-friendly web applications.<br><br>🛠️ Key Skills: JavaScript • Vue.js • Nuxt.js • React.js • Next.js • HTML • CSS<br><br>📚 My Courses: <a href="https://itvdn.com/ua/catalog/author/kinash-stanislav" target="_blank">ITVDN</a>
+👋 Hey, I am a hardworking individual with excellent communication skills, who thrives on continuous learning and development. My primary focus lies in Frontend development, particularly in JavaScript and the Vue framework. I am passionate about leveraging these skills to create innovative and user-friendly web applications.<br><br>📚 My Courses: <a href="https://itvdn.com/ua/catalog/author/kinash-stanislav" target="_blank">ITVDN</a>
 
 <h3 align="center">Connect with me:</h3>
 
