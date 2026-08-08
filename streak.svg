@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <svg xmlns="http://www.w3.org/2000/svg" width="920" height="230" viewBox="0 0 920 230" role="img" aria-label="Contribution Activity">
+      
+    <defs>
+      <linearGradient id="card-bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#15171c"/>
+        <stop offset="100%" stop-color="#090a0d"/>
+      </linearGradient>
+      <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#0a84ff"/>
+        <stop offset="52%" stop-color="#bf5af2"/>
+        <stop offset="100%" stop-color="#ff375f"/>
+      </linearGradient>
+      <radialGradient id="blue-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(82 26) rotate(35) scale(205 130)">
+        <stop stop-color="#0a84ff" stop-opacity="0.20"/>
+        <stop offset="1" stop-color="#0a84ff" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="purple-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(430 230) rotate(-140) scale(220 155)">
+        <stop stop-color="#bf5af2" stop-opacity="0.17"/>
+        <stop offset="1" stop-color="#bf5af2" stop-opacity="0"/>
+      </radialGradient>
+      <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="160%">
+        <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.32"/>
+      </filter>
+      
+      <style>
+        text {
+          font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+          text-rendering: geometricPrecision;
+        }
+        .heading { font-size: 21px; font-weight: 700; fill: #f5f5f7; letter-spacing: -0.35px; }
+        .caption { font-size: 10.5px; font-weight: 500; fill: #98989f; }
+        .metric-label { font-size: 10px; font-weight: 520; fill: #98989f; }
+        .metric-value { font-size: 22px; font-weight: 730; fill: #f5f5f7; letter-spacing: -0.55px; }
+      </style>
+    </defs>
+      <rect x="7" y="9" width="906" height="214" rx="24" fill="#000000" opacity="0.24" filter="url(#soft-shadow)"/>
+      <rect x="1" y="1" width="918" height="228" rx="23" fill="url(#card-bg)" stroke="#343741" stroke-width="1.25"/>
+      <rect x="1" y="1" width="918" height="228" rx="23" fill="url(#blue-glow)"/>
+      <rect x="1" y="1" width="918" height="228" rx="23" fill="url(#purple-glow)"/>
+      <path d="M24 1 H896" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+      <text x="22" y="34" class="heading">Contribution Activity</text>
+      <text x="22" y="53" class="caption">Live overview of your GitHub consistency</text>
+      
+    
+    <g>
+      <rect x="22" y="77" width="280" height="129" rx="19" fill="#1c1e24" fill-opacity="0.73" stroke="#ffffff" stroke-opacity="0.07"/>
+      <circle cx="51" cy="105" r="12" fill="#0a84ff" fill-opacity="0.12" stroke="#0a84ff" stroke-opacity="0.3"/>
+      <circle cx="51" cy="105" r="4" fill="#0a84ff"/>
+      <text x="72" y="109" style="font-size:11px;font-weight:600;fill:#98989f">Current streak</text>
+      <text x="44" y="164" style="font-size:39px;font-weight:750;fill:#f5f5f7;letter-spacing:-1px">1</text>
+      <text x="44" y="188" style="font-size:10.5px;font-weight:500;fill:#98989f">consecutive active days</text>
+    </g>
+    
+    <g>
+      <rect x="320" y="77" width="280" height="129" rx="19" fill="#1c1e24" fill-opacity="0.73" stroke="#ffffff" stroke-opacity="0.07"/>
+      <circle cx="349" cy="105" r="12" fill="#bf5af2" fill-opacity="0.12" stroke="#bf5af2" stroke-opacity="0.3"/>
+      <circle cx="349" cy="105" r="4" fill="#bf5af2"/>
+      <text x="370" y="109" style="font-size:11px;font-weight:600;fill:#98989f">Contributions</text>
+      <text x="342" y="164" style="font-size:39px;font-weight:750;fill:#f5f5f7;letter-spacing:-1px">371</text>
+      <text x="342" y="188" style="font-size:10.5px;font-weight:500;fill:#98989f">during the last 365 days</text>
+    </g>
+    
+    <g>
+      <rect x="618" y="77" width="280" height="129" rx="19" fill="#1c1e24" fill-opacity="0.73" stroke="#ffffff" stroke-opacity="0.07"/>
+      <circle cx="647" cy="105" r="12" fill="#ff375f" fill-opacity="0.12" stroke="#ff375f" stroke-opacity="0.3"/>
+      <circle cx="647" cy="105" r="4" fill="#ff375f"/>
+      <text x="668" y="109" style="font-size:11px;font-weight:600;fill:#98989f">Longest streak</text>
+      <text x="640" y="164" style="font-size:39px;font-weight:750;fill:#f5f5f7;letter-spacing:-1px">14</text>
+      <text x="640" y="188" style="font-size:10.5px;font-weight:500;fill:#98989f">177 active days this year</text>
+    </g>
+    </svg>
