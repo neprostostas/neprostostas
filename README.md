@@ -119,3 +119,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/quote-output/dev-quote-v4.svg" width="100%" alt="Random developer quote" />
 </p>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/footer-banner-v1.svg" width="100%" alt="Thanks for visiting" />
+</div>
