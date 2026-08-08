@@ -158,9 +158,9 @@ jobs:
             <text x="72" y="54" class="sub">A little signal between the commits.</text>
 
             <!-- large decorative quote mark on the right -->
-            <g fill="#bf5af2" opacity="0.12">
-              <path d="M774 66 H802 L792 118 H758 Z"/>
-              <path d="M814 66 H842 L832 118 H798 Z"/>
+            <g fill="#bf5af2" opacity="0.22">
+              <path d="M758 58 H794 L783 124 H742 Z"/>
+              <path d="M808 58 H844 L833 124 H792 Z"/>
             </g>
 
             ${quoteLines}
