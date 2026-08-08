@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="55" viewBox="0 0 900 55" role="img" aria-label="Typing animation">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="55" viewBox="0 0 900 55" role="img" aria-label="Typing animation" style="background-color:transparent">
   <defs>
     <linearGradient id="textGradient" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#8FA7E8"/>
@@ -9,30 +9,26 @@
     </linearGradient>
 
     <mask id="m0">
-      <rect x="450" y="0" width="0" height="55" fill="white">
-        <animate id="a0x" attributeName="x" values="450;0;0;450" keyTimes="0;0.68;0.86;1" dur="6s" begin="0s;a3w.end"/>
-        <animate id="a0w" attributeName="width" values="0;900;900;0" keyTimes="0;0.68;0.86;1" dur="6s" begin="0s;a3w.end"/>
+      <rect x="0" y="0" width="0" height="55" fill="white">
+        <animate id="a0" attributeName="width" values="0;900;900;0" keyTimes="0;0.66;0.88;1" dur="6s" begin="0s;a3.end"/>
       </rect>
     </mask>
 
     <mask id="m1">
-      <rect x="450" y="0" width="0" height="55" fill="white">
-        <animate id="a1x" attributeName="x" values="450;0;0;450" keyTimes="0;0.68;0.86;1" dur="6s" begin="a0w.end"/>
-        <animate id="a1w" attributeName="width" values="0;900;900;0" keyTimes="0;0.68;0.86;1" dur="6s" begin="a0w.end"/>
+      <rect x="0" y="0" width="0" height="55" fill="white">
+        <animate id="a1" attributeName="width" values="0;900;900;0" keyTimes="0;0.66;0.88;1" dur="6s" begin="a0.end"/>
       </rect>
     </mask>
 
     <mask id="m2">
-      <rect x="450" y="0" width="0" height="55" fill="white">
-        <animate id="a2x" attributeName="x" values="450;0;0;450" keyTimes="0;0.68;0.86;1" dur="6s" begin="a1w.end"/>
-        <animate id="a2w" attributeName="width" values="0;900;900;0" keyTimes="0;0.68;0.86;1" dur="6s" begin="a1w.end"/>
+      <rect x="0" y="0" width="0" height="55" fill="white">
+        <animate id="a2" attributeName="width" values="0;900;900;0" keyTimes="0;0.66;0.88;1" dur="6s" begin="a1.end"/>
       </rect>
     </mask>
 
     <mask id="m3">
-      <rect x="450" y="0" width="0" height="55" fill="white">
-        <animate id="a3x" attributeName="x" values="450;0;0;450" keyTimes="0;0.68;0.86;1" dur="6s" begin="a2w.end"/>
-        <animate id="a3w" attributeName="width" values="0;900;900;0" keyTimes="0;0.68;0.86;1" dur="6s" begin="a2w.end"/>
+      <rect x="0" y="0" width="0" height="55" fill="white">
+        <animate id="a3" attributeName="width" values="0;900;900;0" keyTimes="0;0.66;0.88;1" dur="6s" begin="a2.end"/>
       </rect>
     </mask>
   </defs>
