@@ -7,15 +7,7 @@
 <h3 align="center">Connect with me:</h3>
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/neprostostas/" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/main/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="LinkedIn" />
-  </a>
-  <a href="https://www.behance.net/neprostostas" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/main/src/assets/icons/social/behance/default.svg" width="52" height="40" alt="Behance" />
-  </a>
-  <a href="https://www.facebook.com/profile.php?id=100011158801705" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/main/src/assets/icons/social/facebook/default.svg" width="52" height="40" alt="Facebook" />
-  </a>
+  <a href="https://www.linkedin.com/in/neprostostas/" target="_blank"><img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/main/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="LinkedIn" /></a>&nbsp;&nbsp;<a href="https://www.behance.net/neprostostas" target="_blank"><img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/main/src/assets/icons/social/behance/default.svg" width="52" height="40" alt="Behance" /></a>&nbsp;&nbsp;<a href="https://www.facebook.com/stanislav.kinash/" target="_blank"><img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/main/src/assets/icons/social/facebook/default.svg" width="52" height="40" alt="Facebook" /></a>
 </div>
 
 ---
