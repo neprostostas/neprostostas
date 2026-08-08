@@ -121,5 +121,5 @@
 </p>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/footer-banner-v1.svg" width="100%" alt="Thanks for visiting" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/footer-banner-v2.svg" width="100%" alt="Thanks for visiting" />
 </div>
