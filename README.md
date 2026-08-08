@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0F14,45:111827,75:1D1530,100:2B1734&height=210&section=header&text=STANISLAV%20KINASH&fontSize=58&fontColor=F5F5F7&animation=fadeIn&fontAlignY=38&desc=Frontend%20Engineer%20%7C%20Vue.js%20%7C%20React%20%7C%20PixiJS%2FWebGL&descAlignY=60&descColor=64D2FF" width="100%" alt="Stanislav Kinash banner" />
 
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&pause=1100&color=A98BE8&center=true&vCenter=true&width=900&height=55&lines=Building+interactive+web+experiences+%F0%9F%9A%80;Vue+%E2%80%A2+Nuxt+%E2%80%A2+React+%E2%80%A2+Next.js;PixiJS+%E2%80%A2+WebGL+%E2%80%A2+GSAP+%E2%80%A2+Spine;Crafting+smooth+interfaces+%26+animations+%E2%9C%A8" alt="Typing animation" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/typing-gradient.svg" width="900" height="55" alt="Typing animation" />
 </div>
 
 # 💫 About Me:
