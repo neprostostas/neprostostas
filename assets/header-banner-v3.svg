@@ -8,8 +8,8 @@
     </linearGradient>
     <style>
       .page-bg { fill: #0d1117; }
-      /* Accent under-wave: colored band, not same page-bg as the front edge */
-      .wave-soft { fill: #7A68B8; opacity: 0.38; }
+      /* Same morph as page-bg, offset up — gap band in #3F3561 */
+      .wave-soft { fill: #3F3561; }
       .title, .subtitle {
         font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
         text-anchor: middle;
@@ -19,7 +19,7 @@
       .subtitle { font-size: 25px; font-weight: 560; letter-spacing: -0.35px; fill: #B8A7E8; }
       @media (prefers-color-scheme: light) {
         .page-bg { fill: #ffffff; }
-        .wave-soft { fill: #9B8AD4; opacity: 0.28; }
+        .wave-soft { fill: #9B8AD4; }
       }
     </style>
   </defs>
@@ -31,21 +31,21 @@
     <text x="600" y="128" class="subtitle">Frontend Engineer | Vue.js | React | PixiJS/WebGL</text>
   </g>
 
-  <!-- Waves kept near the bottom of the taller canvas -->
+  <!-- Soft edge: identical morph to page-bg, shifted up by 14px for a fixed gap -->
   <path class="wave-soft"
-        d="M0 176 C170 162 310 184 480 172 C650 160 800 154 945 166 C1045 174 1130 188 1200 200 L1200 250 L0 250 Z">
+        d="M0 174 C180 158 320 181 485 171 C650 161 795 157 940 166 C1040 172 1125 185 1200 196 L1200 250 L0 250 Z">
     <animate attributeName="d"
-      dur="16s"
+      dur="11s"
       repeatCount="indefinite"
       calcMode="spline"
       keyTimes="0;0.25;0.5;0.75;1"
       keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
       values="
-      M0 176 C170 162 310 184 480 172 C650 160 800 154 945 166 C1045 174 1130 188 1200 200 L1200 250 L0 250 Z;
-      M0 170 C160 192 330 202 495 180 C660 158 815 142 955 152 C1055 160 1135 182 1200 192 L1200 250 L0 250 Z;
-      M0 182 C185 166 325 152 490 164 C655 176 820 194 960 184 C1060 176 1140 162 1200 196 L1200 250 L0 250 Z;
-      M0 174 C175 156 320 170 485 182 C650 194 810 186 950 170 C1050 158 1135 164 1200 194 L1200 250 L0 250 Z;
-      M0 176 C170 162 310 184 480 172 C650 160 800 154 945 166 C1045 174 1130 188 1200 200 L1200 250 L0 250 Z"/>
+      M0 174 C180 158 320 181 485 171 C650 161 795 157 940 166 C1040 172 1125 185 1200 196 L1200 250 L0 250 Z;
+      M0 168 C165 192 335 200 500 178 C665 156 820 138 955 148 C1055 156 1130 178 1200 188 L1200 250 L0 250 Z;
+      M0 180 C195 162 340 148 505 160 C670 172 830 190 965 180 C1065 172 1140 160 1200 192 L1200 250 L0 250 Z;
+      M0 172 C185 152 330 166 495 180 C660 194 815 186 950 168 C1050 156 1135 162 1200 190 L1200 250 L0 250 Z;
+      M0 174 C180 158 320 181 485 171 C650 161 795 157 940 166 C1040 172 1125 185 1200 196 L1200 250 L0 250 Z"/>
   </path>
 
   <path class="page-bg"
