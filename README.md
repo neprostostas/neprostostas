@@ -7,7 +7,7 @@
 # 💫 About Me:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/b5d138f/assets/finder/about-me-window.png" width="100%" alt="About Me" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/28e9218/assets/finder/about-me-window.png" width="100%" alt="About Me" />
 </p>
 
 📚 My Courses: <a href="https://itvdn.com/ua/catalog/author/kinash-stanislav" target="_blank">ITVDN</a>
