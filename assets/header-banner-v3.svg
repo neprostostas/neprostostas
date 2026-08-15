@@ -6,12 +6,9 @@
       <stop offset="75%" stop-color="#1D1530" stop-opacity="0.85"/>
       <stop offset="100%" stop-color="#2B1734" stop-opacity="0"/>
     </linearGradient>
-    <clipPath id="waveClip">
-      <rect x="0" y="145" width="1200" height="105"/>
-    </clipPath>
     <style>
       .page-bg { fill: #0d1117; }
-      /* Parallel to page-bg — gap band in #3F3561, never crosses the edge */
+      /* Same morph as page-bg, offset up — gap band in #3F3561 */
       .wave-soft { fill: #3F3561; }
       .title, .subtitle {
         font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
@@ -34,38 +31,37 @@
     <text x="600" y="128" class="subtitle">Frontend Engineer | Vue.js | React | PixiJS/WebGL</text>
   </g>
 
-  <g clip-path="url(#waveClip)">
-    <!-- Soft = exact page-bg morph, parallel offset; gap breathes 11–16px so it shifts a little without crossing -->
-    <path class="wave-soft"
-          d="M0 176 C180 160 320 183 485 173 C650 163 795 159 940 168 C1040 174 1125 187 1200 198 L1200 250 L0 250 Z">
-      <animate attributeName="d"
-        dur="11s"
-        repeatCount="indefinite"
-        calcMode="spline"
-        keyTimes="0;0.25;0.5;0.75;1"
-        keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
-        values="
-        M0 176 C180 160 320 183 485 173 C650 163 795 159 940 168 C1040 174 1125 187 1200 198 L1200 250 L0 250 Z;
-        M0 166 C165 190 335 198 500 176 C665 154 820 136 955 146 C1055 154 1130 176 1200 186 L1200 250 L0 250 Z;
-        M0 183 C195 165 340 151 505 163 C670 175 830 193 965 183 C1065 175 1140 163 1200 195 L1200 250 L0 250 Z;
-        M0 171 C185 151 330 165 495 179 C660 193 815 185 950 167 C1050 155 1135 161 1200 189 L1200 250 L0 250 Z;
-        M0 176 C180 160 320 183 485 173 C650 163 795 159 940 168 C1040 174 1125 187 1200 198 L1200 250 L0 250 Z"/>
-    </path>
+  <!-- Soft edge: same morph family, slight phase lag + tiny shape drift -->
+  <path class="wave-soft"
+        d="M0 174 C180 158 320 181 485 171 C650 161 795 157 940 166 C1040 172 1125 185 1200 196 L1200 250 L0 250 Z">
+    <animate attributeName="d"
+      dur="11.6s"
+      begin="0.35s"
+      repeatCount="indefinite"
+      calcMode="spline"
+      keyTimes="0;0.25;0.5;0.75;1"
+      keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
+      values="
+      M0 174 C180 158 320 181 485 171 C650 161 795 157 940 166 C1040 172 1125 185 1200 196 L1200 250 L0 250 Z;
+      M0 170 C168 190 332 198 498 176 C668 154 818 140 952 150 C1052 158 1128 176 1200 190 L1200 250 L0 250 Z;
+      M0 178 C192 164 338 150 502 162 C668 174 828 188 962 178 C1062 170 1138 162 1200 194 L1200 250 L0 250 Z;
+      M0 173 C182 154 328 168 492 178 C658 192 812 184 948 170 C1048 158 1132 164 1200 188 L1200 250 L0 250 Z;
+      M0 174 C180 158 320 181 485 171 C650 161 795 157 940 166 C1040 172 1125 185 1200 196 L1200 250 L0 250 Z"/>
+  </path>
 
-    <path class="page-bg"
-          d="M0 188 C180 172 320 195 485 185 C650 175 795 171 940 180 C1040 186 1125 199 1200 210 L1200 250 L0 250 Z">
-      <animate attributeName="d"
-        dur="11s"
-        repeatCount="indefinite"
-        calcMode="spline"
-        keyTimes="0;0.25;0.5;0.75;1"
-        keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
-        values="
-        M0 188 C180 172 320 195 485 185 C650 175 795 171 940 180 C1040 186 1125 199 1200 210 L1200 250 L0 250 Z;
-        M0 182 C165 206 335 214 500 192 C665 170 820 152 955 162 C1055 170 1130 192 1200 202 L1200 250 L0 250 Z;
-        M0 194 C195 176 340 162 505 174 C670 186 830 204 965 194 C1065 186 1140 174 1200 206 L1200 250 L0 250 Z;
-        M0 186 C185 166 330 180 495 194 C660 208 815 200 950 182 C1050 170 1135 176 1200 204 L1200 250 L0 250 Z;
-        M0 188 C180 172 320 195 485 185 C650 175 795 171 940 180 C1040 186 1125 199 1200 210 L1200 250 L0 250 Z"/>
-    </path>
-  </g>
+  <path class="page-bg"
+        d="M0 188 C180 172 320 195 485 185 C650 175 795 171 940 180 C1040 186 1125 199 1200 210 L1200 250 L0 250 Z">
+    <animate attributeName="d"
+      dur="11s"
+      repeatCount="indefinite"
+      calcMode="spline"
+      keyTimes="0;0.25;0.5;0.75;1"
+      keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
+      values="
+      M0 188 C180 172 320 195 485 185 C650 175 795 171 940 180 C1040 186 1125 199 1200 210 L1200 250 L0 250 Z;
+      M0 182 C165 206 335 214 500 192 C665 170 820 152 955 162 C1055 170 1130 192 1200 202 L1200 250 L0 250 Z;
+      M0 194 C195 176 340 162 505 174 C670 186 830 204 965 194 C1065 186 1140 174 1200 206 L1200 250 L0 250 Z;
+      M0 186 C185 166 330 180 495 194 C660 208 815 200 950 182 C1050 170 1135 176 1200 204 L1200 250 L0 250 Z;
+      M0 188 C180 172 320 195 485 185 C650 175 795 171 940 180 C1040 186 1125 199 1200 210 L1200 250 L0 250 Z"/>
+  </path>
 </svg>
