@@ -11,11 +11,9 @@
 <h3 align="center">Connect with me:</h3>
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/neprostostas/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=linkedin&theme=dark" width="52" height="52" align="middle" alt="LinkedIn" /></a>
-  <a href="https://www.behance.net/neprostostas" target="_blank"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/behance-blue-dark-rounded.svg" width="52" height="52" align="middle" alt="Behance" /></a>
-  <a href="https://www.facebook.com/stanislav.kinash/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=facebook&theme=dark" width="52" height="52" align="middle" alt="Facebook" /></a>
-  <a href="https://t.me/neprostostas" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=telegram&theme=dark" width="52" height="52" align="middle" alt="Telegram" /></a>
-  <a href="mailto:neprostostas.gg@gmail.com"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/gmail-2026-dark-rounded.svg" width="52" height="52" align="middle" alt="Gmail" /></a>
+  <a href="https://www.linkedin.com/in/neprostostas/" target="_blank"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/linkedin.png" width="52" height="52" align="middle" alt="LinkedIn" /></a>
+  <a href="https://t.me/neprostostas" target="_blank"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/telegram.png" width="52" height="52" align="middle" alt="Telegram" /></a>
+  <a href="mailto:neprostostas.gg@gmail.com"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/gmail.png" width="52" height="52" align="middle" alt="Gmail" /></a>
 </div>
 
 ---
@@ -25,54 +23,49 @@
 ### ⚡ Frontend Core
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/javascript-dark-rounded.svg" width="52" height="52" align="middle" alt="JavaScript" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/typescript-dark-rounded.svg" width="52" height="52" align="middle" alt="TypeScript" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/html-dark-rounded.svg" width="52" height="52" align="middle" alt="HTML" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/css-dark-rounded.svg" width="52" height="52" align="middle" alt="CSS" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/sass-dark-rounded.svg" width="52" height="52" align="middle" alt="Sass" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=tailwindcss&theme=dark" width="52" height="52" align="middle" alt="Tailwind CSS" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=vuejs&theme=dark" width="52" height="52" align="middle" alt="Vue.js" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=nuxtjs&theme=dark" width="52" height="52" align="middle" alt="Nuxt.js" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=react&theme=dark" width="52" height="52" align="middle" alt="React" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=nextjs&theme=dark" width="52" height="52" align="middle" alt="Next.js" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=astro&theme=dark" width="52" height="52" align="middle" alt="Astro" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/javascript.png" width="52" height="52" align="middle" alt="JavaScript" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/typescript.png" width="52" height="52" align="middle" alt="TypeScript" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/html.png" width="52" height="52" align="middle" alt="HTML" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/css.png" width="52" height="52" align="middle" alt="CSS" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/sass.png" width="52" height="52" align="middle" alt="Sass" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/tailwindcss.png" width="52" height="52" align="middle" alt="Tailwind CSS" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/vuejs.png" width="52" height="52" align="middle" alt="Vue.js" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/nuxtjs.png" width="52" height="52" align="middle" alt="Nuxt.js" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/react.png" width="52" height="52" align="middle" alt="React" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/nextjs.png" width="52" height="52" align="middle" alt="Next.js" />
 </div>
 
 ### 🧩 Runtime, Build & Version Control
 
 <div align="center">
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=nodejs&theme=dark" width="52" height="52" align="middle" alt="Node.js" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=vite&theme=dark" width="52" height="52" align="middle" alt="Vite" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=webpack&theme=dark" width="52" height="52" align="middle" alt="Webpack" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=npm&theme=dark" width="52" height="52" align="middle" alt="npm" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=threejs&theme=dark" width="52" height="52" align="middle" alt="Three.js" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=gsap&theme=dark" width="52" height="52" align="middle" alt="GSAP" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=firebase&theme=dark" width="52" height="52" align="middle" alt="Firebase" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=git&theme=dark" width="52" height="52" align="middle" alt="Git" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=github&theme=dark" width="52" height="52" align="middle" alt="GitHub" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=gitlab&theme=dark" width="52" height="52" align="middle" alt="GitLab" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=codepen&theme=dark" width="52" height="52" align="middle" alt="CodePen" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/nodejs.png" width="52" height="52" align="middle" alt="Node.js" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/vite.png" width="52" height="52" align="middle" alt="Vite" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/threejs.png" width="52" height="52" align="middle" alt="Three.js" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/gsap.png" width="52" height="52" align="middle" alt="GSAP" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/git.png" width="52" height="52" align="middle" alt="Git" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/github.png" width="52" height="52" align="middle" alt="GitHub" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/gitlab.png" width="52" height="52" align="middle" alt="GitLab" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/codepen.png" width="52" height="52" align="middle" alt="CodePen" />
 </div>
 
 ### 🤖 AI & Coding Assistants
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/chatgpt-dark-rounded.svg" width="52" height="52" align="middle" alt="ChatGPT" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=claude&theme=dark" width="52" height="52" align="middle" alt="Claude Code" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=gemini&theme=dark" width="52" height="52" align="middle" alt="Gemini" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=deepseek&theme=dark" width="52" height="52" align="middle" alt="DeepSeek" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=cursor&theme=dark" width="52" height="52" align="middle" alt="Cursor" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/perplexity-dark-rounded.svg" width="52" height="52" align="middle" alt="Perplexity" />
-  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/notion-dark.svg" width="52" height="52" align="middle" alt="Notion" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/chatgpt.png" width="52" height="52" align="middle" alt="ChatGPT" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/claude.png" width="52" height="52" align="middle" alt="Claude Code" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/gemini.png" width="52" height="52" align="middle" alt="Gemini" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/deepseek.png" width="52" height="52" align="middle" alt="DeepSeek" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/cursor.png" width="52" height="52" align="middle" alt="Cursor" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/perplexity.png" width="52" height="52" align="middle" alt="Perplexity" />
 </div>
 
 ### 🎨 Design, Animation & Creative
 
 <div align="center">
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=figma&theme=dark" width="52" height="52" align="middle" alt="Figma" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/photoshop-dark-rounded.svg" width="52" height="52" align="middle" alt="Adobe Photoshop" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=canva&theme=dark" width="52" height="52" align="middle" alt="Canva" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/spine-dark-rounded.svg" width="52" height="52" align="middle" alt="Spine 2D" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/figma.png" width="52" height="52" align="middle" alt="Figma" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/photoshop.png" width="52" height="52" align="middle" alt="Adobe Photoshop" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/canva.png" width="52" height="52" align="middle" alt="Canva" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/spine.png" width="52" height="52" align="middle" alt="Spine 2D" />
 </div>
 
 ## 🔥 My Stats
