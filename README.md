@@ -11,9 +11,9 @@
 <h3 align="center">Connect with me:</h3>
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/neprostostas/" target="_blank"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/linkedin.png?v=2" width="52" height="52" align="middle" alt="LinkedIn" /></a>
-  <a href="https://t.me/neprostostas" target="_blank"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/telegram.png?v=2" width="52" height="52" align="middle" alt="Telegram" /></a>
-  <a href="mailto:neprostostas.gg@gmail.com"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/gmail.png?v=2" width="52" height="52" align="middle" alt="Gmail" /></a>
+  <a href="https://www.linkedin.com/in/neprostostas/" target="_blank"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/linkedin.png" width="52" height="52" align="middle" alt="LinkedIn" /></a>
+  <a href="https://t.me/neprostostas" target="_blank"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/telegram.png" width="52" height="52" align="middle" alt="Telegram" /></a>
+  <a href="mailto:neprostostas.gg@gmail.com"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/gmail.png" width="52" height="52" align="middle" alt="Gmail" /></a>
 </div>
 
 ---
@@ -23,49 +23,49 @@
 ### ⚡ Frontend Core
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/javascript.png?v=2" width="52" height="52" align="middle" alt="JavaScript" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/typescript.png?v=2" width="52" height="52" align="middle" alt="TypeScript" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/html.png?v=2" width="52" height="52" align="middle" alt="HTML" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/css.png?v=2" width="52" height="52" align="middle" alt="CSS" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/sass.png?v=2" width="52" height="52" align="middle" alt="Sass" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/tailwindcss.png?v=2" width="52" height="52" align="middle" alt="Tailwind CSS" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/vuejs.png?v=2" width="52" height="52" align="middle" alt="Vue.js" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/nuxtjs.png?v=2" width="52" height="52" align="middle" alt="Nuxt.js" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/react.png?v=2" width="52" height="52" align="middle" alt="React" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/nextjs.png?v=2" width="52" height="52" align="middle" alt="Next.js" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/javascript.png" width="52" height="52" align="middle" alt="JavaScript" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/typescript.png" width="52" height="52" align="middle" alt="TypeScript" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/html.png" width="52" height="52" align="middle" alt="HTML" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/css.png" width="52" height="52" align="middle" alt="CSS" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/sass.png" width="52" height="52" align="middle" alt="Sass" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/tailwindcss.png" width="52" height="52" align="middle" alt="Tailwind CSS" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/vuejs.png" width="52" height="52" align="middle" alt="Vue.js" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/nuxtjs.png" width="52" height="52" align="middle" alt="Nuxt.js" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/react.png" width="52" height="52" align="middle" alt="React" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/nextjs.png" width="52" height="52" align="middle" alt="Next.js" />
 </div>
 
 ### 🧩 Runtime, Build & Version Control
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/nodejs.png?v=2" width="52" height="52" align="middle" alt="Node.js" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/vite.png?v=2" width="52" height="52" align="middle" alt="Vite" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/threejs.png?v=2" width="52" height="52" align="middle" alt="Three.js" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/gsap.png?v=2" width="52" height="52" align="middle" alt="GSAP" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/git.png?v=2" width="52" height="52" align="middle" alt="Git" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/github.png?v=2" width="52" height="52" align="middle" alt="GitHub" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/gitlab.png?v=2" width="52" height="52" align="middle" alt="GitLab" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/codepen.png?v=2" width="52" height="52" align="middle" alt="CodePen" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/nodejs.png" width="52" height="52" align="middle" alt="Node.js" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/vite.png" width="52" height="52" align="middle" alt="Vite" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/threejs.png" width="52" height="52" align="middle" alt="Three.js" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/gsap.png" width="52" height="52" align="middle" alt="GSAP" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/git.png" width="52" height="52" align="middle" alt="Git" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/github.png" width="52" height="52" align="middle" alt="GitHub" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/gitlab.png" width="52" height="52" align="middle" alt="GitLab" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/codepen.png" width="52" height="52" align="middle" alt="CodePen" />
 </div>
 
 ### 🤖 AI & Coding Assistants
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/chatgpt.png?v=2" width="52" height="52" align="middle" alt="ChatGPT" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/claude.png?v=2" width="52" height="52" align="middle" alt="Claude Code" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/gemini.png?v=2" width="52" height="52" align="middle" alt="Gemini" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/deepseek.png?v=2" width="52" height="52" align="middle" alt="DeepSeek" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/cursor.png?v=2" width="52" height="52" align="middle" alt="Cursor" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/perplexity.png?v=2" width="52" height="52" align="middle" alt="Perplexity" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/chatgpt.png" width="52" height="52" align="middle" alt="ChatGPT" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/claude.png" width="52" height="52" align="middle" alt="Claude Code" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/gemini.png" width="52" height="52" align="middle" alt="Gemini" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/deepseek.png" width="52" height="52" align="middle" alt="DeepSeek" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/cursor.png" width="52" height="52" align="middle" alt="Cursor" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/perplexity.png" width="52" height="52" align="middle" alt="Perplexity" />
 </div>
 
 ### 🎨 Design, Animation & Creative
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/figma.png?v=2" width="52" height="52" align="middle" alt="Figma" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/photoshop.png?v=2" width="52" height="52" align="middle" alt="Adobe Photoshop" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/canva.png?v=2" width="52" height="52" align="middle" alt="Canva" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/icons/spine.png?v=2" width="52" height="52" align="middle" alt="Spine 2D" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/figma.png" width="52" height="52" align="middle" alt="Figma" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/photoshop.png" width="52" height="52" align="middle" alt="Adobe Photoshop" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/canva.png" width="52" height="52" align="middle" alt="Canva" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/e529d0f/assets/icons/spine.png" width="52" height="52" align="middle" alt="Spine 2D" />
 </div>
 
 ## 🔥 My Stats
