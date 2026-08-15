@@ -8,7 +8,6 @@
     </linearGradient>
     <style>
       .page-bg { fill: #0d1117; }
-      .page-bg-soft { fill: #0d1117; opacity: 0.55; }
       .title, .subtitle {
         font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
         text-anchor: middle;
@@ -17,7 +16,7 @@
       .title { font-size: 66px; font-weight: 750; letter-spacing: -1.8px; fill: #f5f5f7; }
       .subtitle { font-size: 25px; font-weight: 560; letter-spacing: -0.35px; fill: #B8A7E8; }
       @media (prefers-color-scheme: light) {
-        .page-bg, .page-bg-soft { fill: #ffffff; }
+        .page-bg { fill: #ffffff; }
       }
     </style>
   </defs>
@@ -28,23 +27,6 @@
     <text x="600" y="88" class="title">STANISLAV KINASH</text>
     <text x="600" y="128" class="subtitle">Frontend Engineer | Vue.js | React | PixiJS/WebGL</text>
   </g>
-
-  <!-- Waves kept near the bottom of the taller canvas -->
-  <path class="page-bg-soft"
-        d="M0 176 C170 162 310 184 480 172 C650 160 800 154 945 166 C1045 174 1130 188 1200 200 L1200 250 L0 250 Z">
-    <animate attributeName="d"
-      dur="16s"
-      repeatCount="indefinite"
-      calcMode="spline"
-      keyTimes="0;0.25;0.5;0.75;1"
-      keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
-      values="
-      M0 176 C170 162 310 184 480 172 C650 160 800 154 945 166 C1045 174 1130 188 1200 200 L1200 250 L0 250 Z;
-      M0 170 C160 192 330 202 495 180 C660 158 815 142 955 152 C1055 160 1135 182 1200 192 L1200 250 L0 250 Z;
-      M0 182 C185 166 325 152 490 164 C655 176 820 194 960 184 C1060 176 1140 162 1200 196 L1200 250 L0 250 Z;
-      M0 174 C175 156 320 170 485 182 C650 194 810 186 950 170 C1050 158 1135 164 1200 194 L1200 250 L0 250 Z;
-      M0 176 C170 162 310 184 480 172 C650 160 800 154 945 166 C1045 174 1130 188 1200 200 L1200 250 L0 250 Z"/>
-  </path>
 
   <path class="page-bg"
         d="M0 188 C180 172 320 195 485 185 C650 175 795 171 940 180 C1040 186 1125 199 1200 210 L1200 250 L0 250 Z">
