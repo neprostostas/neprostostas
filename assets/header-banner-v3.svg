@@ -8,7 +8,8 @@
     </linearGradient>
     <style>
       .page-bg { fill: #0d1117; }
-      .page-bg-soft { fill: #0d1117; opacity: 0.55; }
+      /* Accent under-wave: colored band, not same page-bg as the front edge */
+      .wave-soft { fill: #7A68B8; opacity: 0.38; }
       .title, .subtitle {
         font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
         text-anchor: middle;
@@ -17,7 +18,8 @@
       .title { font-size: 66px; font-weight: 750; letter-spacing: -1.8px; fill: #f5f5f7; }
       .subtitle { font-size: 25px; font-weight: 560; letter-spacing: -0.35px; fill: #B8A7E8; }
       @media (prefers-color-scheme: light) {
-        .page-bg, .page-bg-soft { fill: #ffffff; }
+        .page-bg { fill: #ffffff; }
+        .wave-soft { fill: #9B8AD4; opacity: 0.28; }
       }
     </style>
   </defs>
@@ -30,7 +32,7 @@
   </g>
 
   <!-- Waves kept near the bottom of the taller canvas -->
-  <path class="page-bg-soft"
+  <path class="wave-soft"
         d="M0 176 C170 162 310 184 480 172 C650 160 800 154 945 166 C1045 174 1130 188 1200 200 L1200 250 L0 250 Z">
     <animate attributeName="d"
       dur="16s"
