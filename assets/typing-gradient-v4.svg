@@ -15,7 +15,6 @@
       }
     </style>
 
-    <!-- Viewport clip like .main-title-viewport { overflow: hidden } -->
     <clipPath id="viewport">
       <rect x="0" y="0" width="900" height="55"/>
     </clipPath>
@@ -24,63 +23,71 @@
   <rect class="canvas" x="0" y="0" width="900" height="55"/>
 
   <!--
-    Same motion as web-407 main-title is-from / is-to:
-    enter: translateY(115%) → 0, exit: 0 → translateY(115%)
-    Hold stays ~1.32s; slide ~0.7s (site cubic-bezier .22,.61,.36,1)
+    Overlapped swap like web-407 .main-title is-from / is-to:
+    while A exits down, B enters from below (same 0.7s window).
+    slide=0.7s, hold=1.32s, period=2.02s, full loop=8.08s
   -->
   <g clip-path="url(#viewport)"
      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace"
      font-size="21" font-weight="600" fill="url(#textGradient)" text-anchor="middle">
 
-    <g transform="translate(0, 63)">
-      <animateTransform id="a0" attributeName="transform" type="translate"
-        values="0,63; 0,0; 0,0; 0,63"
-        keyTimes="0;0.257;0.743;1"
-        keySplines="0.22 0.61 0.36 1; 0 0 1 1; 0.22 0.61 0.36 1"
-        calcMode="spline" dur="2.72s" begin="0s;a3.end"/>
-      <animate attributeName="opacity" values="0;1;1;0"
-        keyTimes="0;0.257;0.743;1"
-        keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 1 1"
-        calcMode="spline" dur="2.72s" begin="0s;a3.end"/>
+    <!-- line 0 -->
+    <g transform="translate(0, 63)" opacity="0">
+      <animateTransform attributeName="transform" type="translate"
+        values="0,63; 0,0; 0,0; 0,63; 0,63"
+        keyTimes="0; 0.0866; 0.25; 0.3366; 1"
+        keySplines="0.22 0.61 0.36 1; 0 0 1 1; 0.22 0.61 0.36 1; 0 0 1 1"
+        calcMode="spline" dur="8.08s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+        values="0; 1; 1; 0; 0"
+        keyTimes="0; 0.0866; 0.25; 0.3366; 1"
+        keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 1 1; 0 0 1 1"
+        calcMode="spline" dur="8.08s" begin="0s" repeatCount="indefinite"/>
       <text x="450" y="34">Building interactive web experiences 🚀</text>
     </g>
 
+    <!-- line 1 — starts as line 0 begins exiting -->
     <g transform="translate(0, 63)" opacity="0">
-      <animateTransform id="a1" attributeName="transform" type="translate"
-        values="0,63; 0,0; 0,0; 0,63"
-        keyTimes="0;0.257;0.743;1"
-        keySplines="0.22 0.61 0.36 1; 0 0 1 1; 0.22 0.61 0.36 1"
-        calcMode="spline" dur="2.72s" begin="a0.end"/>
-      <animate attributeName="opacity" values="0;1;1;0"
-        keyTimes="0;0.257;0.743;1"
-        keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 1 1"
-        calcMode="spline" dur="2.72s" begin="a0.end"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,63; 0,0; 0,0; 0,63; 0,63"
+        keyTimes="0; 0.0866; 0.25; 0.3366; 1"
+        keySplines="0.22 0.61 0.36 1; 0 0 1 1; 0.22 0.61 0.36 1; 0 0 1 1"
+        calcMode="spline" dur="8.08s" begin="2.02s" repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+        values="0; 1; 1; 0; 0"
+        keyTimes="0; 0.0866; 0.25; 0.3366; 1"
+        keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 1 1; 0 0 1 1"
+        calcMode="spline" dur="8.08s" begin="2.02s" repeatCount="indefinite"/>
       <text x="450" y="34">Vue • Nuxt • React • Next.js</text>
     </g>
 
+    <!-- line 2 -->
     <g transform="translate(0, 63)" opacity="0">
-      <animateTransform id="a2" attributeName="transform" type="translate"
-        values="0,63; 0,0; 0,0; 0,63"
-        keyTimes="0;0.257;0.743;1"
-        keySplines="0.22 0.61 0.36 1; 0 0 1 1; 0.22 0.61 0.36 1"
-        calcMode="spline" dur="2.72s" begin="a1.end"/>
-      <animate attributeName="opacity" values="0;1;1;0"
-        keyTimes="0;0.257;0.743;1"
-        keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 1 1"
-        calcMode="spline" dur="2.72s" begin="a1.end"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,63; 0,0; 0,0; 0,63; 0,63"
+        keyTimes="0; 0.0866; 0.25; 0.3366; 1"
+        keySplines="0.22 0.61 0.36 1; 0 0 1 1; 0.22 0.61 0.36 1; 0 0 1 1"
+        calcMode="spline" dur="8.08s" begin="4.04s" repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+        values="0; 1; 1; 0; 0"
+        keyTimes="0; 0.0866; 0.25; 0.3366; 1"
+        keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 1 1; 0 0 1 1"
+        calcMode="spline" dur="8.08s" begin="4.04s" repeatCount="indefinite"/>
       <text x="450" y="34">PixiJS • WebGL • GSAP • Spine</text>
     </g>
 
+    <!-- line 3 -->
     <g transform="translate(0, 63)" opacity="0">
-      <animateTransform id="a3" attributeName="transform" type="translate"
-        values="0,63; 0,0; 0,0; 0,63"
-        keyTimes="0;0.257;0.743;1"
-        keySplines="0.22 0.61 0.36 1; 0 0 1 1; 0.22 0.61 0.36 1"
-        calcMode="spline" dur="2.72s" begin="a2.end"/>
-      <animate attributeName="opacity" values="0;1;1;0"
-        keyTimes="0;0.257;0.743;1"
-        keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 1 1"
-        calcMode="spline" dur="2.72s" begin="a2.end"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,63; 0,0; 0,0; 0,63; 0,63"
+        keyTimes="0; 0.0866; 0.25; 0.3366; 1"
+        keySplines="0.22 0.61 0.36 1; 0 0 1 1; 0.22 0.61 0.36 1; 0 0 1 1"
+        calcMode="spline" dur="8.08s" begin="6.06s" repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+        values="0; 1; 1; 0; 0"
+        keyTimes="0; 0.0866; 0.25; 0.3366; 1"
+        keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 1 1; 0 0 1 1"
+        calcMode="spline" dur="8.08s" begin="6.06s" repeatCount="indefinite"/>
       <text x="450" y="34">Crafting smooth interfaces &amp; animations ✨</text>
     </g>
   </g>
