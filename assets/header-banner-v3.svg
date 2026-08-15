@@ -6,22 +6,9 @@
       <stop offset="75%" stop-color="#1D1530"/>
       <stop offset="100%" stop-color="#2B1734"/>
     </linearGradient>
-
-    <!-- Footer layering logic, header page-bg color -->
-    <linearGradient id="waveFront" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#0d1117"/>
-    </linearGradient>
-    <linearGradient id="waveMid" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#0d1117" stop-opacity="0.42"/>
-      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.38"/>
-    </linearGradient>
-    <linearGradient id="waveBack" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#0d1117" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.18"/>
-    </linearGradient>
-
     <style>
+      .page-bg { fill: #0d1117; }
+      .page-bg-soft { fill: #0d1117; opacity: 0.55; }
       .title, .subtitle {
         font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
         text-anchor: middle;
@@ -30,7 +17,7 @@
       .title { font-size: 66px; font-weight: 750; letter-spacing: -1.8px; fill: #f5f5f7; }
       .subtitle { font-size: 25px; font-weight: 560; letter-spacing: -0.35px; fill: #B8A7E8; }
       @media (prefers-color-scheme: light) {
-        #waveFront stop, #waveMid stop, #waveBack stop { stop-color: #ffffff; }
+        .page-bg, .page-bg-soft { fill: #ffffff; }
       }
     </style>
   </defs>
@@ -42,48 +29,36 @@
     <text x="600" y="128" class="subtitle">Frontend Engineer | Vue.js | React | PixiJS/WebGL</text>
   </g>
 
-  <!-- Back — footer morph logic, mirrored for header, page-bg color -->
-  <path fill="url(#waveBack)"
-        d="M0 168 C142 133 270 145 405 174 C556 205 714 202 861 172 C996 144 1107 137 1200 152 L1200 250 L0 250 Z">
+  <!-- Waves kept near the bottom of the taller canvas -->
+  <path class="page-bg-soft"
+        d="M0 176 C170 162 310 184 480 172 C650 160 800 154 945 166 C1045 174 1130 188 1200 200 L1200 250 L0 250 Z">
     <animate attributeName="d"
-      dur="18s" repeatCount="indefinite" calcMode="spline"
+      dur="16s"
+      repeatCount="indefinite"
+      calcMode="spline"
       keyTimes="0;0.25;0.5;0.75;1"
       keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
       values="
-      M 0 168 C 142 133 270 145 405 174 C 556 205 714 202 861 172 C 996 144 1107 137 1200 152 L 1200 250 L 0 250 Z;
-      M 0 166 C 138 166 275 180 414 180 C 562 180 713 166 858 156 C 992 146 1108 159 1200 158 L 1200 250 L 0 250 Z;
-      M 0 172 C 150 138 280 134 414 160 C 561 188 718 202 864 180 C 1000 160 1112 142 1200 152 L 1200 250 L 0 250 Z;
-      M 0 168 C 144 134 278 148 412 175 C 562 204 712 197 858 170 C 994 144 1110 138 1200 155 L 1200 250 L 0 250 Z;
-      M 0 168 C 142 133 270 145 405 174 C 556 205 714 202 861 172 C 996 144 1107 137 1200 152 L 1200 250 L 0 250 Z"/>
+      M0 176 C170 162 310 184 480 172 C650 160 800 154 945 166 C1045 174 1130 188 1200 200 L1200 250 L0 250 Z;
+      M0 170 C160 192 330 202 495 180 C660 158 815 142 955 152 C1055 160 1135 182 1200 192 L1200 250 L0 250 Z;
+      M0 182 C185 166 325 152 490 164 C655 176 820 194 960 184 C1060 176 1140 162 1200 196 L1200 250 L0 250 Z;
+      M0 174 C175 156 320 170 485 182 C650 194 810 186 950 170 C1050 158 1135 164 1200 194 L1200 250 L0 250 Z;
+      M0 176 C170 162 310 184 480 172 C650 160 800 154 945 166 C1045 174 1130 188 1200 200 L1200 250 L0 250 Z"/>
   </path>
 
-  <!-- Mid -->
-  <path fill="url(#waveMid)"
-        d="M0 182 C111 149 228 136 364 157 C502 179 636 220 771 209 C903 196 1023 150 1200 175 L1200 250 L0 250 Z">
+  <path class="page-bg"
+        d="M0 188 C180 172 320 195 485 185 C650 175 795 171 940 180 C1040 186 1125 199 1200 210 L1200 250 L0 250 Z">
     <animate attributeName="d"
-      dur="14s" repeatCount="indefinite" calcMode="spline"
+      dur="11s"
+      repeatCount="indefinite"
+      calcMode="spline"
       keyTimes="0;0.25;0.5;0.75;1"
       keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
       values="
-      M 0 182 C 111 149 228 136 364 157 C 502 179 636 220 771 209 C 903 196 1023 150 1200 175 L 1200 250 L 0 250 Z;
-      M 0 178 C 122 182 245 184 381 179 C 519 174 652 176 786 174 C 918 171 1038 171 1200 172 L 1200 250 L 0 250 Z;
-      M 0 186 C 116 152 235 134 370 150 C 507 170 640 206 774 196 C 908 184 1032 150 1200 177 L 1200 250 L 0 250 Z;
-      M 0 180 C 120 146 239 140 375 162 C 512 186 646 218 780 205 C 915 190 1040 154 1200 174 L 1200 250 L 0 250 Z;
-      M 0 182 C 111 149 228 136 364 157 C 502 179 636 220 771 209 C 903 196 1023 150 1200 175 L 1200 250 L 0 250 Z"/>
-  </path>
-
-  <!-- Front -->
-  <path fill="url(#waveFront)"
-        d="M0 196 C130 152 261 136 393 160 C530 187 660 239 796 220 C936 201 1064 166 1200 187 L1200 250 L0 250 Z">
-    <animate attributeName="d"
-      dur="10.5s" repeatCount="indefinite" calcMode="spline"
-      keyTimes="0;0.25;0.5;0.75;1"
-      keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
-      values="
-      M 0 196 C 130 152 261 136 393 160 C 530 187 660 239 796 220 C 936 201 1064 166 1200 187 L 1200 250 L 0 250 Z;
-      M 0 190 C 125 192 258 190 393 182 C 530 174 662 186 798 186 C 937 184 1066 190 1200 189 L 1200 250 L 0 250 Z;
-      M 0 198 C 134 156 266 139 398 163 C 536 189 668 235 803 216 C 942 197 1070 170 1200 189 L 1200 250 L 0 250 Z;
-      M 0 194 C 130 148 262 140 396 167 C 534 195 664 238 800 218 C 940 198 1069 172 1200 191 L 1200 250 L 0 250 Z;
-      M 0 196 C 130 152 261 136 393 160 C 530 187 660 239 796 220 C 936 201 1064 166 1200 187 L 1200 250 L 0 250 Z"/>
+      M0 188 C180 172 320 195 485 185 C650 175 795 171 940 180 C1040 186 1125 199 1200 210 L1200 250 L0 250 Z;
+      M0 182 C165 206 335 214 500 192 C665 170 820 152 955 162 C1055 170 1130 192 1200 202 L1200 250 L0 250 Z;
+      M0 194 C195 176 340 162 505 174 C670 186 830 204 965 194 C1065 186 1140 174 1200 206 L1200 250 L0 250 Z;
+      M0 186 C185 166 330 180 495 194 C660 208 815 200 950 182 C1050 170 1135 176 1200 204 L1200 250 L0 250 Z;
+      M0 188 C180 172 320 195 485 185 C650 175 795 171 940 180 C1040 186 1125 199 1200 210 L1200 250 L0 250 Z"/>
   </path>
 </svg>
