@@ -57,7 +57,7 @@
 ### 🤖 AI & Coding Assistants
 
 <div align="center">
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=chatgpt&theme=dark" width="52" height="52" align="middle" alt="ChatGPT" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/chatgpt-dark-rounded.svg" width="52" height="52" align="middle" alt="ChatGPT" />
   <img src="https://go-skill-icons.vercel.app/api/icons?i=claude&theme=dark" width="52" height="52" align="middle" alt="Claude Code" />
   <img src="https://go-skill-icons.vercel.app/api/icons?i=gemini&theme=dark" width="52" height="52" align="middle" alt="Gemini" />
   <img src="https://go-skill-icons.vercel.app/api/icons?i=deepseek&theme=dark" width="52" height="52" align="middle" alt="DeepSeek" />
