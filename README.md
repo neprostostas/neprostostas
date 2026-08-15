@@ -4,8 +4,8 @@
   <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/56e0122/assets/typing-gradient-v4.svg" width="900" height="55" alt="Typing animation" />
 </div>
 
-<p align="center">
-  <a href="#"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/de35eb6/assets/finder/about-me-window.svg" width="100%" alt="About Me" /></a>
+<p align="center" id="about-me">
+  <a href="#user-content-about-me"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/de35eb6/assets/finder/about-me-window.svg" width="100%" alt="About Me" /></a>
 </p>
 
 📚 My Courses: <a href="https://itvdn.com/ua/catalog/author/kinash-stanislav" target="_blank">ITVDN</a>
