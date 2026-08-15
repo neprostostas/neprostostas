@@ -1,30 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="290" viewBox="0 0 1200 290" role="img" aria-label="Stanislav Kinash - Frontend Engineer">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" role="img" aria-label="Stanislav Kinash - Frontend Engineer">
   <defs>
-    <linearGradient id="headerBg" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#111827"/>
-      <stop offset="55%" stop-color="#1D1530"/>
-      <stop offset="100%" stop-color="#2B1734"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B0F14" stop-opacity="1"/>
+      <stop offset="45%" stop-color="#111827" stop-opacity="1"/>
+      <stop offset="75%" stop-color="#1D1530" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#2B1734" stop-opacity="0"/>
     </linearGradient>
-
-    <linearGradient id="waveFront" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#111827"/>
-      <stop offset="55%" stop-color="#1D1530"/>
-      <stop offset="100%" stop-color="#2B1734"/>
-    </linearGradient>
-
-    <linearGradient id="waveMid" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#111827" stop-opacity="0.50"/>
-      <stop offset="55%" stop-color="#1D1530" stop-opacity="0.48"/>
-      <stop offset="100%" stop-color="#2B1734" stop-opacity="0.48"/>
-    </linearGradient>
-
-    <linearGradient id="waveBack" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#111827" stop-opacity="0.24"/>
-      <stop offset="55%" stop-color="#1D1530" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#2B1734" stop-opacity="0.22"/>
-    </linearGradient>
-
     <style>
+      .page-bg { fill: #0d1117; }
+      /* Accent under-wave: colored band, not same page-bg as the front edge */
+      .wave-soft { fill: #7A68B8; opacity: 0.38; }
       .title, .subtitle {
         font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
         text-anchor: middle;
@@ -33,65 +18,49 @@
       .title { font-size: 66px; font-weight: 750; letter-spacing: -1.8px; fill: #f5f5f7; }
       .subtitle { font-size: 25px; font-weight: 560; letter-spacing: -0.35px; fill: #B8A7E8; }
       @media (prefers-color-scheme: light) {
-        .title { fill: #111827; }
-        .subtitle { fill: #5B4F8C; }
+        .page-bg { fill: #ffffff; }
+        .wave-soft { fill: #9B8AD4; opacity: 0.28; }
       }
     </style>
   </defs>
 
-  <!-- Text band: plain rectangle, separate from the waves -->
-  <rect width="1200" height="150" fill="url(#headerBg)"/>
-  <text x="600" y="88" class="title">STANISLAV KINASH</text>
-  <text x="600" y="128" class="subtitle">Frontend Engineer | Vue.js | React | PixiJS/WebGL</text>
+  <rect width="1200" height="250" fill="url(#bg)"/>
 
-  <!-- Footer waves, flipped under the text rect (flat against the band, wavy edge down) -->
-  <g transform="translate(0 150) scale(0.75 -0.625) translate(0 -240)">
-    <path fill="url(#waveBack)"
-          d="M0 146 C190 98, 360 114, 540 150 C742 190, 952 186, 1148 148 C1328 112, 1476 104, 1600 122 L1600 240 L0 240 Z">
-      <animate attributeName="d"
-        dur="18s"
-        repeatCount="indefinite"
-        calcMode="spline"
-        keyTimes="0;0.25;0.5;0.75;1"
-        keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
-        values="
-        M0 146 C190 98, 360 114, 540 150 C742 190, 952 186, 1148 148 C1328 112, 1476 104, 1600 122 L1600 240 L0 240 Z;
-        M0 140 C178 184, 374 206, 562 168 C756 130, 950 98, 1140 110 C1316 122, 1480 162, 1600 142 L1600 240 L0 240 Z;
-        M0 154 C210 114, 388 90, 564 118 C754 150, 964 188, 1154 172 C1338 156, 1488 118, 1600 126 L1600 240 L0 240 Z;
-        M0 144 C196 104, 380 124, 560 156 C756 190, 948 176, 1140 144 C1322 114, 1482 108, 1600 130 L1600 240 L0 240 Z;
-        M0 146 C190 98, 360 114, 540 150 C742 190, 952 186, 1148 148 C1328 112, 1476 104, 1600 122 L1600 240 L0 240 Z"/>
-    </path>
-
-    <path fill="url(#waveMid)"
-          d="M0 164 C148 122, 304 106, 486 132 C670 160, 848 212, 1028 198 C1204 182, 1364 124, 1600 156 L1600 240 L0 240 Z">
-      <animate attributeName="d"
-        dur="14s"
-        repeatCount="indefinite"
-        calcMode="spline"
-        keyTimes="0;0.25;0.5;0.75;1"
-        keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
-        values="
-        M0 164 C148 122, 304 106, 486 132 C670 160, 848 212, 1028 198 C1204 182, 1364 124, 1600 156 L1600 240 L0 240 Z;
-        M0 152 C176 206, 350 228, 530 188 C714 146, 890 102, 1068 110 C1244 118, 1402 176, 1600 148 L1600 240 L0 240 Z;
-        M0 172 C160 128, 322 100, 502 116 C682 136, 858 178, 1036 166 C1216 154, 1390 126, 1600 160 L1600 240 L0 240 Z;
-        M0 160 C170 116, 334 116, 514 146 C696 178, 874 208, 1052 188 C1236 166, 1408 132, 1600 152 L1600 240 L0 240 Z;
-        M0 164 C148 122, 304 106, 486 132 C670 160, 848 212, 1028 198 C1204 182, 1364 124, 1600 156 L1600 240 L0 240 Z"/>
-    </path>
-
-    <path fill="url(#waveFront)"
-          d="M0 182 C174 126, 348 106, 524 136 C706 170, 880 236, 1062 212 C1248 188, 1418 144, 1600 172 L1600 240 L0 240 Z">
-      <animate attributeName="d"
-        dur="10.5s"
-        repeatCount="indefinite"
-        calcMode="spline"
-        keyTimes="0;0.25;0.5;0.75;1"
-        keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
-        values="
-        M0 182 C174 126, 348 106, 524 136 C706 170, 880 236, 1062 212 C1248 188, 1418 144, 1600 172 L1600 240 L0 240 Z;
-        M0 168 C160 228, 342 242, 524 190 C706 138, 884 102, 1066 126 C1250 150, 1424 206, 1600 176 L1600 240 L0 240 Z;
-        M0 188 C184 138, 360 114, 538 144 C724 176, 900 226, 1080 202 C1264 178, 1434 152, 1600 176 L1600 240 L0 240 Z;
-        M0 176 C172 118, 352 118, 532 154 C718 190, 892 232, 1072 206 C1258 180, 1432 160, 1600 180 L1600 240 L0 240 Z;
-        M0 182 C174 126, 348 106, 524 136 C706 170, 880 236, 1062 212 C1248 188, 1418 144, 1600 172 L1600 240 L0 240 Z"/>
-    </path>
+  <g>
+    <text x="600" y="88" class="title">STANISLAV KINASH</text>
+    <text x="600" y="128" class="subtitle">Frontend Engineer | Vue.js | React | PixiJS/WebGL</text>
   </g>
+
+  <!-- Waves kept near the bottom of the taller canvas -->
+  <path class="wave-soft"
+        d="M0 176 C170 162 310 184 480 172 C650 160 800 154 945 166 C1045 174 1130 188 1200 200 L1200 250 L0 250 Z">
+    <animate attributeName="d"
+      dur="16s"
+      repeatCount="indefinite"
+      calcMode="spline"
+      keyTimes="0;0.25;0.5;0.75;1"
+      keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
+      values="
+      M0 176 C170 162 310 184 480 172 C650 160 800 154 945 166 C1045 174 1130 188 1200 200 L1200 250 L0 250 Z;
+      M0 170 C160 192 330 202 495 180 C660 158 815 142 955 152 C1055 160 1135 182 1200 192 L1200 250 L0 250 Z;
+      M0 182 C185 166 325 152 490 164 C655 176 820 194 960 184 C1060 176 1140 162 1200 196 L1200 250 L0 250 Z;
+      M0 174 C175 156 320 170 485 182 C650 194 810 186 950 170 C1050 158 1135 164 1200 194 L1200 250 L0 250 Z;
+      M0 176 C170 162 310 184 480 172 C650 160 800 154 945 166 C1045 174 1130 188 1200 200 L1200 250 L0 250 Z"/>
+  </path>
+
+  <path class="page-bg"
+        d="M0 188 C180 172 320 195 485 185 C650 175 795 171 940 180 C1040 186 1125 199 1200 210 L1200 250 L0 250 Z">
+    <animate attributeName="d"
+      dur="11s"
+      repeatCount="indefinite"
+      calcMode="spline"
+      keyTimes="0;0.25;0.5;0.75;1"
+      keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
+      values="
+      M0 188 C180 172 320 195 485 185 C650 175 795 171 940 180 C1040 186 1125 199 1200 210 L1200 250 L0 250 Z;
+      M0 182 C165 206 335 214 500 192 C665 170 820 152 955 162 C1055 170 1130 192 1200 202 L1200 250 L0 250 Z;
+      M0 194 C195 176 340 162 505 174 C670 186 830 204 965 194 C1065 186 1140 174 1200 206 L1200 250 L0 250 Z;
+      M0 186 C185 166 330 180 495 194 C660 208 815 200 950 182 C1050 170 1135 176 1200 204 L1200 250 L0 250 Z;
+      M0 188 C180 172 320 195 485 185 C650 175 795 171 940 180 C1040 186 1125 199 1200 210 L1200 250 L0 250 Z"/>
+  </path>
 </svg>
