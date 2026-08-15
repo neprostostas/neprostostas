@@ -2,11 +2,12 @@ name: Update Activity Graph
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "5 */12 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - main
+
+concurrency:
+  group: activity-graph-output
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -14,6 +15,7 @@ jobs:
       contents: write
 
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - uses: actions/checkout@v4
@@ -26,10 +28,27 @@ jobs:
           output_path: dist/activity-graph.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Push activity graph to output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: activity-graph-output
-          build_dir: dist
+      - name: Push activity graph to activity-graph-output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TARGET_BRANCH: activity-graph-output
+        run: |
+          set -euo pipefail
+          cd dist
+          git init
+          git checkout --orphan "$TARGET_BRANCH"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit --allow-empty -m "Update activity graph"
+          remote="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          for attempt in 1 2 3 4 5; do
+            if git push --force "$remote" "HEAD:refs/heads/${TARGET_BRANCH}"; then
+              echo "Pushed on attempt ${attempt}"
+              exit 0
+            fi
+            echo "Push attempt ${attempt} failed; retrying..."
+            sleep $((attempt * 3))
+          done
+          echo "Failed to push after retries"
+          exit 1
