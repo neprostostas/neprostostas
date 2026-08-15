@@ -6,26 +6,9 @@
       <stop offset="75%" stop-color="#1D1530"/>
       <stop offset="100%" stop-color="#2B1734"/>
     </linearGradient>
-
-    <linearGradient id="waveFront" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#7657F0"/>
-      <stop offset="52%" stop-color="#5572E6"/>
-      <stop offset="100%" stop-color="#3C97D4"/>
-    </linearGradient>
-
-    <linearGradient id="waveMid" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#7D63F3" stop-opacity="0.42"/>
-      <stop offset="52%" stop-color="#6480EA" stop-opacity="0.38"/>
-      <stop offset="100%" stop-color="#48A4DF" stop-opacity="0.38"/>
-    </linearGradient>
-
-    <linearGradient id="waveBack" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#8D74FF" stop-opacity="0.20"/>
-      <stop offset="52%" stop-color="#7290F0" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#58B2E7" stop-opacity="0.18"/>
-    </linearGradient>
-
     <style>
+      .page-bg { fill: #0d1117; }
+      .page-bg-soft { fill: #0d1117; opacity: 0.55; }
       .title, .subtitle {
         font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
         text-anchor: middle;
@@ -33,64 +16,50 @@
       }
       .title { font-size: 66px; font-weight: 750; letter-spacing: -1.8px; fill: #f5f5f7; }
       .subtitle { font-size: 25px; font-weight: 560; letter-spacing: -0.35px; fill: #B8A7E8; }
+      @media (prefers-color-scheme: light) {
+        .page-bg, .page-bg-soft { fill: #ffffff; }
+      }
     </style>
   </defs>
 
   <rect width="1200" height="210" fill="url(#bg)"/>
 
+  <!-- Soft under-layer of the same page-bg edge, slightly offset timing -->
+  <path class="page-bg-soft"
+        d="M0 152 C170 138 310 160 480 148 C650 136 800 130 945 142 C1045 150 1130 164 1200 176 L1200 210 L0 210 Z">
+    <animate attributeName="d"
+      dur="16s"
+      repeatCount="indefinite"
+      calcMode="spline"
+      keyTimes="0;0.25;0.5;0.75;1"
+      keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
+      values="
+      M0 152 C170 138 310 160 480 148 C650 136 800 130 945 142 C1045 150 1130 164 1200 176 L1200 210 L0 210 Z;
+      M0 146 C160 168 330 178 495 156 C660 134 815 118 955 128 C1055 136 1135 158 1200 168 L1200 210 L0 210 Z;
+      M0 158 C185 142 325 128 490 140 C655 152 820 170 960 160 C1060 152 1140 138 1200 172 L1200 210 L0 210 Z;
+      M0 150 C175 132 320 146 485 158 C650 170 810 162 950 146 C1050 134 1135 140 1200 170 L1200 210 L0 210 Z;
+      M0 152 C170 138 310 160 480 148 C650 136 800 130 945 142 C1045 150 1130 164 1200 176 L1200 210 L0 210 Z"/>
+  </path>
+
+  <!-- Original header edge curve — animated in place -->
+  <path class="page-bg"
+        d="M0 164 C180 148 320 171 485 161 C650 151 795 147 940 156 C1040 162 1125 175 1200 186 L1200 210 L0 210 Z">
+    <animate attributeName="d"
+      dur="11s"
+      repeatCount="indefinite"
+      calcMode="spline"
+      keyTimes="0;0.25;0.5;0.75;1"
+      keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
+      values="
+      M0 164 C180 148 320 171 485 161 C650 151 795 147 940 156 C1040 162 1125 175 1200 186 L1200 210 L0 210 Z;
+      M0 158 C165 182 335 190 500 168 C665 146 820 128 955 138 C1055 146 1130 168 1200 178 L1200 210 L0 210 Z;
+      M0 170 C195 152 340 138 505 150 C670 162 830 180 965 170 C1065 162 1140 150 1200 182 L1200 210 L0 210 Z;
+      M0 162 C185 142 330 156 495 170 C660 184 815 176 950 158 C1050 146 1135 152 1200 180 L1200 210 L0 210 Z;
+      M0 164 C180 148 320 171 485 161 C650 151 795 147 940 156 C1040 162 1125 175 1200 186 L1200 210 L0 210 Z"/>
+  </path>
+
   <g>
-    <text x="600" y="78" class="title">STANISLAV KINASH</text>
-    <text x="600" y="116" class="subtitle">Frontend Engineer | Vue.js | React | PixiJS/WebGL</text>
+    <text x="600" y="90" class="title">STANISLAV KINASH</text>
+    <text x="600" y="130" class="subtitle">Frontend Engineer | Vue.js | React | PixiJS/WebGL</text>
   </g>
-
-  <!-- Back wave (same motion language as footer-banner-v3) -->
-  <path fill="url(#waveBack)"
-        d="M0 132 C142 98, 270 108, 405 132 C556 160, 714 158, 861 132 C996 108, 1107 102, 1200 116 L1200 210 L0 210 Z">
-    <animate attributeName="d"
-      dur="18s"
-      repeatCount="indefinite"
-      calcMode="spline"
-      keyTimes="0;0.25;0.5;0.75;1"
-      keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
-      values="
-      M0 132 C142 98, 270 108, 405 132 C556 160, 714 158, 861 132 C996 108, 1107 102, 1200 116 L1200 210 L0 210 Z;
-      M0 128 C134 154, 280 168, 422 144 C567 118, 712 96, 855 104 C987 112, 1110 140, 1200 128 L1200 210 L0 210 Z;
-      M0 138 C158 108, 291 90, 423 108 C566 130, 723 156, 866 146 C1004 136, 1116 110, 1200 118 L1200 210 L0 210 Z;
-      M0 130 C147 102, 285 116, 420 138 C567 160, 711 150, 855 128 C992 108, 1112 104, 1200 120 L1200 210 L0 210 Z;
-      M0 132 C142 98, 270 108, 405 132 C556 160, 714 158, 861 132 C996 108, 1107 102, 1200 116 L1200 210 L0 210 Z"/>
-  </path>
-
-  <!-- Middle wave -->
-  <path fill="url(#waveMid)"
-        d="M0 146 C111 118, 228 108, 364 124 C502 144, 636 178, 771 168 C903 158, 1023 118, 1200 140 L1200 210 L0 210 Z">
-    <animate attributeName="d"
-      dur="14s"
-      repeatCount="indefinite"
-      calcMode="spline"
-      keyTimes="0;0.25;0.5;0.75;1"
-      keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
-      values="
-      M0 146 C111 118, 228 108, 364 124 C502 144, 636 178, 771 168 C903 158, 1023 118, 1200 140 L1200 210 L0 210 Z;
-      M0 138 C132 168, 262 182, 398 156 C536 128, 668 98, 801 104 C933 110, 1052 148, 1200 134 L1200 210 L0 210 Z;
-      M0 152 C120 120, 242 98, 376 110 C512 124, 644 152, 777 144 C912 136, 1042 118, 1200 142 L1200 210 L0 210 Z;
-      M0 144 C128 112, 250 112, 386 132 C522 154, 656 174, 789 160 C927 146, 1056 122, 1200 138 L1200 210 L0 210 Z;
-      M0 146 C111 118, 228 108, 364 124 C502 144, 636 178, 771 168 C903 158, 1023 118, 1200 140 L1200 210 L0 210 Z"/>
-  </path>
-
-  <!-- Front wave -->
-  <path fill="url(#waveFront)"
-        d="M0 160 C130 122, 261 108, 393 128 C530 152, 660 196, 796 178 C936 160, 1064 130, 1200 150 L1200 210 L0 210 Z">
-    <animate attributeName="d"
-      dur="10.5s"
-      repeatCount="indefinite"
-      calcMode="spline"
-      keyTimes="0;0.25;0.5;0.75;1"
-      keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
-      values="
-      M0 160 C130 122, 261 108, 393 128 C530 152, 660 196, 796 178 C936 160, 1064 130, 1200 150 L1200 210 L0 210 Z;
-      M0 150 C120 186, 256 196, 393 162 C530 126, 663 100, 800 116 C938 132, 1068 170, 1200 154 L1200 210 L0 210 Z;
-      M0 164 C138 128, 270 110, 404 130 C543 152, 675 186, 810 170 C948 154, 1076 136, 1200 154 L1200 210 L0 210 Z;
-      M0 156 C129 114, 264 114, 399 138 C538 162, 669 190, 804 172 C944 154, 1074 140, 1200 158 L1200 210 L0 210 Z;
-      M0 160 C130 122, 261 108, 393 128 C530 152, 660 196, 796 178 C936 160, 1064 130, 1200 150 L1200 210 L0 210 Z"/>
-  </path>
 </svg>
