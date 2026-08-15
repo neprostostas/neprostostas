@@ -6,10 +6,26 @@
       <stop offset="75%" stop-color="#1D1530"/>
       <stop offset="100%" stop-color="#2B1734"/>
     </linearGradient>
+
+    <linearGradient id="waveFront" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7657F0"/>
+      <stop offset="52%" stop-color="#5572E6"/>
+      <stop offset="100%" stop-color="#3C97D4"/>
+    </linearGradient>
+
+    <linearGradient id="waveMid" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7D63F3" stop-opacity="0.42"/>
+      <stop offset="52%" stop-color="#6480EA" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#48A4DF" stop-opacity="0.38"/>
+    </linearGradient>
+
+    <linearGradient id="waveBack" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8D74FF" stop-opacity="0.20"/>
+      <stop offset="52%" stop-color="#7290F0" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#58B2E7" stop-opacity="0.18"/>
+    </linearGradient>
+
     <style>
-      .wave-back { fill: #0d1117; opacity: 0.28; }
-      .wave-mid { fill: #0d1117; opacity: 0.52; }
-      .wave-front { fill: #0d1117; }
       .title, .subtitle {
         font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
         text-anchor: middle;
@@ -17,9 +33,6 @@
       }
       .title { font-size: 66px; font-weight: 750; letter-spacing: -1.8px; fill: #f5f5f7; }
       .subtitle { font-size: 25px; font-weight: 560; letter-spacing: -0.35px; fill: #B8A7E8; }
-      @media (prefers-color-scheme: light) {
-        .wave-back, .wave-mid, .wave-front { fill: #ffffff; }
-      }
     </style>
   </defs>
 
@@ -30,15 +43,9 @@
     <text x="600" y="128" class="subtitle">Frontend Engineer | Vue.js | React | PixiJS/WebGL</text>
   </g>
 
-  <!--
-    Three stacked edges of the same page-bg color.
-    Crest bands stay separated so the solid front never pokes through the softer layers:
-      back  ~158–176, mid ~182–198, front ~204–218
-  -->
-
-  <!-- Back (highest, softest) -->
-  <path class="wave-back"
-        d="M0 168 C175 154 320 172 490 164 C660 156 810 150 960 160 C1065 168 1140 178 1200 186 L1200 250 L0 250 Z">
+  <!-- Back wave -->
+  <path fill="url(#waveBack)"
+        d="M 0 171 C 142 133 270 145 405 174 C 556 205 714 202 861 172 C 996 144 1107 137 1200 152 L 1200 250 L 0 250 Z">
     <animate attributeName="d"
       dur="18s"
       repeatCount="indefinite"
@@ -46,44 +53,44 @@
       keyTimes="0;0.25;0.5;0.75;1"
       keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
       values="
-      M0 168 C175 154 320 172 490 164 C660 156 810 150 960 160 C1065 168 1140 178 1200 186 L1200 250 L0 250 Z;
-      M0 160 C165 176 335 180 500 168 C665 156 820 148 965 154 C1070 160 1145 172 1200 180 L1200 250 L0 250 Z;
-      M0 172 C185 158 330 148 495 156 C660 164 825 174 970 168 C1075 164 1145 158 1200 184 L1200 250 L0 250 Z;
-      M0 166 C180 152 325 160 490 170 C655 180 815 172 960 162 C1065 156 1140 162 1200 182 L1200 250 L0 250 Z;
-      M0 168 C175 154 320 172 490 164 C660 156 810 150 960 160 C1065 168 1140 178 1200 186 L1200 250 L0 250 Z"/>
+      M 0 171 C 142 133 270 145 405 174 C 556 205 714 202 861 172 C 996 144 1107 137 1200 152 L 1200 250 L 0 250 Z;
+      M 0 166 C 134 201 280 218 422 188 C 567 158 712 133 855 142 C 987 152 1110 183 1200 167 L 1200 250 L 0 250 Z;
+      M 0 177 C 158 145 291 126 423 148 C 566 174 723 204 866 191 C 1004 178 1116 148 1200 155 L 1200 250 L 0 250 Z;
+      M 0 169 C 147 137 285 153 420 178 C 567 205 711 194 855 169 C 992 145 1112 140 1200 158 L 1200 250 L 0 250 Z;
+      M 0 171 C 142 133 270 145 405 174 C 556 205 714 202 861 172 C 996 144 1107 137 1200 152 L 1200 250 L 0 250 Z"/>
   </path>
 
-  <!-- Mid -->
-  <path class="wave-mid"
-        d="M0 190 C170 176 315 192 485 186 C655 180 805 174 955 182 C1060 188 1135 198 1200 204 L1200 250 L0 250 Z">
+  <!-- Middle wave -->
+  <path fill="url(#waveMid)"
+        d="M 0 185 C 111 152 228 139 364 160 C 502 182 636 223 771 212 C 903 199 1023 153 1200 178 L 1200 250 L 0 250 Z">
     <animate attributeName="d"
-      dur="13s"
+      dur="14s"
       repeatCount="indefinite"
       calcMode="spline"
       keyTimes="0;0.25;0.5;0.75;1"
       keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
       values="
-      M0 190 C170 176 315 192 485 186 C655 180 805 174 955 182 C1060 188 1135 198 1200 204 L1200 250 L0 250 Z;
-      M0 184 C160 198 330 202 495 190 C660 178 815 170 960 176 C1065 182 1140 194 1200 200 L1200 250 L0 250 Z;
-      M0 196 C180 182 325 172 490 180 C655 188 820 198 965 192 C1070 188 1140 182 1200 202 L1200 250 L0 250 Z;
-      M0 188 C175 174 320 182 485 194 C650 206 810 198 955 186 C1060 180 1135 186 1200 200 L1200 250 L0 250 Z;
-      M0 190 C170 176 315 192 485 186 C655 180 805 174 955 182 C1060 188 1135 198 1200 204 L1200 250 L0 250 Z"/>
+      M 0 185 C 111 152 228 139 364 160 C 502 182 636 223 771 212 C 903 199 1023 153 1200 178 L 1200 250 L 0 250 Z;
+      M 0 175 C 132 218 262 236 398 204 C 536 171 668 136 801 142 C 933 148 1052 194 1200 172 L 1200 250 L 0 250 Z;
+      M 0 191 C 120 156 242 134 376 147 C 512 163 644 196 777 186 C 912 177 1042 155 1200 182 L 1200 250 L 0 250 Z;
+      M 0 182 C 128 147 250 147 386 171 C 522 196 656 220 789 204 C 927 186 1056 160 1200 175 L 1200 250 L 0 250 Z;
+      M 0 185 C 111 152 228 139 364 160 C 502 182 636 223 771 212 C 903 199 1023 153 1200 178 L 1200 250 L 0 250 Z"/>
   </path>
 
-  <!-- Front (lowest, solid — crest stays under the mid band) -->
-  <path class="wave-front"
-        d="M0 212 C180 198 325 210 490 206 C655 202 805 196 955 202 C1060 206 1135 214 1200 218 L1200 250 L0 250 Z">
+  <!-- Front wave -->
+  <path fill="url(#waveFront)"
+        d="M 0 199 C 130 155 261 139 393 163 C 530 190 660 242 796 223 C 936 204 1064 169 1200 191 L 1200 250 L 0 250 Z">
     <animate attributeName="d"
-      dur="9.5s"
+      dur="10.5s"
       repeatCount="indefinite"
       calcMode="spline"
       keyTimes="0;0.25;0.5;0.75;1"
       keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
       values="
-      M0 212 C180 198 325 210 490 206 C655 202 805 196 955 202 C1060 206 1135 214 1200 218 L1200 250 L0 250 Z;
-      M0 208 C170 218 335 220 500 210 C665 200 820 194 965 198 C1070 202 1140 212 1200 216 L1200 250 L0 250 Z;
-      M0 216 C190 204 340 196 505 202 C670 208 830 216 970 212 C1075 210 1145 206 1200 218 L1200 250 L0 250 Z;
-      M0 210 C185 198 330 204 495 214 C660 224 815 218 960 208 C1065 204 1140 208 1200 216 L1200 250 L0 250 Z;
-      M0 212 C180 198 325 210 490 206 C655 202 805 196 955 202 C1060 206 1135 214 1200 218 L1200 250 L0 250 Z"/>
+      M 0 199 C 130 155 261 139 393 163 C 530 190 660 242 796 223 C 936 204 1064 169 1200 191 L 1200 250 L 0 250 Z;
+      M 0 188 C 120 236 256 247 393 205 C 530 164 663 136 800 155 C 938 174 1068 218 1200 194 L 1200 250 L 0 250 Z;
+      M 0 204 C 138 164 270 145 404 169 C 543 194 675 234 810 215 C 948 196 1076 175 1200 194 L 1200 250 L 0 250 Z;
+      M 0 194 C 129 148 264 148 399 177 C 538 205 669 239 804 218 C 944 198 1074 182 1200 198 L 1200 250 L 0 250 Z;
+      M 0 199 C 130 155 261 139 393 163 C 530 190 660 242 796 223 C 936 204 1064 169 1200 191 L 1200 250 L 0 250 Z"/>
   </path>
 </svg>
