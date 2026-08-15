@@ -1,28 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" role="img" aria-label="Stanislav Kinash - Frontend Engineer">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#0B0F14"/>
       <stop offset="45%" stop-color="#111827"/>
       <stop offset="75%" stop-color="#1D1530"/>
       <stop offset="100%" stop-color="#2B1734"/>
     </linearGradient>
 
-    <linearGradient id="waveFront" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#7657F0"/>
-      <stop offset="52%" stop-color="#5572E6"/>
-      <stop offset="100%" stop-color="#3C97D4"/>
+    <linearGradient id="a v t" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="52%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#0d1117"/>
     </linearGradient>
 
-    <linearGradient id="waveMid" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#7D63F3" stop-opacity="0.42"/>
-      <stop offset="52%" stop-color="#6480EA" stop-opacity="0.38"/>
-      <stop offset="100%" stop-color="#48A4DF" stop-opacity="0.38"/>
+    <linearGradient id="a v M" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d1117" stop-opacity="0.42"/>
+      <stop offset="52%" stop-color="#0d1117" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.38"/>
     </linearGradient>
 
-    <linearGradient id="waveBack" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#8D74FF" stop-opacity="0.20"/>
-      <stop offset="52%" stop-color="#7290F0" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#58B2E7" stop-opacity="0.18"/>
+    <linearGradient id="a v a c" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d1117" stop-opacity="0.20"/>
+      <stop offset="52%" stop-color="#0d1117" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.18"/>
     </linearGradient>
 
     <style>
@@ -33,6 +33,9 @@
       }
       .title { font-size: 66px; font-weight: 750; letter-spacing: -1.8px; fill: #f5f5f7; }
       .subtitle { font-size: 25px; font-weight: 560; letter-spacing: -0.35px; fill: #B8A7E8; }
+      @media (prefers-color-scheme: light) {
+        #waveFront stop, #waveMid stop, #waveBack stop { stop-color: #ffffff; }
+      }
     </style>
   </defs>
 
@@ -44,8 +47,7 @@
   </g>
 
   <!-- Back wave -->
-  <path fill="url(#waveBack)"
-        d="M 0 171 C 142 133 270 145 405 174 C 556 205 714 202 861 172 C 996 144 1107 137 1200 152 L 1200 250 L 0 250 Z">
+  <path fill="url(#waveBack)" d="M 1200 200 C 1058 167 930 178 795 202 C 644 229 486 227 339 201 C 204 176 93 171 0 183 L 0 250 L 1200 250 Z">
     <animate attributeName="d"
       dur="18s"
       repeatCount="indefinite"
@@ -53,16 +55,15 @@
       keyTimes="0;0.25;0.5;0.75;1"
       keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
       values="
-      M 0 171 C 142 133 270 145 405 174 C 556 205 714 202 861 172 C 996 144 1107 137 1200 152 L 1200 250 L 0 250 Z;
-      M 0 166 C 134 201 280 218 422 188 C 567 158 712 133 855 142 C 987 152 1110 183 1200 167 L 1200 250 L 0 250 Z;
-      M 0 177 C 158 145 291 126 423 148 C 566 174 723 204 866 191 C 1004 178 1116 148 1200 155 L 1200 250 L 0 250 Z;
-      M 0 169 C 147 137 285 153 420 178 C 567 205 711 194 855 169 C 992 145 1112 140 1200 158 L 1200 250 L 0 250 Z;
-      M 0 171 C 142 133 270 145 405 174 C 556 205 714 202 861 172 C 996 144 1107 137 1200 152 L 1200 250 L 0 250 Z"/>
+      M 1200 200 C 1058 167 930 178 795 202 C 644 229 486 227 339 201 C 204 176 93 171 0 183 L 0 250 L 1200 250 Z;
+      M 1200 198 C 1053 171 915 185 780 206 C 633 229 489 220 345 198 C 208 178 88 174 0 189 L 0 250 L 1200 250 Z;
+      M 1200 205 C 1042 178 909 162 777 181 C 634 202 477 228 334 217 C 196 206 84 181 0 186 L 0 250 L 1200 250 Z;
+      M 1200 196 C 1066 225 920 240 778 214 C 633 189 488 167 345 175 C 213 183 90 210 0 197 L 0 250 L 1200 250 Z;
+      M 1200 200 C 1058 167 930 178 795 202 C 644 229 486 227 339 201 C 204 176 93 171 0 183 L 0 250 L 1200 250 Z"/>
   </path>
 
   <!-- Middle wave -->
-  <path fill="url(#waveMid)"
-        d="M 0 185 C 111 152 228 139 364 160 C 502 182 636 223 771 212 C 903 199 1023 153 1200 178 L 1200 250 L 0 250 Z">
+  <path fill="url(#waveMid)" d="M 1200 212 C 1089 183 972 172 836 190 C 698 209 564 244 429 235 C 297 224 177 185 0 206 L 0 250 L 1200 250 Z">
     <animate attributeName="d"
       dur="14s"
       repeatCount="indefinite"
@@ -70,16 +71,15 @@
       keyTimes="0;0.25;0.5;0.75;1"
       keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
       values="
-      M 0 185 C 111 152 228 139 364 160 C 502 182 636 223 771 212 C 903 199 1023 153 1200 178 L 1200 250 L 0 250 Z;
-      M 0 175 C 132 218 262 236 398 204 C 536 171 668 136 801 142 C 933 148 1052 194 1200 172 L 1200 250 L 0 250 Z;
-      M 0 191 C 120 156 242 134 376 147 C 512 163 644 196 777 186 C 912 177 1042 155 1200 182 L 1200 250 L 0 250 Z;
-      M 0 182 C 128 147 250 147 386 171 C 522 196 656 220 789 204 C 927 186 1056 160 1200 175 L 1200 250 L 0 250 Z;
-      M 0 185 C 111 152 228 139 364 160 C 502 182 636 223 771 212 C 903 199 1023 153 1200 178 L 1200 250 L 0 250 Z"/>
+      M 1200 212 C 1089 183 972 172 836 190 C 698 209 564 244 429 235 C 297 224 177 185 0 206 L 0 250 L 1200 250 Z;
+      M 1200 209 C 1072 179 950 179 814 200 C 678 221 544 242 411 228 C 273 213 144 190 0 204 L 0 250 L 1200 250 Z;
+      M 1200 217 C 1080 187 958 168 824 179 C 688 193 556 221 423 213 C 288 205 158 186 0 209 L 0 250 L 1200 250 Z;
+      M 1200 204 C 1068 240 938 255 802 228 C 664 200 532 170 399 175 C 267 181 148 220 0 201 L 0 250 L 1200 250 Z;
+      M 1200 212 C 1089 183 972 172 836 190 C 698 209 564 244 429 235 C 297 224 177 185 0 206 L 0 250 L 1200 250 Z"/>
   </path>
 
   <!-- Front wave -->
-  <path fill="url(#waveFront)"
-        d="M 0 199 C 130 155 261 139 393 163 C 530 190 660 242 796 223 C 936 204 1064 169 1200 191 L 1200 250 L 0 250 Z">
+  <path fill="url(#waveFront)" d="M 1200 224 C 1070 186 939 172 807 193 C 670 216 540 261 404 244 C 264 228 136 198 0 217 L 0 250 L 1200 250 Z">
     <animate attributeName="d"
       dur="10.5s"
       repeatCount="indefinite"
@@ -87,10 +87,10 @@
       keyTimes="0;0.25;0.5;0.75;1"
       keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
       values="
-      M 0 199 C 130 155 261 139 393 163 C 530 190 660 242 796 223 C 936 204 1064 169 1200 191 L 1200 250 L 0 250 Z;
-      M 0 188 C 120 236 256 247 393 205 C 530 164 663 136 800 155 C 938 174 1068 218 1200 194 L 1200 250 L 0 250 Z;
-      M 0 204 C 138 164 270 145 404 169 C 543 194 675 234 810 215 C 948 196 1076 175 1200 194 L 1200 250 L 0 250 Z;
-      M 0 194 C 129 148 264 148 399 177 C 538 205 669 239 804 218 C 944 198 1074 182 1200 198 L 1200 250 L 0 250 Z;
-      M 0 199 C 130 155 261 139 393 163 C 530 190 660 242 796 223 C 936 204 1064 169 1200 191 L 1200 250 L 0 250 Z"/>
+      M 1200 224 C 1070 186 939 172 807 193 C 670 216 540 261 404 244 C 264 228 136 198 0 217 L 0 250 L 1200 250 Z;
+      M 1200 220 C 1071 181 936 181 801 205 C 662 229 531 258 396 240 C 256 223 126 209 0 223 L 0 250 L 1200 250 Z;
+      M 1200 228 C 1062 194 930 178 796 198 C 657 220 525 254 390 238 C 252 221 124 204 0 220 L 0 250 L 1200 250 Z;
+      M 1200 214 C 1080 255 944 265 807 229 C 670 194 537 170 400 186 C 262 202 132 240 0 220 L 0 250 L 1200 250 Z;
+      M 1200 224 C 1070 186 939 172 807 193 C 670 216 540 261 404 244 C 264 228 136 198 0 217 L 0 250 L 1200 250 Z"/>
   </path>
 </svg>
