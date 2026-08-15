@@ -17,25 +17,26 @@
 
     <mask id="m0">
       <rect x="0" y="0" width="0" height="55" fill="white">
-        <animate id="a0" attributeName="width" values="0;900;900;0" keyTimes="0;0.66;0.88;1" dur="6s" begin="0s;a3.end"/>
+        <!-- hold stays ~1.32s; type-in/out faster (was 3.96s / 0.72s of a 6s cycle) -->
+        <animate id="a0" attributeName="width" values="0;900;900;0" keyTimes="0;0.361;0.8375;1" keySplines="0.25 0.1 0.25 1; 0 0 1 1; 0.4 0 0.2 1" calcMode="spline" dur="2.77s" begin="0s;a3.end"/>
       </rect>
     </mask>
 
     <mask id="m1">
       <rect x="0" y="0" width="0" height="55" fill="white">
-        <animate id="a1" attributeName="width" values="0;900;900;0" keyTimes="0;0.66;0.88;1" dur="6s" begin="a0.end"/>
+        <animate id="a1" attributeName="width" values="0;900;900;0" keyTimes="0;0.361;0.8375;1" keySplines="0.25 0.1 0.25 1; 0 0 1 1; 0.4 0 0.2 1" calcMode="spline" dur="2.77s" begin="a0.end"/>
       </rect>
     </mask>
 
     <mask id="m2">
       <rect x="0" y="0" width="0" height="55" fill="white">
-        <animate id="a2" attributeName="width" values="0;900;900;0" keyTimes="0;0.66;0.88;1" dur="6s" begin="a1.end"/>
+        <animate id="a2" attributeName="width" values="0;900;900;0" keyTimes="0;0.361;0.8375;1" keySplines="0.25 0.1 0.25 1; 0 0 1 1; 0.4 0 0.2 1" calcMode="spline" dur="2.77s" begin="a1.end"/>
       </rect>
     </mask>
 
     <mask id="m3">
       <rect x="0" y="0" width="0" height="55" fill="white">
-        <animate id="a3" attributeName="width" values="0;900;900;0" keyTimes="0;0.66;0.88;1" dur="6s" begin="a2.end"/>
+        <animate id="a3" attributeName="width" values="0;900;900;0" keyTimes="0;0.361;0.8375;1" keySplines="0.25 0.1 0.25 1; 0 0 1 1; 0.4 0 0.2 1" calcMode="spline" dur="2.77s" begin="a2.end"/>
       </rect>
     </mask>
   </defs>
