@@ -63,6 +63,7 @@
   <img src="https://go-skill-icons.vercel.app/api/icons?i=deepseek&theme=dark" width="52" height="52" align="middle" alt="DeepSeek" />
   <img src="https://go-skill-icons.vercel.app/api/icons?i=cursor&theme=dark" width="52" height="52" align="middle" alt="Cursor" />
   <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/perplexity-dark-rounded.svg" width="52" height="52" align="middle" alt="Perplexity" />
+  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/notion-dark.svg" width="52" height="52" align="middle" alt="Notion" />
 </div>
 
 ### 🎨 Design, Animation & Creative
@@ -72,58 +73,6 @@
   <img src="https://go-skill-icons.vercel.app/api/icons?i=photoshop&theme=dark" width="52" height="52" align="middle" alt="Adobe Photoshop" />
   <img src="https://go-skill-icons.vercel.app/api/icons?i=canva&theme=dark" width="52" height="52" align="middle" alt="Canva" />
   <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/spine-dark-rounded.svg" width="52" height="52" align="middle" alt="Spine 2D" />
-</div>
-
-### 🛠️ IDEs & Developer Tools
-
-<div align="center">
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=vscode&theme=dark" width="52" height="52" align="middle" alt="VS Code" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=webstorm&theme=dark" width="52" height="52" align="middle" alt="WebStorm" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=phpstorm&theme=dark" width="52" height="52" align="middle" alt="PhpStorm" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=postman&theme=dark" width="52" height="52" align="middle" alt="Postman" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/toolbox-dark-rounded.svg" width="52" height="52" align="middle" alt="JetBrains Toolbox" />
-</div>
-
-### ☁️ Cloud & Deployment
-
-<div align="center">
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=netlify&theme=dark" width="52" height="52" align="middle" alt="Netlify" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=vercel&theme=dark" width="52" height="52" align="middle" alt="Vercel" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/cloudinary-dark-rounded.svg" width="52" height="52" align="middle" alt="Cloudinary" />
-</div>
-
-### 💬 Communication
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/teams-dark.svg" width="52" height="52" align="middle" alt="Microsoft Teams" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/meet-2026-dark-rounded.svg" width="52" height="52" align="middle" alt="Google Meet" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/zoom-dark-rounded.svg" width="52" height="52" align="middle" alt="Zoom" />
-</div>
-
-### 🌐 Browsers
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/chrome-dark.svg" width="52" height="52" align="middle" alt="Google Chrome" />
-  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/firefox-dark.svg" width="52" height="52" align="middle" alt="Firefox" />
-  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/safari-dark.svg" width="52" height="52" align="middle" alt="Safari" />
-</div>
-
-### 📝 Productivity
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/notion-dark.svg" width="52" height="52" align="middle" alt="Notion" />
-  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/word-dark.svg" width="52" height="52" align="middle" alt="Microsoft Word" />
-  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/excel-dark.svg" width="52" height="52" align="middle" alt="Microsoft Excel" />
-  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/powerpoint-dark.svg" width="52" height="52" align="middle" alt="Microsoft PowerPoint" />
-</div>
-
-### 🔐 System & Utility Tools
-
-<div align="center">
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=cloudflare&theme=dark" width="52" height="52" align="middle" alt="Cloudflare WARP" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/nordvpn-dark-rounded.svg" width="52" height="52" align="middle" alt="NordVPN" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/elgato-dark-rounded.svg" width="52" height="52" align="middle" alt="Elgato Control Center" />
-  <img src="https://getwhisky.app/_astro/icon.Dn5YXOI8_Z2s5AQv.webp" width="52" height="52" align="middle" alt="Whisky" />
 </div>
 
 ## 🔥 My Stats
