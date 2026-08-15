@@ -5,7 +5,7 @@
 </div>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/08a6e4f/assets/finder/about-me-window-typed.svg" width="100%" alt="About Me" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/7c93d9b/assets/finder/about-me-window-typed.svg" width="100%" alt="About Me" />
 </p>
 
 📚 My Courses: <a href="https://itvdn.com/ua/catalog/author/kinash-stanislav" target="_blank">ITVDN</a>
