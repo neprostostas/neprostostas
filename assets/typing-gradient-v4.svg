@@ -15,38 +15,73 @@
       }
     </style>
 
-    <mask id="m0">
-      <rect x="0" y="0" width="0" height="55" fill="white">
-        <!-- hold stays ~1.32s; type-in/out faster (was 3.96s / 0.72s of a 6s cycle) -->
-        <animate id="a0" attributeName="width" values="0;900;900;0" keyTimes="0;0.361;0.8375;1" keySplines="0.25 0.1 0.25 1; 0 0 1 1; 0.4 0 0.2 1" calcMode="spline" dur="2.77s" begin="0s;a3.end"/>
-      </rect>
-    </mask>
-
-    <mask id="m1">
-      <rect x="0" y="0" width="0" height="55" fill="white">
-        <animate id="a1" attributeName="width" values="0;900;900;0" keyTimes="0;0.361;0.8375;1" keySplines="0.25 0.1 0.25 1; 0 0 1 1; 0.4 0 0.2 1" calcMode="spline" dur="2.77s" begin="a0.end"/>
-      </rect>
-    </mask>
-
-    <mask id="m2">
-      <rect x="0" y="0" width="0" height="55" fill="white">
-        <animate id="a2" attributeName="width" values="0;900;900;0" keyTimes="0;0.361;0.8375;1" keySplines="0.25 0.1 0.25 1; 0 0 1 1; 0.4 0 0.2 1" calcMode="spline" dur="2.77s" begin="a1.end"/>
-      </rect>
-    </mask>
-
-    <mask id="m3">
-      <rect x="0" y="0" width="0" height="55" fill="white">
-        <animate id="a3" attributeName="width" values="0;900;900;0" keyTimes="0;0.361;0.8375;1" keySplines="0.25 0.1 0.25 1; 0 0 1 1; 0.4 0 0.2 1" calcMode="spline" dur="2.77s" begin="a2.end"/>
-      </rect>
-    </mask>
+    <!-- Viewport clip like .main-title-viewport { overflow: hidden } -->
+    <clipPath id="viewport">
+      <rect x="0" y="0" width="900" height="55"/>
+    </clipPath>
   </defs>
 
   <rect class="canvas" x="0" y="0" width="900" height="55"/>
 
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="600" fill="url(#textGradient)" text-anchor="middle">
-    <text x="450" y="34" mask="url(#m0)">Building interactive web experiences 🚀</text>
-    <text x="450" y="34" mask="url(#m1)">Vue • Nuxt • React • Next.js</text>
-    <text x="450" y="34" mask="url(#m2)">PixiJS • WebGL • GSAP • Spine</text>
-    <text x="450" y="34" mask="url(#m3)">Crafting smooth interfaces &amp; animations ✨</text>
+  <!--
+    Same motion as web-407 main-title is-from / is-to:
+    enter: translateY(115%) → 0, exit: 0 → translateY(115%)
+    Hold stays ~1.32s; slide ~0.7s (site cubic-bezier .22,.61,.36,1)
+  -->
+  <g clip-path="url(#viewport)"
+     font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace"
+     font-size="21" font-weight="600" fill="url(#textGradient)" text-anchor="middle">
+
+    <g transform="translate(0, 63)">
+      <animateTransform id="a0" attributeName="transform" type="translate"
+        values="0,63; 0,0; 0,0; 0,63"
+        keyTimes="0;0.257;0.743;1"
+        keySplines="0.22 0.61 0.36 1; 0 0 1 1; 0.22 0.61 0.36 1"
+        calcMode="spline" dur="2.72s" begin="0s;a3.end"/>
+      <animate attributeName="opacity" values="0;1;1;0"
+        keyTimes="0;0.257;0.743;1"
+        keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 1 1"
+        calcMode="spline" dur="2.72s" begin="0s;a3.end"/>
+      <text x="450" y="34">Building interactive web experiences 🚀</text>
+    </g>
+
+    <g transform="translate(0, 63)" opacity="0">
+      <animateTransform id="a1" attributeName="transform" type="translate"
+        values="0,63; 0,0; 0,0; 0,63"
+        keyTimes="0;0.257;0.743;1"
+        keySplines="0.22 0.61 0.36 1; 0 0 1 1; 0.22 0.61 0.36 1"
+        calcMode="spline" dur="2.72s" begin="a0.end"/>
+      <animate attributeName="opacity" values="0;1;1;0"
+        keyTimes="0;0.257;0.743;1"
+        keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 1 1"
+        calcMode="spline" dur="2.72s" begin="a0.end"/>
+      <text x="450" y="34">Vue • Nuxt • React • Next.js</text>
+    </g>
+
+    <g transform="translate(0, 63)" opacity="0">
+      <animateTransform id="a2" attributeName="transform" type="translate"
+        values="0,63; 0,0; 0,0; 0,63"
+        keyTimes="0;0.257;0.743;1"
+        keySplines="0.22 0.61 0.36 1; 0 0 1 1; 0.22 0.61 0.36 1"
+        calcMode="spline" dur="2.72s" begin="a1.end"/>
+      <animate attributeName="opacity" values="0;1;1;0"
+        keyTimes="0;0.257;0.743;1"
+        keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 1 1"
+        calcMode="spline" dur="2.72s" begin="a1.end"/>
+      <text x="450" y="34">PixiJS • WebGL • GSAP • Spine</text>
+    </g>
+
+    <g transform="translate(0, 63)" opacity="0">
+      <animateTransform id="a3" attributeName="transform" type="translate"
+        values="0,63; 0,0; 0,0; 0,63"
+        keyTimes="0;0.257;0.743;1"
+        keySplines="0.22 0.61 0.36 1; 0 0 1 1; 0.22 0.61 0.36 1"
+        calcMode="spline" dur="2.72s" begin="a2.end"/>
+      <animate attributeName="opacity" values="0;1;1;0"
+        keyTimes="0;0.257;0.743;1"
+        keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 1 1"
+        calcMode="spline" dur="2.72s" begin="a2.end"/>
+      <text x="450" y="34">Crafting smooth interfaces &amp; animations ✨</text>
+    </g>
   </g>
 </svg>
