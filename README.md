@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/09388aa/assets/header-banner-v3.svg" width="100%" alt="Stanislav Kinash banner" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/aa51ae7/assets/header-banner-v3.svg" width="100%" alt="Stanislav Kinash banner" />
 
   <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/56e0122/assets/typing-gradient-v4.svg" width="900" height="55" alt="Typing animation" />
 </div>
