@@ -25,11 +25,11 @@
 ### ⚡ Frontend Core
 
 <div align="center">
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=javascript&theme=dark" width="52" height="52" align="middle" alt="JavaScript" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=typescript&theme=dark" width="52" height="52" align="middle" alt="TypeScript" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=html&theme=dark" width="52" height="52" align="middle" alt="HTML" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/javascript-dark-rounded.svg" width="52" height="52" align="middle" alt="JavaScript" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/typescript-dark-rounded.svg" width="52" height="52" align="middle" alt="TypeScript" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/html-dark-rounded.svg" width="52" height="52" align="middle" alt="HTML" />
   <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/css-dark-rounded.svg" width="52" height="52" align="middle" alt="CSS" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=sass&theme=dark" width="52" height="52" align="middle" alt="Sass" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/sass-dark-rounded.svg" width="52" height="52" align="middle" alt="Sass" />
   <img src="https://go-skill-icons.vercel.app/api/icons?i=tailwindcss&theme=dark" width="52" height="52" align="middle" alt="Tailwind CSS" />
   <img src="https://go-skill-icons.vercel.app/api/icons?i=vuejs&theme=dark" width="52" height="52" align="middle" alt="Vue.js" />
   <img src="https://go-skill-icons.vercel.app/api/icons?i=nuxtjs&theme=dark" width="52" height="52" align="middle" alt="Nuxt.js" />
@@ -70,7 +70,7 @@
 
 <div align="center">
   <img src="https://go-skill-icons.vercel.app/api/icons?i=figma&theme=dark" width="52" height="52" align="middle" alt="Figma" />
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=photoshop&theme=dark" width="52" height="52" align="middle" alt="Adobe Photoshop" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/photoshop-dark-rounded.svg" width="52" height="52" align="middle" alt="Adobe Photoshop" />
   <img src="https://go-skill-icons.vercel.app/api/icons?i=canva&theme=dark" width="52" height="52" align="middle" alt="Canva" />
   <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/spine-dark-rounded.svg" width="52" height="52" align="middle" alt="Spine 2D" />
 </div>
