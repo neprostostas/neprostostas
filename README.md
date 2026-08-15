@@ -4,8 +4,6 @@
   <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/56e0122/assets/typing-gradient-v4.svg" width="900" height="55" alt="Typing animation" />
 </div>
 
-# 💫 About Me:
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/28e9218/assets/finder/about-me-window.png" width="100%" alt="About Me" />
 </p>
