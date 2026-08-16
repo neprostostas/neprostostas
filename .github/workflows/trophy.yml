@@ -18,7 +18,14 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - name: Download trophy.svg
+      - name: Checkout build script
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            preview/build-trophies-svg.mjs
+          sparse-checkout-cone-mode: false
+
+      - name: Download stock trophy.svg + restyle
         env:
           USERNAME: ${{ github.repository_owner }}
         run: |
@@ -38,22 +45,26 @@ jobs:
             url="${endpoint}/?username=${USERNAME}&theme=algolia&column=-1&row=1&margin-w=8&margin-h=8&no-bg=false&no-frame=false"
             echo "Trying ${endpoint}..."
 
-            if curl --fail --location --silent --show-error --max-time 30 --retry 2 --retry-delay 2 "$url" -o dist/trophy.tmp.svg; then
-              if grep -q '<svg' dist/trophy.tmp.svg; then
-                mv dist/trophy.tmp.svg dist/trophy.svg
-                echo "Trophy generated successfully via ${endpoint}"
+            if curl --fail --location --silent --show-error --max-time 30 --retry 2 --retry-delay 2 "$url" -o dist/trophy-stock.svg; then
+              if grep -q '<svg' dist/trophy-stock.svg; then
+                echo "Stock trophy downloaded via ${endpoint}"
                 success=true
                 break
               fi
             fi
           done
 
-          rm -f dist/trophy.tmp.svg
-
           if [ "$success" != "true" ]; then
             echo "All trophy endpoints failed"
             exit 1
           fi
+
+          # Restyle into our SVG; text/ranks come from the stock file (Actions-fed).
+          node preview/build-trophies-svg.mjs \
+            --from-stock dist/trophy-stock.svg \
+            --out dist/trophy.svg
+
+          ls -la dist/trophy.svg dist/trophies-data.json
 
       - name: Push trophy.svg to trophy-output
         env:
@@ -66,8 +77,10 @@ jobs:
           git checkout --orphan "$TARGET_BRANCH"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit --allow-empty -m "Update trophy card"
+          # Ship styled SVG as trophy.svg (README already points here) + data JSON
+          git add trophy.svg
+          if [ -f trophies-data.json ]; then git add trophies-data.json; fi
+          git commit --allow-empty -m "Update styled trophy card"
           remote="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           for attempt in 1 2 3 4 5; do
             if git push --force "$remote" "HEAD:refs/heads/${TARGET_BRANCH}"; then
