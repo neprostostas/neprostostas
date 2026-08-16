@@ -14,25 +14,25 @@
   <tr>
     <td align="center" width="25%" valign="top">
       <a href="https://itvdn.com/ua/video/vuejs-start-ua" target="_blank">
-        <img src="https://img.shields.io/badge/Vue.js_Starter-5h12m-4fc08d?style=for-the-badge&labelColor=272725" alt="Vue.js Starter" /><br />
+        <img src="https://img.shields.io/static/v1?style=for-the-badge&labelColor=272725&color=4fc08d&label=%E2%A0%80%E2%A0%80%E2%A0%809%20lessons%E2%A0%80%E2%A0%80%E2%A0%80&message=5h12m" alt="Vue.js Starter" /><br />
         <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/3baed18/assets/courses/styled/vuejs-start.png" width="200" height="120" alt="Vue.js Starter cover" />
       </a>
     </td>
     <td align="center" width="25%" valign="top">
       <a href="https://itvdn.com/ua/video/layout-grid-ua" target="_blank">
-        <img src="https://img.shields.io/badge/CSS_Grid_Layout-3h46m-818cf8?style=for-the-badge&labelColor=272725" alt="CSS Grid Layout" /><br />
+        <img src="https://img.shields.io/static/v1?style=for-the-badge&labelColor=272725&color=818cf8&label=%E2%A0%80%E2%A0%80%E2%A0%8010%20lessons%E2%A0%80%E2%A0%80%E2%A0%80&message=3h46m" alt="CSS Grid Layout" /><br />
         <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/3baed18/assets/courses/styled/layout-grid.png" width="200" height="120" alt="CSS Grid Layout cover" />
       </a>
     </td>
     <td align="center" width="25%" valign="top">
       <a href="https://itvdn.com/ua/video/pug-ua" target="_blank">
-        <img src="https://img.shields.io/badge/Pug_Template_Engine-6h27m-c4b5fd?style=for-the-badge&labelColor=272725" alt="Pug Template Engine" /><br />
+        <img src="https://img.shields.io/static/v1?style=for-the-badge&labelColor=272725&color=c4b5fd&label=%E2%A0%80%E2%A0%80%E2%A0%8010%20lessons%E2%A0%80%E2%A0%80%E2%A0%80&message=6h27m" alt="Pug Template Engine" /><br />
         <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/3baed18/assets/courses/styled/pug.png" width="200" height="120" alt="Pug Template Engine cover" />
       </a>
     </td>
     <td align="center" width="25%" valign="top">
       <a href="https://itvdn.com/ua/video/react-native-ua" target="_blank">
-        <img src="https://img.shields.io/badge/React_Native-9h59m-8b5cf6?style=for-the-badge&labelColor=272725" alt="React Native" /><br />
+        <img src="https://img.shields.io/static/v1?style=for-the-badge&labelColor=272725&color=8b5cf6&label=%E2%A0%80%E2%A0%80%E2%A0%8020%20lessons%E2%A0%80%E2%A0%80%E2%A0%80&message=9h59m" alt="React Native" /><br />
         <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/3baed18/assets/courses/styled/react-native.png" width="200" height="120" alt="React Native cover" />
       </a>
     </td>
