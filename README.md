@@ -11,7 +11,23 @@
 <h3 align="center">📚 My Courses · <a href="https://itvdn.com/ua/catalog/author/kinash-stanislav" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/21c9617/assets/courses/itvdn-link.svg" height="18" align="absmiddle" alt="ITVDN" /></a></h3>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/d0c4e0b/assets/courses/courses-shelf.svg" width="100%" alt="My Courses" />
+  <table width="100%">
+    <tr>
+      <td width="25%" valign="top" align="center">
+        <a href="https://itvdn.com/ua/video/vuejs-start-ua" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/927d55b/assets/courses/courses-card-vuejs-start.svg" width="100%" alt="Vue.js Starter" /></a>
+      </td>
+      <td width="25%" valign="top" align="center">
+        <a href="https://itvdn.com/ua/video/layout-grid-ua" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/927d55b/assets/courses/courses-card-layout-grid.svg" width="100%" alt="CSS Grid Layout" /></a>
+      </td>
+      <td width="25%" valign="top" align="center">
+        <a href="https://itvdn.com/ua/video/pug-ua" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/927d55b/assets/courses/courses-card-pug.svg" width="100%" alt="Pug Template Engine" /></a>
+      </td>
+      <td width="25%" valign="top" align="center">
+        <a href="https://itvdn.com/ua/video/react-native-ua" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/927d55b/assets/courses/courses-card-react-native.svg" width="100%" alt="React Native" /></a>
+      </td>
+    </tr>
+  </table>
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/927d55b/assets/courses/courses-progress.svg" width="100%" alt="" />
 </p>
 
 <h3 align="center">Connect with me:</h3>
