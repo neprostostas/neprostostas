@@ -8,7 +8,7 @@
   <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/df2dd05/assets/finder/about-me-window-typed.svg" width="100%" alt="About Me" />
 </p>
 
-<h3 align="center">📚 My Courses · <a href="https://itvdn.com/ua/catalog/author/kinash-stanislav" target="_blank"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/24dddd2/assets/courses/itvdn-link.svg" height="22" alt="ITVDN" /></a></h3>
+<h3 align="center">📚 My Courses · <a href="https://itvdn.com/ua/catalog/author/kinash-stanislav" target="_blank"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/21c9617/assets/courses/itvdn-link.svg" height="18" align="absmiddle" alt="ITVDN" /></a></h3>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/d0c4e0b/assets/courses/courses-shelf.svg" width="100%" alt="My Courses" />
