@@ -18,15 +18,38 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout build script
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            preview/build-activity-graph-svg.mjs
+          sparse-checkout-cone-mode: false
 
-      - name: Generate activity graph
+      - name: Generate stock activity graph
         uses: maurodesouza/github-readme-activity-graph-action@v1
         with:
           username: ${{ github.repository_owner }}
           options: radius=16&theme=react&area=true
-          output_path: dist/activity-graph.svg
+          output_path: dist/activity-graph-stock.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Restyle into custom SVG
+        run: |
+          set -euo pipefail
+          test -f dist/activity-graph-stock.svg
+          grep -q '<svg' dist/activity-graph-stock.svg
+
+          node preview/build-activity-graph-svg.mjs \
+            --from-stock dist/activity-graph-stock.svg \
+            --out dist/activity-graph.svg
+
+          # Sanity: styled chrome markers (not the stock react theme)
+          grep -q 'shelf-accent' dist/activity-graph.svg
+          grep -q 'title-name' dist/activity-graph.svg
+          grep -q '15171c' dist/activity-graph.svg
+          ! grep -q 'ct:value' dist/activity-graph.svg
+
+          ls -la dist/activity-graph.svg dist/activity-graph-meta.json
 
       - name: Push activity graph to activity-graph-output
         env:
@@ -39,8 +62,10 @@ jobs:
           git checkout --orphan "$TARGET_BRANCH"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit --allow-empty -m "Update activity graph"
+          # Ship styled SVG (README already points here) + meta
+          git add activity-graph.svg
+          if [ -f activity-graph-meta.json ]; then git add activity-graph-meta.json; fi
+          git commit --allow-empty -m "Update styled activity graph"
           remote="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           for attempt in 1 2 3 4 5; do
             if git push --force "$remote" "HEAD:refs/heads/${TARGET_BRANCH}"; then
