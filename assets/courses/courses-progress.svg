@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="10" viewBox="0 0 1020 10" fill="none" overflow="visible" role="img" aria-label="Courses cycle progress">
+<g pointer-events="none" aria-hidden="true">
+<rect x="4.00" y="3.50" width="1012.00" height="2.5" rx="1.25" fill="#8b5cf6" opacity="0.18"/>
+<rect x="4.00" y="3.50" width="0" height="2.5" rx="1.25" fill="#7c3aed" opacity="0"><animate attributeName="width" values="0;1012.00;1012.00" keyTimes="0.00000;0.76679;1.00000" dur="12.864s" begin="1.040s" repeatCount="indefinite" calcMode="linear"/><animate attributeName="opacity" values="1;1;1;0" keyTimes="0.00000;0.76679;0.98445;1.00000" dur="12.864s" begin="1.040s" repeatCount="indefinite" calcMode="linear"/></rect>
+<rect x="4.00" y="3.50" width="0" height="2.5" rx="1.25" fill="#c4b5fd" opacity="0"><animate attributeName="width" values="0;0;1012.00" keyTimes="0.00000;0.76679;1.00000" dur="12.864s" begin="1.040s" repeatCount="indefinite" calcMode="linear"/><animate attributeName="opacity" values="1;1;1;0" keyTimes="0.00000;0.76679;0.98445;1.00000" dur="12.864s" begin="1.040s" repeatCount="indefinite" calcMode="linear"/></rect>
+</g>
+</svg>
