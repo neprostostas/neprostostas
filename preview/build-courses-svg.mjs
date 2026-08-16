@@ -4,12 +4,12 @@
  * Heading "📚 My Courses · ITVDN" stays README markdown text — not in these SVGs.
  *
  * Outputs (shared SMIL clock — load together to stay in sync):
- * - courses-shelf.svg — combined (preview / legacy)
+ * - compare/courses-shelf.svg — combined (local diff only, not shipped to README)
  * - courses-card-<slug>.svg × N — one card each (README wraps <a href=course>)
  * - courses-progress.svg — bottom cycle/pause bar
  *
  * Usage: node build-courses-svg.mjs
- * Needs: http://127.0.0.1:8765/index.html
+ * Needs: http://127.0.0.1:8765/index.html (.courses-shelf-export fixture in the page)
  */
 import { chromium } from 'playwright';
 import fs from 'fs';
@@ -150,9 +150,10 @@ async function main() {
     content: `
       .chrome { display: none !important; }
       html, body { background: transparent !important; }
-      /* Full content width — no side padding so the shelf spans README column */
       .readme { max-width: 1012px !important; margin: 0 !important; padding: 24px 0 !important; }
-      .courses-shelf-export { width: 1012px !important; max-width: 1012px !important; }
+      /* Fixture is hidden in playground UI — force it on for capture */
+      .courses-shelf-export { display: block !important; width: 1012px !important; max-width: 1012px !important; }
+      .courses-shelf-export[hidden] { display: block !important; }
       .courses-shelf-export .courses-badge-shelf { width: 1012px !important; }
       .courses-shelf-svg-preview { display: none !important; }
       .variant-label { display: none !important; }
@@ -668,9 +669,7 @@ async function main() {
   const staticPath = path.join(OUT_COMPARE, 'courses-shelf-static.svg');
   fs.writeFileSync(staticPath, staticSvg);
   fs.writeFileSync(svgPath, animatedSvg);
-  fs.writeFileSync(path.join(OUT_ASSETS, 'courses-shelf.svg'), animatedSvg);
-  fs.writeFileSync(path.join(OUT_ASSETS, 'courses-shelf-static.svg'), staticSvg);
-  fs.copyFileSync(pngPath, path.join(OUT_ASSETS, 'courses-shelf.png'));
+  // Combined shelf stays in compare/ only — README uses split card SVGs.
 
   const cardMeta = [];
   for (let i = 0; i < data.cards.length; i++) {
@@ -712,7 +711,7 @@ async function main() {
       'All split SVGs share the same absolute SMIL clock (appearBegin / appearEnd / cometCycle). Load them together so timelines stay locked.',
   };
   fs.writeFileSync(path.join(OUT_COMPARE, 'courses-split-manifest.json'), JSON.stringify(manifest, null, 2));
-  fs.writeFileSync(path.join(OUT_ASSETS, 'courses-split-manifest.json'), JSON.stringify(manifest, null, 2));
+  // Manifest is local tooling only — not shipped under assets/
 
   console.log(
     `Courses SVG ${W.toFixed(1)}×${H.toFixed(1)} · static ${(staticSvg.length / 1024).toFixed(0)}KB · animated ${(animatedSvg.length / 1024).toFixed(0)}KB · cards ${data.cards.length} · appear ~${appearEnd.toFixed(2)}s · loop ${cometCycle.toFixed(2)}s · sheenDur ${S.sheenDur.toFixed(2)}s`
