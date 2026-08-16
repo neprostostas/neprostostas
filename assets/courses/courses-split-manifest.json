@@ -20,7 +20,7 @@
       "file": "courses-card-vuejs-start.svg",
       "slug": "vuejs-start",
       "href": "https://itvdn.com/ua/video/vuejs-start-ua",
-      "width": 250.5,
+      "width": 256.5,
       "height": 204.5,
       "appearBegin": 0.12,
       "rimIndex": 0
@@ -29,7 +29,7 @@
       "file": "courses-card-layout-grid.svg",
       "slug": "layout-grid",
       "href": "https://itvdn.com/ua/video/layout-grid-ua",
-      "width": 250.5,
+      "width": 256.5,
       "height": 204.5,
       "appearBegin": 0.26,
       "rimIndex": 1
@@ -38,7 +38,7 @@
       "file": "courses-card-pug.svg",
       "slug": "pug",
       "href": "https://itvdn.com/ua/video/pug-ua",
-      "width": 250.5,
+      "width": 256.5,
       "height": 204.5,
       "appearBegin": 0.4,
       "rimIndex": 2
@@ -47,7 +47,7 @@
       "file": "courses-card-react-native.svg",
       "slug": "react-native",
       "href": "https://itvdn.com/ua/video/react-native-ua",
-      "width": 250.5,
+      "width": 256.5,
       "height": 204.5,
       "appearBegin": 0.54,
       "rimIndex": 3
