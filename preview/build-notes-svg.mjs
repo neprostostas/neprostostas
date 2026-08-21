@@ -221,7 +221,7 @@ function renderNote(L, snake, seg) {
       parts.push(
         appearScale(
           `<rect x="${it.logo.x}" y="${it.logo.y}" width="${it.logo.w}" height="${it.logo.h}" rx="${lr}" ry="${lr}" fill="#fff"/>` +
-            `<image x="${it.logo.x}" y="${it.logo.y}" width="${it.logo.w}" height="${it.logo.h}" preserveAspectRatio="xMidYMid meet" href="${logoHref}" clip-path="url(#${clipId})"/>`,
+            `<image x="${it.logo.x}" y="${it.logo.y}" width="${it.logo.w}" height="${it.logo.h}" preserveAspectRatio="none" href="${logoHref}" clip-path="url(#${clipId})"/>`,
           t0,
           it.logo.x + it.logo.w / 2,
           it.logo.y + it.logo.h / 2,
@@ -302,27 +302,32 @@ function renderNote(L, snake, seg) {
   let by = L.role?.meta ? L.role.meta.box.y + L.role.meta.box.h + 22 : body.y + 18;
 
   L.bullets.forEach((bullet, bi) => {
-    const lines = wrapText(bullet, 72);
+    const lines = bullet.lines || wrapText(bullet.text || bullet, 72).map((text) => ({ text }));
+    const firstBaseline = typeof lines[0] === 'string' ? by : lines[0].y + 11.5;
     const xml =
-      `<circle cx="${bx + 4}" cy="${by - 4}" r="2" fill="#c9d1d9"/>` +
+      `<circle cx="${bx + 4}" cy="${firstBaseline - 4}" r="2" fill="#c9d1d9"/>` +
       lines
         .map(
-          (line, i) =>
-            `<text x="${bx + 14}" y="${by + i * 19}" font-family="${fontMono}" font-size="12.5" fill="#c9d1d9">${esc(line)}</text>`
+          (line, i) => {
+            const text = typeof line === 'string' ? line : line.text;
+            const y = typeof line === 'string' ? by + i * 19 : line.y + 11.5;
+            return `<text x="${bx + 14}" y="${y.toFixed(2)}" font-family="${fontMono}" font-size="12.5" fill="#c9d1d9">${esc(text)}</text>`;
+          }
         )
         .join('');
-    const bh = lines.length * 19;
+    const bh = lines.length * 18.75;
     parts.push(
       appearWipe(xml, t0 + 0.34 + bi * 0.08, {
         id: `wipe-${bi}`,
         x: bx,
-        y: by - 8,
+        y: firstBaseline - 8,
         w: Math.max(120, (L.body?.w || main.w) - 28),
         h: bh,
         dur: 0.5,
       })
     );
-    by += bh + 6;
+    if (bullet.box) by = bullet.box.y + bullet.box.h + 4;
+    else by += bh + 6;
   });
 
   parts.push(`</g></g>`);
@@ -409,7 +414,33 @@ async function main() {
             box: rel(el),
           };
         }),
-        bullets: [...root.querySelectorAll('.notes__bullets li')].map((li) => li.textContent.trim()),
+        bullets: [...root.querySelectorAll('.notes__bullets li')].map((li) => {
+          const node = [...li.childNodes].find((child) => child.nodeType === Node.TEXT_NODE);
+          const text = li.textContent.trim();
+          const liBox = rel(li);
+          if (!node) return { text, box: liBox, lines: [{ text, y: liBox.y }] };
+
+          const lines = [];
+          for (let i = 0; i < node.textContent.length; i++) {
+            const range = document.createRange();
+            range.setStart(node, i);
+            range.setEnd(node, i + 1);
+            const charBox = range.getBoundingClientRect();
+            if (!charBox.width && !charBox.height) continue;
+            const y = +(charBox.top - r.top).toFixed(2);
+            let line = lines.find((item) => Math.abs(item.y - y) < 0.5);
+            if (!line) {
+              line = { text: '', y };
+              lines.push(line);
+            }
+            line.text += node.textContent[i];
+          }
+          return {
+            text,
+            box: liBox,
+            lines: lines.map((line) => ({ ...line, text: line.text.trim() })).filter((line) => line.text),
+          };
+        }),
         sideSkills: (() => {
           const wrap = q('.notes__body-skills .notes__skills');
           if (!wrap) return null;
