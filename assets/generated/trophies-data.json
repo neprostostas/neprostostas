@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-08-21T12:28:57.000Z",
+  "trophies": [
+    {
+      "id": "multilanguage",
+      "title": "MultiLanguage",
+      "subtitle": "Rainbow Lang User",
+      "detail": "11 points",
+      "rank": "SECRET",
+      "progress": 1,
+      "accent": "#64d2ff",
+      "cups": 1,
+      "tone": "rainbow",
+      "laurel": false
+    },
+    {
+      "id": "joined2020",
+      "title": "Joined 2020",
+      "subtitle": "Everything started...",
+      "detail": "Joined 2020",
+      "rank": "SECRET",
+      "progress": 1,
+      "accent": "#bf5af2",
+      "cups": 1,
+      "tone": "purple",
+      "laurel": false
+    },
+    {
+      "id": "repositories",
+      "title": "Repositories",
+      "subtitle": "God Repo Creator",
+      "detail": "72 points",
+      "rank": "SSS",
+      "progress": 1,
+      "accent": "#0a84ff",
+      "cups": 3,
+      "tone": "warm",
+      "laurel": true
+    },
+    {
+      "id": "stars",
+      "title": "Stars",
+      "subtitle": "Super Star",
+      "detail": "128 points",
+      "rank": "AAA",
+      "progress": 0.28,
+      "accent": "#ffd60a",
+      "cups": 3,
+      "tone": "gold",
+      "laurel": true
+    },
+    {
+      "id": "commits",
+      "title": "Commits",
+      "subtitle": "Hyper Committer",
+      "detail": "478 points",
+      "rank": "AA",
+      "progress": 0.9266666666666665,
+      "accent": "#30d158",
+      "cups": 2,
+      "tone": "green",
+      "laurel": true
+    },
+    {
+      "id": "experience",
+      "title": "Experience",
+      "subtitle": "Experienced Dev",
+      "detail": "22 points",
+      "rank": "AA",
+      "progress": 0.4,
+      "accent": "#64d2ff",
+      "cups": 2,
+      "tone": "cyan",
+      "laurel": true
+    },
+    {
+      "id": "followers",
+      "title": "Followers",
+      "subtitle": "Dynamic User",
+      "detail": "26 points",
+      "rank": "A",
+      "progress": 0.2,
+      "accent": "#0a84ff",
+      "cups": 1,
+      "tone": "blue",
+      "laurel": true
+    },
+    {
+      "id": "pullrequest",
+      "title": "Pull Request",
+      "subtitle": "Middle Puller",
+      "detail": "17 points",
+      "rank": "B",
+      "progress": 0.7,
+      "accent": "#ff375f",
+      "cups": 1,
+      "tone": "pink",
+      "laurel": false
+    },
+    {
+      "id": "issues",
+      "title": "Issues",
+      "subtitle": "Unknown",
+      "detail": "0 points",
+      "rank": "?",
+      "progress": 0,
+      "accent": "#5c5c62",
+      "cups": 1,
+      "tone": "muted",
+      "laurel": false
+    },
+    {
+      "id": "reviews",
+      "title": "Reviews",
+      "subtitle": "Unknown",
+      "detail": "0 points",
+      "rank": "?",
+      "progress": 0,
+      "accent": "#5c5c62",
+      "cups": 1,
+      "tone": "muted",
+      "laurel": false
+    }
+  ]
+}
