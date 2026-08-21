@@ -7,7 +7,7 @@ export const SNAKE = {
   artboardW: 980,
   joinAt: 105,
   connH: 24,
-  connTipY: 2.5,
+  connTipY: 0,
   cometLen: 460,
   speed: 360,
   /**

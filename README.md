@@ -15,21 +15,21 @@
   <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/12af6ac/assets/courses/courses-progress.svg" width="100%" alt="" />
 </p>
 
-<h3 align="center">💼 Work Experience · <a href="https://www.linkedin.com/in/neprostostas/details/experience/" target="_blank" rel="noopener noreferrer">LinkedIn</a></h3>
+<h3 align="center">💼 Work Experience · <a href="https://www.linkedin.com/in/neprostostas/details/experience/" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/experience/linkedin-link.svg" height="23" align="absmiddle" alt="LinkedIn" /></a></h3>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/note-01-creosquad.svg" width="100%" alt="CREOSQUAD work experience" /><br />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/notes-connector-01.svg" width="100%" alt="" /><br />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/note-02-itvdn.svg" width="100%" alt="ITVDN work experience" /><br />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/notes-connector-02.svg" width="100%" alt="" /><br />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/note-03-dfrnc.svg" width="100%" alt="DFRNC work experience" /><br />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/notes-connector-03.svg" width="100%" alt="" /><br />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/note-04-webspirit.svg" width="100%" alt="WebSpirit work experience" /><br />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/notes-connector-04.svg" width="100%" alt="" /><br />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/note-05-surelockkey.svg" width="100%" alt="Sure Lock &amp; Key work experience" /><br />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/notes-connector-05.svg" width="100%" alt="" /><br />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/note-06-raimbek.svg" width="100%" alt="Raimbek Group work experience" />
-</p>
+<div align="center" style="font-size:0;line-height:0;">
+  <div><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/note-01-creosquad.svg" width="100%" alt="CREOSQUAD work experience" /></div>
+  <div><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/notes-connector-01.svg" width="100%" alt="" /></div>
+  <div><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/note-02-itvdn.svg" width="100%" alt="ITVDN work experience" /></div>
+  <div><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/notes-connector-02.svg" width="100%" alt="" /></div>
+  <div><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/note-03-dfrnc.svg" width="100%" alt="DFRNC work experience" /></div>
+  <div><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/notes-connector-03.svg" width="100%" alt="" /></div>
+  <div><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/note-04-webspirit.svg" width="100%" alt="WebSpirit work experience" /></div>
+  <div><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/notes-connector-04.svg" width="100%" alt="" /></div>
+  <div><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/note-05-surelockkey.svg" width="100%" alt="Sure Lock &amp; Key work experience" /></div>
+  <div><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/notes-connector-05.svg" width="100%" alt="" /></div>
+  <div><img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/notes/note-06-raimbek.svg" width="100%" alt="Raimbek Group work experience" /></div>
+</div>
 
 <h3 align="center">Connect with me:</h3>
 
