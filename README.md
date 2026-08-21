@@ -68,41 +68,41 @@
 ## 🔥 My Stats
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/stats.svg" width="49.5%" alt="GitHub stats" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/languages.svg" width="49.5%" alt="Top languages" />
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/streak.svg" width="100%" alt="GitHub contribution activity" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/generated/stats.svg" width="49.5%" alt="GitHub stats" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/generated/languages.svg" width="49.5%" alt="Top languages" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/generated/streak.svg" width="100%" alt="GitHub contribution activity" />
 </p>
 
 ## 🏆 GitHub Trophies
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/trophy-output/trophy.svg" width="100%" alt="GitHub trophies" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/generated/trophy.svg" width="100%" alt="GitHub trophies" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/activity-graph-output/activity-graph.svg" width="100%" alt="GitHub contribution graph" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/generated/activity-graph.svg" width="100%" alt="GitHub contribution graph" />
 </p>
 
 ## 🐍 Contribution Snake
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/neprostostas/neprostostas/output/snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/neprostostas/neprostostas/output/snake.svg" />
-  <img alt="Snake contribution animation" src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/snake.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/generated/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/generated/snake.svg" />
+  <img alt="Snake contribution animation" src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/generated/snake.svg" />
 </picture>
 
 ## 🕹️ Pac-Man Contribution Graph
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/neprostostas/neprostostas/output/pacman-contribution-graph-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/neprostostas/neprostostas/output/pacman-contribution-graph.svg" />
-  <img alt="Pac-Man contribution graph" src="https://raw.githubusercontent.com/neprostostas/neprostostas/output/pacman-contribution-graph.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/generated/pacman-contribution-graph-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/generated/pacman-contribution-graph.svg" />
+  <img alt="Pac-Man contribution graph" src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/generated/pacman-contribution-graph.svg" />
 </picture>
 
 ## ✍️ Random Dev Quote
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/quote-output/dev-quote-v4.svg" width="100%" alt="Random developer quote" />
+  <img src="https://raw.githubusercontent.com/neprostostas/neprostostas/main/assets/generated/dev-quote-v4.svg" width="100%" alt="Random developer quote" />
 </p>
 
 <div align="center">

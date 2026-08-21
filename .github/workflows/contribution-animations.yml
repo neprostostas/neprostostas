@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: profile-output
+  group: generated-assets-main
   cancel-in-progress: true
 
 jobs:
@@ -18,6 +18,12 @@ jobs:
     timeout-minutes: 20
 
     steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
       - name: Generate Pac-Man contribution graph
         uses: abozanona/pacman-contribution-graph@main
         with:
@@ -413,22 +419,45 @@ jobs:
           });
           NODE
 
-      - name: Push generated SVGs to output
+      - name: Commit generated SVGs to main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TARGET_BRANCH: output
         run: |
           set -euo pipefail
-          cd dist
-          git init
-          git checkout --orphan "$TARGET_BRANCH"
+
+          mkdir -p assets/generated
+          for file in \
+            stats.svg \
+            languages.svg \
+            streak.svg \
+            snake.svg \
+            snake-dark.svg \
+            pacman-contribution-graph.svg \
+            pacman-contribution-graph-dark.svg; do
+            test -f "dist/$file"
+            cp "dist/$file" "assets/generated/$file"
+          done
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit --allow-empty -m "Update profile graphics"
-          remote="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git add assets/generated/stats.svg \
+            assets/generated/languages.svg \
+            assets/generated/streak.svg \
+            assets/generated/snake.svg \
+            assets/generated/snake-dark.svg \
+            assets/generated/pacman-contribution-graph.svg \
+            assets/generated/pacman-contribution-graph-dark.svg
+
+          if git diff --cached --quiet; then
+            echo "Generated profile graphics are unchanged"
+            exit 0
+          fi
+
+          git commit -m "Update profile graphics"
           for attempt in 1 2 3 4 5; do
-            if git push --force "$remote" "HEAD:refs/heads/${TARGET_BRANCH}"; then
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
               echo "Pushed on attempt ${attempt}"
               exit 0
             fi

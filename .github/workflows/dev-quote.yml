@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: quote-output
+  group: generated-assets-main
   cancel-in-progress: true
 
 jobs:
@@ -18,6 +18,12 @@ jobs:
     timeout-minutes: 5
 
     steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
       - name: Generate quote SVG
         run: |
           mkdir -p dist
@@ -135,22 +141,29 @@ jobs:
           fs.writeFileSync('dist/dev-quote-v4.svg', svg);
           NODE
 
-      - name: Push quote SVG to quote-output
+      - name: Commit quote SVG to main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TARGET_BRANCH: quote-output
         run: |
           set -euo pipefail
-          cd dist
-          git init
-          git checkout --orphan "$TARGET_BRANCH"
+
+          mkdir -p assets/generated
+          cp dist/dev-quote-v4.svg assets/generated/dev-quote-v4.svg
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit --allow-empty -m "Update daily quote"
-          remote="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git add assets/generated/dev-quote-v4.svg
+
+          if git diff --cached --quiet; then
+            echo "Daily quote is unchanged"
+            exit 0
+          fi
+
+          git commit -m "Update daily quote"
           for attempt in 1 2 3 4 5; do
-            if git push --force "$remote" "HEAD:refs/heads/${TARGET_BRANCH}"; then
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
               echo "Pushed on attempt ${attempt}"
               exit 0
             fi

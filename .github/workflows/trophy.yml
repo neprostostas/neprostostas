@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: trophy-output
+  group: generated-assets-main
   cancel-in-progress: true
 
 jobs:
@@ -21,9 +21,8 @@ jobs:
       - name: Checkout build script
         uses: actions/checkout@v4
         with:
-          sparse-checkout: |
-            preview/build-trophies-svg.mjs
-          sparse-checkout-cone-mode: false
+          ref: main
+          fetch-depth: 0
 
       - name: Download stock trophy.svg + restyle
         env:
@@ -66,24 +65,35 @@ jobs:
 
           ls -la dist/trophy.svg dist/trophies-data.json
 
-      - name: Push trophy.svg to trophy-output
+      - name: Commit trophy.svg to main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TARGET_BRANCH: trophy-output
         run: |
           set -euo pipefail
-          cd dist
-          git init
-          git checkout --orphan "$TARGET_BRANCH"
+
+          mkdir -p assets/generated
+          cp dist/trophy.svg assets/generated/trophy.svg
+          if [ -f dist/trophies-data.json ]; then
+            cp dist/trophies-data.json assets/generated/trophies-data.json
+          fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Ship styled SVG as trophy.svg (README already points here) + data JSON
-          git add trophy.svg
-          if [ -f trophies-data.json ]; then git add trophies-data.json; fi
-          git commit --allow-empty -m "Update styled trophy card"
-          remote="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git add assets/generated/trophy.svg
+          if [ -f assets/generated/trophies-data.json ]; then
+            git add assets/generated/trophies-data.json
+          fi
+
+          if git diff --cached --quiet; then
+            echo "Trophy card is unchanged"
+            exit 0
+          fi
+
+          git commit -m "Update styled trophy card"
           for attempt in 1 2 3 4 5; do
-            if git push --force "$remote" "HEAD:refs/heads/${TARGET_BRANCH}"; then
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
               echo "Pushed on attempt ${attempt}"
               exit 0
             fi
