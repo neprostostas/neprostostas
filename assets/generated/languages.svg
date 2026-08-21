@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <svg xmlns="http://www.w3.org/2000/svg" width="450" height="245" viewBox="0 0 450 245" role="img" aria-label="Languages">
+      
+    <defs>
+      <linearGradient id="card-bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#15171c"/>
+        <stop offset="100%" stop-color="#090a0d"/>
+      </linearGradient>
+      <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#0a84ff"/>
+        <stop offset="52%" stop-color="#bf5af2"/>
+        <stop offset="100%" stop-color="#ff375f"/>
+      </linearGradient>
+      <radialGradient id="blue-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(82 26) rotate(35) scale(205 130)">
+        <stop stop-color="#0a84ff" stop-opacity="0.20"/>
+        <stop offset="1" stop-color="#0a84ff" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="purple-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(430 230) rotate(-140) scale(220 155)">
+        <stop stop-color="#bf5af2" stop-opacity="0.17"/>
+        <stop offset="1" stop-color="#bf5af2" stop-opacity="0"/>
+      </radialGradient>
+      <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="160%">
+        <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.32"/>
+      </filter>
+      
+    <clipPath id="language-bar-clip">
+      <rect x="22" y="74" width="406" height="12" rx="6"/>
+    </clipPath>
+      <style>
+        text {
+          font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+          text-rendering: geometricPrecision;
+        }
+        .heading { font-size: 21px; font-weight: 700; fill: #f5f5f7; letter-spacing: -0.35px; }
+        .caption { font-size: 10.5px; font-weight: 500; fill: #98989f; }
+        .metric-label { font-size: 10px; font-weight: 520; fill: #98989f; }
+        .metric-value { font-size: 22px; font-weight: 730; fill: #f5f5f7; letter-spacing: -0.55px; }
+      </style>
+    </defs>
+      <rect x="7" y="9" width="436" height="229" rx="24" fill="#000000" opacity="0.24" filter="url(#soft-shadow)"/>
+      <rect x="1" y="1" width="448" height="243" rx="23" fill="url(#card-bg)" stroke="#343741" stroke-width="1.25"/>
+      <rect x="1" y="1" width="448" height="243" rx="23" fill="url(#blue-glow)"/>
+      <rect x="1" y="1" width="448" height="243" rx="23" fill="url(#purple-glow)"/>
+      <path d="M24 1 H426" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+      <text x="22" y="34" class="heading">Languages</text>
+      <text x="22" y="53" class="caption">Share of code across public repositories</text>
+      
+      <rect x="22" y="74" width="406" height="12" rx="6" fill="#22252d"/>
+      <g clip-path="url(#language-bar-clip)"><rect x="22" y="74" width="134" height="12" fill="#0a84ff"/><rect x="158" y="74" width="126" height="12" fill="#bf5af2"/><rect x="286" y="74" width="68" height="12" fill="#ff375f"/><rect x="356" y="74" width="38" height="12" fill="#64d2ff"/><rect x="396" y="74" width="17" height="12" fill="#30d158"/><rect x="415" y="74" width="13" height="12" fill="#ff9f0a"/></g>
+      
+      <g>
+        <rect x="22" y="103" width="198" height="33" rx="11" fill="#1c1e24" fill-opacity="0.66" stroke="#ffffff" stroke-opacity="0.06"/>
+        <circle cx="36" cy="119.5" r="4" fill="#0a84ff"/>
+        <text x="48" y="124" style="font-size:11px;font-weight:620;fill:#f5f5f7">CSS</text>
+        <text x="207" y="124" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">33.8%</text>
+      </g>
+      <g>
+        <rect x="230" y="103" width="198" height="33" rx="11" fill="#1c1e24" fill-opacity="0.66" stroke="#ffffff" stroke-opacity="0.06"/>
+        <circle cx="244" cy="119.5" r="4" fill="#bf5af2"/>
+        <text x="256" y="124" style="font-size:11px;font-weight:620;fill:#f5f5f7">TypeScript</text>
+        <text x="415" y="124" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">31.8%</text>
+      </g>
+      <g>
+        <rect x="22" y="143" width="198" height="33" rx="11" fill="#1c1e24" fill-opacity="0.66" stroke="#ffffff" stroke-opacity="0.06"/>
+        <circle cx="36" cy="159.5" r="4" fill="#ff375f"/>
+        <text x="48" y="164" style="font-size:11px;font-weight:620;fill:#f5f5f7">JavaScript</text>
+        <text x="207" y="164" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">17.2%</text>
+      </g>
+      <g>
+        <rect x="230" y="143" width="198" height="33" rx="11" fill="#1c1e24" fill-opacity="0.66" stroke="#ffffff" stroke-opacity="0.06"/>
+        <circle cx="244" cy="159.5" r="4" fill="#64d2ff"/>
+        <text x="256" y="164" style="font-size:11px;font-weight:620;fill:#f5f5f7">Vue</text>
+        <text x="415" y="164" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">9.5%</text>
+      </g>
+      <g>
+        <rect x="22" y="183" width="198" height="33" rx="11" fill="#1c1e24" fill-opacity="0.66" stroke="#ffffff" stroke-opacity="0.06"/>
+        <circle cx="36" cy="199.5" r="4" fill="#30d158"/>
+        <text x="48" y="204" style="font-size:11px;font-weight:620;fill:#f5f5f7">HTML</text>
+        <text x="207" y="204" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">4.4%</text>
+      </g>
+      <g>
+        <rect x="230" y="183" width="198" height="33" rx="11" fill="#1c1e24" fill-opacity="0.66" stroke="#ffffff" stroke-opacity="0.06"/>
+        <circle cx="244" cy="199.5" r="4" fill="#ff9f0a"/>
+        <text x="256" y="204" style="font-size:11px;font-weight:620;fill:#f5f5f7">Python</text>
+        <text x="415" y="204" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">3.3%</text>
+      </g>
+    </svg>
