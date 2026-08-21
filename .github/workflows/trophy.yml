@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: generated-assets-main
+  group: generated-assets-main-trophy
   cancel-in-progress: true
 
 jobs:
