@@ -1697,20 +1697,9 @@ body {
 }
 
 @keyframes notes-chip-idle {
-  0%, 1% {
-    background: color-mix(in srgb, var(--notes-accent) 6%, transparent);
-    border-color: color-mix(in srgb, var(--notes-accent) 28%, transparent);
-    box-shadow: none;
-  }
+  0%, 1%, 2.6%, 100% { box-shadow: none; }
   1.7% {
-    background: color-mix(in srgb, var(--notes-accent) 22%, transparent);
-    border-color: color-mix(in srgb, var(--notes-accent) 72%, transparent);
     box-shadow: 0 0 10px color-mix(in srgb, var(--notes-accent) 38%, transparent);
-  }
-  2.6%, 100% {
-    background: color-mix(in srgb, var(--notes-accent) 6%, transparent);
-    border-color: color-mix(in srgb, var(--notes-accent) 28%, transparent);
-    box-shadow: none;
   }
 }
 

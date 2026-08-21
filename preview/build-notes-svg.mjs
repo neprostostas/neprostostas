@@ -129,15 +129,8 @@ function appearWipe(xml, begin, { id, x, y, w, h, dur = 0.52 }) {
 
 function chipIdleAnims(accent, k, ni, cycle = 48) {
   const begin = (ni + 0.35 + k * 0.42).toFixed(3);
-  const fill0 = hexToRgba(accent, 0.06);
-  const fill1 = hexToRgba(accent, 0.22);
-  const stroke0 = hexToRgba(accent, 0.28);
-  const stroke1 = hexToRgba(accent, 0.72);
   const kt = `keyTimes="0;0.01;0.017;0.026;1" dur="${cycle}s" begin="${begin}s" repeatCount="indefinite"`;
-  return (
-    `<animate attributeName="fill" values="${fill0};${fill0};${fill1};${fill0};${fill0}" ${kt}/>` +
-    `<animate attributeName="stroke" values="${stroke0};${stroke0};${stroke1};${stroke0};${stroke0}" ${kt}/>`
-  );
+  return `<animate attributeName="fill-opacity" values="0;0;0.2;0;0" ${kt}/>`;
 }
 
 function headSheenXml(b, ni, slug, accent, cycle = 48) {
@@ -204,7 +197,8 @@ function renderNote(L, snake, seg) {
       if (b) {
         parts.push(
           appearScale(
-            `<rect x="${b.x}" y="${b.y}" width="${b.w}" height="${b.h}" rx="${b.h / 2}" fill="${hexToRgba(C.accent, 0.06)}" stroke="${hexToRgba(C.accent, 0.28)}" stroke-width="1">${chipIdleAnims(C.accent, k, ni)}</rect>` +
+            `<rect x="${b.x}" y="${b.y}" width="${b.w}" height="${b.h}" rx="${b.h / 2}" fill="${hexToRgba(C.accent, 0.06)}" stroke="${hexToRgba(C.accent, 0.28)}" stroke-width="1"/>` +
+              `<rect x="${b.x}" y="${b.y}" width="${b.w}" height="${b.h}" rx="${b.h / 2}" fill="${C.accent}" fill-opacity="0" pointer-events="none">${chipIdleAnims(C.accent, k, ni)}</rect>` +
               `<text x="${b.x + b.w / 2}" y="${b.y + b.h * 0.72}" text-anchor="middle" font-family="${font}" font-size="10" font-weight="600" fill="${C.accent}">${esc(label)}</text>`,
             t0 + 0.1 + k * 0.045,
             b.x + b.w / 2,
