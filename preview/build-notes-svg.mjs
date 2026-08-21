@@ -60,12 +60,15 @@ const APPEAR_EASE = `calcMode="spline" keyTimes="0;1" keySplines="0.22 1 0.36 1"
 const BLOCK_STEP = CARD_APPEAR_STEP;
 const BLOCK_DUR = CARD_APPEAR_DUR;
 
-function appearBlockStart(begin, dur = BLOCK_DUR) {
+function appearBlockStart(begin, W, H, dur = BLOCK_DUR) {
   const b = Number(begin).toFixed(3);
+  const cx = (W / 2).toFixed(2);
+  const cy = (H / 2).toFixed(2);
   return (
-    `<g opacity="0">` +
+    `<g transform="translate(${cx} ${cy})"><g opacity="0">` +
     `<animate attributeName="opacity" from="0" to="1" begin="${b}s" dur="${dur}s" fill="freeze" ${APPEAR_EASE}/>` +
-    `<animateTransform attributeName="transform" type="translate" from="0 18" to="0 0" begin="${b}s" dur="${dur}s" fill="freeze" ${APPEAR_EASE}/>`
+    `<animateTransform attributeName="transform" type="scale" from="0.86" to="1" begin="${b}s" dur="${dur}s" fill="freeze" ${APPEAR_EASE}/>` +
+    `<g transform="translate(-${cx} -${cy})">`
   );
 }
 
@@ -166,8 +169,8 @@ function renderNote(L, snake, seg) {
   const parts = [];
   const glowId = `cometGlow-${esc(L.slug)}`;
   const blockBegin = (seg?.i ?? 0) * BLOCK_STEP;
-  const t0 = blockBegin;
-  const ni = 2.5 + (seg?.i ?? 0) * 8;
+  const t0 = blockBegin + BLOCK_DUR + 0.08;
+  const ni = t0 + 2.5;
 
   parts.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" overflow="visible" role="img" aria-label="Notes - ${esc(L.label)}">`);
   parts.push(`<defs>
@@ -175,7 +178,7 @@ function renderNote(L, snake, seg) {
     <clipPath id="main"><rect x="${main.x}" y="${main.y}" width="${main.w}" height="${main.h}" rx="${innerR}" ry="${innerR}"/></clipPath>
     ${cometFilter(glowId)}
   </defs>`);
-  parts.push(appearBlockStart(blockBegin));
+  parts.push(appearBlockStart(blockBegin, W, H));
   parts.push(`<g clip-path="url(#win)">`);
   parts.push(`<rect width="${W}" height="${H}" fill="${C.window}"/>`);
 
@@ -334,7 +337,7 @@ function renderNote(L, snake, seg) {
     const pathD = cardSnakePath({ W, H, r: or, joinX: seg.joinX, move: true });
     parts.push(cometLayersXml(pathD, seg, snake, glowId));
   }
-  parts.push(`</g></svg>`);
+  parts.push(`</g></g></g></svg>`);
   return parts.join('\n');
 }
 
@@ -345,6 +348,20 @@ async function main() {
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1100, height: 900 }, deviceScaleFactor: 2 });
   await page.goto(PREVIEW, { waitUntil: 'networkidle' });
+  await page.addStyleTag({
+    content: `
+      .notes-stack .notes,
+      .notes-stack .notes-card,
+      .notes-stack .notes * {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+        transform: none !important;
+        clip-path: none !important;
+      }
+    `,
+  });
   await page.waitForSelector('.notes');
   await page.waitForFunction(() => {
     const el = document.querySelector('.notes__item-date[data-start]');
