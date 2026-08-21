@@ -25,6 +25,10 @@ export const SNAKE = {
   coreColor: '#e9e0ff',
 };
 
+export const CARD_APPEAR_STEP = 0.82;
+export const CARD_APPEAR_DUR = 0.68;
+const APPEAR_EASE = `calcMode="spline" keyTimes="0;1" keySplines="0.22 1 0.36 1"`;
+
 export function joinX(W, cfg = SNAKE) {
   return (cfg.joinAt / cfg.artboardW) * W;
 }
@@ -267,12 +271,14 @@ export function renderConnectorSvg(seg, snake) {
   const jx = cfg.joinAt;
   const glowId = `cometGlow-conn-${seg.i}`;
   const pathD = connectorStemPath(jx, H, cfg.connTipY);
+  const connectorBegin = seg.i * CARD_APPEAR_STEP + CARD_APPEAR_DUR;
   return (
     `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" overflow="visible" fill="none" role="img" aria-label="Work timeline connector">` +
     `<defs>${cometFilter(glowId)}</defs>` +
+    `<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="${connectorBegin.toFixed(3)}s" dur="0.28s" fill="freeze" ${APPEAR_EASE}/>` +
     connectorChrome(W, H, jx) +
     cometLayersXml(pathD, seg, snake, glowId) +
-    `</svg>\n`
+    `</g></svg>\n`
   );
 }
 
@@ -291,6 +297,8 @@ function notesCardHost(el) {
   if (el.parentElement?.classList.contains('notes-card')) return el.parentElement;
   const wrap = document.createElement('div');
   wrap.className = 'notes-card';
+  wrap.dataset.note = el.getAttribute('data-note') || '';
+  wrap.style.setProperty('--nb', getComputedStyle(el).getPropertyValue('--nb').trim() || '0s');
   el.parentElement.insertBefore(wrap, el);
   wrap.appendChild(el);
   return wrap;

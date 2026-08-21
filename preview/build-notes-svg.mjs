@@ -16,6 +16,8 @@ import {
   cometLayersXml,
   renderConnectorSvg,
   renderStaticConnectorSvg,
+  CARD_APPEAR_STEP,
+  CARD_APPEAR_DUR,
 } from './notes-snake.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -55,9 +57,10 @@ function wrapText(text, maxChars) {
 
 const APPEAR_EASE = `calcMode="spline" keyTimes="0;1" keySplines="0.22 1 0.36 1"`;
 
-const BLOCK_STEP = 0.82;
+const BLOCK_STEP = CARD_APPEAR_STEP;
+const BLOCK_DUR = CARD_APPEAR_DUR;
 
-function appearBlockStart(begin, dur = 0.68) {
+function appearBlockStart(begin, dur = BLOCK_DUR) {
   const b = Number(begin).toFixed(3);
   return (
     `<g opacity="0">` +

@@ -1591,10 +1591,34 @@ body {
 .notes[data-note="05-surelockkey"] { --na: 0.44s; --ni: 34.5s; --nb: 3.28s; }
 .notes[data-note="06-raimbek"] { --na: 0.55s; --ni: 42.5s; --nb: 4.10s; }
 
-.notes-stack .notes {
+.notes-stack .notes,
+.notes-stack .notes-card {
   animation: notes-block-in 0.68s cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: var(--nb);
 }
+
+@keyframes notes-connector-in {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.notes-stack > .notes-connector-wrap {
+  --cb: 0s;
+  animation: notes-connector-in 0.28s ease both;
+  animation-delay: var(--cb);
+}
+
+.notes-stack > .notes-connector-wrap:nth-of-type(1) { --cb: 0.68s; }
+.notes-stack > .notes-connector-wrap:nth-of-type(2) { --cb: 1.50s; }
+.notes-stack > .notes-connector-wrap:nth-of-type(3) { --cb: 2.32s; }
+.notes-stack > .notes-connector-wrap:nth-of-type(4) { --cb: 3.14s; }
+.notes-stack > .notes-connector-wrap:nth-of-type(5) { --cb: 3.96s; }
 
 .notes__item-logo {
   transform-origin: center center;
@@ -1708,6 +1732,8 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .notes__item-logo,
   .notes,
+  .notes-card,
+  .notes-connector-wrap,
   .notes__item-title,
   .notes__item-date,
   .notes__role-name,
