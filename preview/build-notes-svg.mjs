@@ -18,6 +18,7 @@ import {
   renderStaticConnectorSvg,
   CARD_APPEAR_STEP,
   CARD_APPEAR_DUR,
+  CARD_CONTENT_OFFSET,
 } from './notes-snake.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -169,7 +170,7 @@ function renderNote(L, snake, seg) {
   const parts = [];
   const glowId = `cometGlow-${esc(L.slug)}`;
   const blockBegin = (seg?.i ?? 0) * BLOCK_STEP;
-  const t0 = blockBegin + BLOCK_DUR + 0.08;
+  const t0 = blockBegin + CARD_CONTENT_OFFSET;
   const ni = t0 + 2.5;
 
   parts.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" overflow="visible" role="img" aria-label="Notes - ${esc(L.label)}">`);
@@ -335,7 +336,12 @@ function renderNote(L, snake, seg) {
   parts.push(`<rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="${or}" ry="${or}" fill="none" stroke="rgba(167, 139, 250, 0.55)" stroke-width="1"/>`);
   if (seg) {
     const pathD = cardSnakePath({ W, H, r: or, joinX: seg.joinX, move: true });
+    const meteorBegin = (blockBegin + BLOCK_DUR).toFixed(3);
+    parts.push(
+      `<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="${meteorBegin}s" dur="0.16s" fill="freeze"/>`
+    );
     parts.push(cometLayersXml(pathD, seg, snake, glowId));
+    parts.push(`</g>`);
   }
   parts.push(`</g></g></g></svg>`);
   return parts.join('\n');

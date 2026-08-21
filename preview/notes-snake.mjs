@@ -26,7 +26,8 @@ export const SNAKE = {
 };
 
 export const CARD_APPEAR_STEP = 0.82;
-export const CARD_APPEAR_DUR = 0.68;
+export const CARD_APPEAR_DUR = 0.74;
+export const CARD_CONTENT_OFFSET = 0.54;
 const APPEAR_EASE = `calcMode="spline" keyTimes="0;1" keySplines="0.22 1 0.36 1"`;
 
 export function joinX(W, cfg = SNAKE) {
