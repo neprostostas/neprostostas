@@ -29,25 +29,20 @@
       .author { font-size: 14px; font-weight: 600; fill: #a7a7b0; }
     </style>
   </defs>
-
   <rect x="7" y="9" width="906" height="164" rx="24" fill="#000" opacity="0.24" filter="url(#shadow)"/>
   <rect x="1" y="1" width="918" height="178" rx="23" fill="url(#card-bg)" stroke="#343741" stroke-width="1.25"/>
   <rect x="1" y="1" width="918" height="178" rx="23" fill="url(#blue-glow)"/>
   <rect x="1" y="1" width="918" height="178" rx="23" fill="url(#purple-glow)"/>
   <path d="M24 1 H896" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
-
   <text x="72" y="38" class="eyebrow">DAILY DEV QUOTE</text>
   <text x="72" y="54" class="sub">A little signal between the commits.</text>
-
   <g fill="#bf5af2" opacity="0.22">
     <path d="M758 58 H794 L783 124 H742 Z"/>
     <path d="M808 58 H844 L833 124 H792 Z"/>
   </g>
-
   <text x="72" y="80" class="quote">The most effective debugging tool is still careful</text>
 <text x="72" y="108" class="quote">thought, coupled with judiciously placed print</text>
 <text x="72" y="136" class="quote">statements.</text>
-
   <g transform="translate(72 154)">
     <rect x="0" y="-14" width="5" height="20" rx="2.5" fill="#bf5af2"/>
     <text x="16" y="0" class="author">— Brian Kernighan</text>
