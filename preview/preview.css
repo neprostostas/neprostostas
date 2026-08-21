@@ -1500,6 +1500,19 @@ body {
   }
 }
 
+@keyframes notes-block-in {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    clip-path: inset(0 0 100% 0 round 28px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    clip-path: inset(0 0 0 0 round 28px);
+  }
+}
+
 @keyframes notes-chip-in {
   from {
     opacity: 0;
@@ -1571,12 +1584,17 @@ body {
   }
 }
 
-.notes[data-note="01-creosquad"] { --na: 0s; --ni: 2.5s; }
-.notes[data-note="02-itvdn"] { --na: 0.11s; --ni: 10.5s; }
-.notes[data-note="03-dfrnc"] { --na: 0.22s; --ni: 18.5s; }
-.notes[data-note="04-webspirit"] { --na: 0.33s; --ni: 26.5s; }
-.notes[data-note="05-surelockkey"] { --na: 0.44s; --ni: 34.5s; }
-.notes[data-note="06-raimbek"] { --na: 0.55s; --ni: 42.5s; }
+.notes[data-note="01-creosquad"] { --na: 0s; --ni: 2.5s; --nb: 0s; }
+.notes[data-note="02-itvdn"] { --na: 0.11s; --ni: 10.5s; --nb: 0.82s; }
+.notes[data-note="03-dfrnc"] { --na: 0.22s; --ni: 18.5s; --nb: 1.64s; }
+.notes[data-note="04-webspirit"] { --na: 0.33s; --ni: 26.5s; --nb: 2.46s; }
+.notes[data-note="05-surelockkey"] { --na: 0.44s; --ni: 34.5s; --nb: 3.28s; }
+.notes[data-note="06-raimbek"] { --na: 0.55s; --ni: 42.5s; --nb: 4.10s; }
+
+.notes-stack .notes {
+  animation: notes-block-in 0.68s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--nb);
+}
 
 .notes__item-logo {
   transform-origin: center center;
@@ -1689,6 +1707,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .notes__item-logo,
+  .notes,
   .notes__item-title,
   .notes__item-date,
   .notes__role-name,

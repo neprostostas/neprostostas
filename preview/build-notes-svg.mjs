@@ -55,6 +55,17 @@ function wrapText(text, maxChars) {
 
 const APPEAR_EASE = `calcMode="spline" keyTimes="0;1" keySplines="0.22 1 0.36 1"`;
 
+const BLOCK_STEP = 0.82;
+
+function appearBlockStart(begin, dur = 0.68) {
+  const b = Number(begin).toFixed(3);
+  return (
+    `<g opacity="0">` +
+    `<animate attributeName="opacity" from="0" to="1" begin="${b}s" dur="${dur}s" fill="freeze" ${APPEAR_EASE}/>` +
+    `<animateTransform attributeName="transform" type="translate" from="0 18" to="0 0" begin="${b}s" dur="${dur}s" fill="freeze" ${APPEAR_EASE}/>`
+  );
+}
+
 function appearFade(xml, begin, dur = 0.42) {
   const b = Number(begin).toFixed(3);
   return (
@@ -151,7 +162,8 @@ function renderNote(L, snake, seg) {
   const fontMono = `ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace`;
   const parts = [];
   const glowId = `cometGlow-${esc(L.slug)}`;
-  const t0 = (seg?.i ?? 0) * 0.11;
+  const blockBegin = (seg?.i ?? 0) * BLOCK_STEP;
+  const t0 = blockBegin;
   const ni = 2.5 + (seg?.i ?? 0) * 8;
 
   parts.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" overflow="visible" role="img" aria-label="Notes - ${esc(L.label)}">`);
@@ -160,6 +172,7 @@ function renderNote(L, snake, seg) {
     <clipPath id="main"><rect x="${main.x}" y="${main.y}" width="${main.w}" height="${main.h}" rx="${innerR}" ry="${innerR}"/></clipPath>
     ${cometFilter(glowId)}
   </defs>`);
+  parts.push(appearBlockStart(blockBegin));
   parts.push(`<g clip-path="url(#win)">`);
   parts.push(`<rect width="${W}" height="${H}" fill="${C.window}"/>`);
 
@@ -318,7 +331,7 @@ function renderNote(L, snake, seg) {
     const pathD = cardSnakePath({ W, H, r: or, joinX: seg.joinX, move: true });
     parts.push(cometLayersXml(pathD, seg, snake, glowId));
   }
-  parts.push(`</svg>`);
+  parts.push(`</g></svg>`);
   return parts.join('\n');
 }
 
