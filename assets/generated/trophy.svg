@@ -526,10 +526,10 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     </g></svg>
       </g>
         <text x="55" y="105" text-anchor="middle" class="t-sub" data-field="subtitle">Hyper Committer</text>
-        <text x="55" y="116" text-anchor="middle" class="t-detail" fill="#30d158" data-field="detail">478 points</text>
+        <text x="55" y="116" text-anchor="middle" class="t-detail" fill="#30d158" data-field="detail">491 points</text>
         <rect x="15" y="122" width="80" height="3.2" rx="1.5" fill="#1c1e24"/>
-        <rect x="15" y="122" width="74" height="3.2" rx="1.5" fill="url(#bar-4)">
-          <animate attributeName="width" from="0" to="74" dur="0.9s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+        <rect x="15" y="122" width="78" height="3.2" rx="1.5" fill="url(#bar-4)">
+          <animate attributeName="width" from="0" to="78" dur="0.9s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
         </rect>
       </g>
 
@@ -650,10 +650,10 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     </g></svg>
     </g>
         <text x="55" y="105" text-anchor="middle" class="t-sub" data-field="subtitle">Dynamic User</text>
-        <text x="55" y="116" text-anchor="middle" class="t-detail" fill="#0a84ff" data-field="detail">26 points</text>
+        <text x="55" y="116" text-anchor="middle" class="t-detail" fill="#0a84ff" data-field="detail">27 points</text>
         <rect x="15" y="122" width="80" height="3.2" rx="1.5" fill="#1c1e24"/>
-        <rect x="15" y="122" width="16" height="3.2" rx="1.5" fill="url(#bar-6)">
-          <animate attributeName="width" from="0" to="16" dur="0.9s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+        <rect x="15" y="122" width="19" height="3.2" rx="1.5" fill="url(#bar-6)">
+          <animate attributeName="width" from="0" to="19" dur="0.9s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
         </rect>
       </g>
 
