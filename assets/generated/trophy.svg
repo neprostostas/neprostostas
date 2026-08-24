@@ -526,10 +526,10 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     </g></svg>
       </g>
         <text x="55" y="105" text-anchor="middle" class="t-sub" data-field="subtitle">Hyper Committer</text>
-        <text x="55" y="116" text-anchor="middle" class="t-detail" fill="#30d158" data-field="detail">491 points</text>
+        <text x="55" y="116" text-anchor="middle" class="t-detail" fill="#30d158" data-field="detail">487 points</text>
         <rect x="15" y="122" width="80" height="3.2" rx="1.5" fill="#1c1e24"/>
-        <rect x="15" y="122" width="78" height="3.2" rx="1.5" fill="url(#bar-4)">
-          <animate attributeName="width" from="0" to="78" dur="0.9s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+        <rect x="15" y="122" width="77" height="3.2" rx="1.5" fill="url(#bar-4)">
+          <animate attributeName="width" from="0" to="77" dur="0.9s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
         </rect>
       </g>
 
