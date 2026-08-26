@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T01:00:14.864Z",
+  "generatedAt": "2026-08-26T01:01:26.522Z",
   "trophies": [
     {
       "id": "multilanguage",
@@ -65,9 +65,9 @@
       "id": "experience",
       "title": "Experience",
       "subtitle": "Experienced Dev",
-      "detail": "22 points",
+      "detail": "23 points",
       "rank": "AA",
-      "progress": 0.4,
+      "progress": 0.5,
       "accent": "#64d2ff",
       "cups": 2,
       "tone": "cyan",
