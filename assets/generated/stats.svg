@@ -63,19 +63,19 @@
       <rect x="22" y="128" width="198" height="49" rx="14" fill="#1c1e24" fill-opacity="0.78" stroke="#ffffff" stroke-opacity="0.075"/>
       <rect x="32" y="139" width="3" height="27" rx="1.5" fill="#64d2ff"/>
       <text x="44" y="145" class="metric-label">Followers</text>
-      <text x="44" y="168" class="metric-value">28</text>
+      <text x="44" y="168" class="metric-value">27</text>
     </g>
     <g>
       <rect x="230" y="128" width="198" height="49" rx="14" fill="#1c1e24" fill-opacity="0.78" stroke="#ffffff" stroke-opacity="0.075"/>
       <rect x="240" y="139" width="3" height="27" rx="1.5" fill="#bf5af2"/>
       <text x="252" y="145" class="metric-label">Contributions</text>
-      <text x="252" y="168" class="metric-value">503</text>
+      <text x="252" y="168" class="metric-value">502</text>
     </g>
     <g>
       <rect x="22" y="184" width="198" height="49" rx="14" fill="#1c1e24" fill-opacity="0.78" stroke="#ffffff" stroke-opacity="0.075"/>
       <rect x="32" y="195" width="3" height="27" rx="1.5" fill="#30d158"/>
       <text x="44" y="201" class="metric-label">Commits</text>
-      <text x="44" y="224" class="metric-value">483</text>
+      <text x="44" y="224" class="metric-value">482</text>
     </g>
     <g>
       <rect x="230" y="184" width="198" height="49" rx="14" fill="#1c1e24" fill-opacity="0.78" stroke="#ffffff" stroke-opacity="0.075"/>
