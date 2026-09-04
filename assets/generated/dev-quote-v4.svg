@@ -40,9 +40,9 @@
     <path d="M758 58 H794 L783 124 H742 Z"/>
     <path d="M808 58 H844 L833 124 H792 Z"/>
   </g>
-  <text x="72" y="102" class="quote">Good code is its own best documentation.</text>
+  <text x="72" y="102" class="quote">Simplicity is prerequisite for reliability.</text>
   <g transform="translate(72 137)">
     <rect x="0" y="-14" width="5" height="20" rx="2.5" fill="#bf5af2"/>
-    <text x="16" y="0" class="author">— Steve McConnell</text>
+    <text x="16" y="0" class="author">— Edsger W. Dijkstra</text>
   </g>
 </svg>
