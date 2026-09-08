@@ -3,9 +3,13 @@
 from __future__ import annotations
 
 import hashlib
+import ipaddress
 import re
-import urllib.request
+import socket
 from pathlib import Path
+from urllib.parse import urlparse
+
+import requests
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "icons"
@@ -112,6 +116,25 @@ ICONS = [
 ]
 
 
+def _assert_safe_url(url: str) -> None:
+    """Reject non-https URLs and URLs resolving to internal/private hosts (SSRF guard)."""
+    parsed = urlparse(url)
+    if parsed.scheme != "https" or not parsed.hostname:
+        raise ValueError(f"Refusing to fetch unsafe URL: {url}")
+    try:
+        resolved_ip = ipaddress.ip_address(socket.gethostbyname(parsed.hostname))
+    except (OSError, ValueError) as exc:
+        raise ValueError(f"Could not resolve host for URL: {url}") from exc
+    if (
+        resolved_ip.is_private
+        or resolved_ip.is_loopback
+        or resolved_ip.is_link_local
+        or resolved_ip.is_reserved
+        or resolved_ip.is_multicast
+    ):
+        raise ValueError(f"Refusing to fetch internal/private address: {url}")
+
+
 def fetch(src: str) -> str:
     OUT.mkdir(exist_ok=True)
     CACHE.mkdir(exist_ok=True)
@@ -120,16 +143,17 @@ def fetch(src: str) -> str:
         path = CACHE / f"api-{name}.svg"
         if not path.exists():
             url = f"https://go-skill-icons.vercel.app/api/icons?i={name}&theme=dark"
-            path.write_bytes(urllib.request.urlopen(url, timeout=30).read())
+            path.write_bytes(requests.get(url, timeout=30).content)
         return path.read_text(errors="replace")
     if src.startswith("file:"):
         return (REPO_ASSETS / src[5:]).read_text(errors="replace")
     if src.startswith("url:"):
         url = src[4:]
-        h = hashlib.md5(url.encode()).hexdigest()[:10]
+        _assert_safe_url(url)
+        h = hashlib.sha256(url.encode()).hexdigest()[:10]
         path = CACHE / f"url-{h}.svg"
         if not path.exists():
-            path.write_bytes(urllib.request.urlopen(url, timeout=30).read())
+            path.write_bytes(requests.get(url, timeout=30).content)
         return path.read_text(errors="replace")
     raise ValueError(src)
 
