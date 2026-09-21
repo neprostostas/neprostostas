@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T03:05:18.362Z",
+  "generatedAt": "2026-09-21T03:01:57.923Z",
   "trophies": [
     {
       "id": "multilanguage",
@@ -53,9 +53,9 @@
       "id": "commits",
       "title": "Commits",
       "subtitle": "Hyper Committer",
-      "detail": "480 points",
+      "detail": "473 points",
       "rank": "AA",
-      "progress": 0.9333333333333333,
+      "progress": 0.9099999999999999,
       "accent": "#30d158",
       "cups": 2,
       "tone": "green",
