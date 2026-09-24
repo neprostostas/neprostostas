@@ -40,11 +40,9 @@
     <path d="M758 58 H794 L783 124 H742 Z"/>
     <path d="M808 58 H844 L833 124 H792 Z"/>
   </g>
-  <text x="72" y="80" class="quote">Any fool can write code that a computer can</text>
-<text x="72" y="108" class="quote">understand. Good programmers write code that humans</text>
-<text x="72" y="136" class="quote">can understand.</text>
-  <g transform="translate(72 154)">
+  <text x="72" y="102" class="quote">Fix the cause, not the symptom.</text>
+  <g transform="translate(72 137)">
     <rect x="0" y="-14" width="5" height="20" rx="2.5" fill="#bf5af2"/>
-    <text x="16" y="0" class="author">— Martin Fowler</text>
+    <text x="16" y="0" class="author">— Steve Maguire</text>
   </g>
 </svg>
