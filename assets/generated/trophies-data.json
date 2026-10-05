@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T04:01:06.887Z",
+  "generatedAt": "2026-10-05T03:45:46.176Z",
   "trophies": [
     {
       "id": "multilanguage",
@@ -53,9 +53,9 @@
       "id": "commits",
       "title": "Commits",
       "subtitle": "Hyper Committer",
-      "detail": "470 points",
+      "detail": "469 points",
       "rank": "AA",
-      "progress": 0.9,
+      "progress": 0.8966666666666667,
       "accent": "#30d158",
       "cups": 2,
       "tone": "green",
@@ -77,9 +77,9 @@
       "id": "followers",
       "title": "Followers",
       "subtitle": "Dynamic User",
-      "detail": "28 points",
+      "detail": "29 points",
       "rank": "A",
-      "progress": 0.26666666666666666,
+      "progress": 0.3,
       "accent": "#0a84ff",
       "cups": 1,
       "tone": "blue",
