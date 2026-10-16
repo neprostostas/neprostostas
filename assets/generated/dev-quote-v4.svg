@@ -40,10 +40,11 @@
     <path d="M758 58 H794 L783 124 H742 Z"/>
     <path d="M808 58 H844 L833 124 H792 Z"/>
   </g>
-  <text x="72" y="91" class="quote">The best error message is the one that never shows</text>
-<text x="72" y="119" class="quote">up.</text>
-  <g transform="translate(72 146)">
+  <text x="72" y="80" class="quote">Any fool can write code that a computer can</text>
+<text x="72" y="108" class="quote">understand. Good programmers write code that humans</text>
+<text x="72" y="136" class="quote">can understand.</text>
+  <g transform="translate(72 154)">
     <rect x="0" y="-14" width="5" height="20" rx="2.5" fill="#bf5af2"/>
-    <text x="16" y="0" class="author">— Thomas Fuchs</text>
+    <text x="16" y="0" class="author">— Martin Fowler</text>
   </g>
 </svg>
