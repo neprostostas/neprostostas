@@ -272,7 +272,7 @@
     </g></svg>
     </g>
         <text x="55" y="105" text-anchor="middle" class="t-sub" data-field="subtitle">Rainbow Lang User</text>
-        <text x="55" y="116" text-anchor="middle" class="t-detail" fill="#64d2ff" data-field="detail">11 points</text>
+        <text x="55" y="116" text-anchor="middle" class="t-detail" fill="#64d2ff" data-field="detail">12 points</text>
         <rect x="15" y="122" width="80" height="3.2" rx="1.5" fill="#1c1e24"/>
         <rect x="15" y="122" width="80" height="3.2" rx="1.5" fill="url(#bar-0)">
           <animate attributeName="width" from="0" to="80" dur="0.9s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
@@ -382,7 +382,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     </g></svg>
       </g>
         <text x="55" y="105" text-anchor="middle" class="t-sub" data-field="subtitle">God Repo Creator</text>
-        <text x="55" y="116" text-anchor="middle" class="t-detail" fill="#0a84ff" data-field="detail">72 points</text>
+        <text x="55" y="116" text-anchor="middle" class="t-detail" fill="#0a84ff" data-field="detail">73 points</text>
         <rect x="15" y="122" width="80" height="3.2" rx="1.5" fill="#1c1e24"/>
         <rect x="15" y="122" width="80" height="3.2" rx="1.5" fill="url(#bar-2)">
           <animate attributeName="width" from="0" to="80" dur="0.9s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
@@ -466,7 +466,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
         </rect>
       </g>
 
-      <g transform="translate(472 0)" opacity="1" data-trophy-id="commits" data-cups="2">
+      <g transform="translate(472 0)" opacity="1" data-trophy-id="commits" data-cups="3">
         <defs>
           <linearGradient id="card-bg-4" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#15171c"/>
@@ -504,6 +504,16 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
 </g>
 </svg>
     </g>
+        <svg x="2" y="48" width="44" height="44" viewBox="-1 0 18 18" overflow="visible">
+    <g opacity="0.92" fill="url(#cup-4)">
+      <path d="M7 10h2v4H7v-4z"/>
+      <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+      <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+      <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+      
+      <circle cx="8" cy="6" r="4" fill="#f5f5f7"/>
+      <text x="8" y="8.55" text-anchor="middle" font-size="7" class="t-rank" fill="#090a0d">A</text>
+    </g></svg>
         <svg x="62" y="48" width="44" height="44" viewBox="-1 0 18 18" overflow="visible">
     <g opacity="0.92" fill="url(#cup-4)">
       <path d="M7 10h2v4H7v-4z"/>
@@ -525,11 +535,11 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       <text x="8" y="8.55" text-anchor="middle" font-size="7" class="t-rank" fill="#090a0d">A</text>
     </g></svg>
       </g>
-        <text x="55" y="105" text-anchor="middle" class="t-sub" data-field="subtitle">Hyper Committer</text>
-        <text x="55" y="116" text-anchor="middle" class="t-detail" fill="#30d158" data-field="detail">461 points</text>
+        <text x="55" y="105" text-anchor="middle" class="t-sub" data-field="subtitle">Ultra Committer</text>
+        <text x="55" y="116" text-anchor="middle" class="t-detail" fill="#30d158" data-field="detail">508 points</text>
         <rect x="15" y="122" width="80" height="3.2" rx="1.5" fill="#1c1e24"/>
-        <rect x="15" y="122" width="70" height="3.2" rx="1.5" fill="url(#bar-4)">
-          <animate attributeName="width" from="0" to="70" dur="0.9s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+        <rect x="15" y="122" width="3" height="3.2" rx="1.5" fill="url(#bar-4)">
+          <animate attributeName="width" from="0" to="3" dur="0.9s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
         </rect>
       </g>
 
