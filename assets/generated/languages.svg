@@ -46,37 +46,37 @@
       <text x="22" y="53" class="caption">Share of code across public repositories</text>
       
       <rect x="22" y="74" width="406" height="12" rx="6" fill="#22252d"/>
-      <g clip-path="url(#language-bar-clip)"><rect x="22" y="74" width="135" height="12" fill="#0a84ff"/><rect x="159" y="74" width="132" height="12" fill="#bf5af2"/><rect x="293" y="74" width="65" height="12" fill="#ff375f"/><rect x="360" y="74" width="36" height="12" fill="#64d2ff"/><rect x="398" y="74" width="17" height="12" fill="#30d158"/><rect x="417" y="74" width="11" height="12" fill="#ff9f0a"/></g>
+      <g clip-path="url(#language-bar-clip)"><rect x="22" y="74" width="137" height="12" fill="#0a84ff"/><rect x="161" y="74" width="131" height="12" fill="#bf5af2"/><rect x="294" y="74" width="64" height="12" fill="#ff375f"/><rect x="360" y="74" width="35" height="12" fill="#64d2ff"/><rect x="397" y="74" width="16" height="12" fill="#30d158"/><rect x="415" y="74" width="13" height="12" fill="#ff9f0a"/></g>
       
       <g>
         <rect x="22" y="103" width="198" height="33" rx="11" fill="#1c1e24" fill-opacity="0.66" stroke="#ffffff" stroke-opacity="0.06"/>
         <circle cx="36" cy="119.5" r="4" fill="#0a84ff"/>
         <text x="48" y="124" style="font-size:11px;font-weight:620;fill:#f5f5f7">TypeScript</text>
-        <text x="207" y="124" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">34.0%</text>
+        <text x="207" y="124" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">34.6%</text>
       </g>
       <g>
         <rect x="230" y="103" width="198" height="33" rx="11" fill="#1c1e24" fill-opacity="0.66" stroke="#ffffff" stroke-opacity="0.06"/>
         <circle cx="244" cy="119.5" r="4" fill="#bf5af2"/>
         <text x="256" y="124" style="font-size:11px;font-weight:620;fill:#f5f5f7">CSS</text>
-        <text x="415" y="124" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">33.2%</text>
+        <text x="415" y="124" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">33.1%</text>
       </g>
       <g>
         <rect x="22" y="143" width="198" height="33" rx="11" fill="#1c1e24" fill-opacity="0.66" stroke="#ffffff" stroke-opacity="0.06"/>
         <circle cx="36" cy="159.5" r="4" fill="#ff375f"/>
         <text x="48" y="164" style="font-size:11px;font-weight:620;fill:#f5f5f7">JavaScript</text>
-        <text x="207" y="164" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">16.4%</text>
+        <text x="207" y="164" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">16.2%</text>
       </g>
       <g>
         <rect x="230" y="143" width="198" height="33" rx="11" fill="#1c1e24" fill-opacity="0.66" stroke="#ffffff" stroke-opacity="0.06"/>
         <circle cx="244" cy="159.5" r="4" fill="#64d2ff"/>
         <text x="256" y="164" style="font-size:11px;font-weight:620;fill:#f5f5f7">Vue</text>
-        <text x="415" y="164" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">9.0%</text>
+        <text x="415" y="164" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">8.9%</text>
       </g>
       <g>
         <rect x="22" y="183" width="198" height="33" rx="11" fill="#1c1e24" fill-opacity="0.66" stroke="#ffffff" stroke-opacity="0.06"/>
         <circle cx="36" cy="199.5" r="4" fill="#30d158"/>
         <text x="48" y="204" style="font-size:11px;font-weight:620;fill:#f5f5f7">HTML</text>
-        <text x="207" y="204" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">4.2%</text>
+        <text x="207" y="204" text-anchor="end" style="font-size:10.5px;font-weight:650;fill:#98989f">4.1%</text>
       </g>
       <g>
         <rect x="230" y="183" width="198" height="33" rx="11" fill="#1c1e24" fill-opacity="0.66" stroke="#ffffff" stroke-opacity="0.06"/>
