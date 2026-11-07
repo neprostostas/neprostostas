@@ -40,10 +40,9 @@
     <path d="M758 58 H794 L783 124 H742 Z"/>
     <path d="M808 58 H844 L833 124 H792 Z"/>
   </g>
-  <text x="72" y="91" class="quote">Programs must be written for people to read, and</text>
-<text x="72" y="119" class="quote">only incidentally for machines to execute.</text>
-  <g transform="translate(72 146)">
+  <text x="72" y="102" class="quote">First, solve the problem. Then, write the code.</text>
+  <g transform="translate(72 137)">
     <rect x="0" y="-14" width="5" height="20" rx="2.5" fill="#bf5af2"/>
-    <text x="16" y="0" class="author">— Harold Abelson</text>
+    <text x="16" y="0" class="author">— John Johnson</text>
   </g>
 </svg>

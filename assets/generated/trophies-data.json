@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T04:51:13.507Z",
+  "generatedAt": "2026-11-07T04:21:56.992Z",
   "trophies": [
     {
       "id": "multilanguage",
@@ -77,9 +77,9 @@
       "id": "followers",
       "title": "Followers",
       "subtitle": "Dynamic User",
-      "detail": "31 points",
+      "detail": "32 points",
       "rank": "A",
-      "progress": 0.36666666666666664,
+      "progress": 0.4,
       "accent": "#0a84ff",
       "cups": 1,
       "tone": "blue",
